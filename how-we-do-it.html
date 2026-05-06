@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="./style/style.css" />
     <style>
       .hero-bg {
-        background-image: url("/assets/Links/compressed-img/how-hero.webp");
+        background-image: url("./assets/Links/compressed-img/how-hero.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
 
       .circle-img {
-        background-image: url("/assets/Links/compressed-img/circle-img-1.webp");
+        background-image: url("./assets/Links/compressed-img/circle-img-1.webp");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -48,7 +48,7 @@
       <nav
         class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
       >
-        <a href="index.html">
+        <a href="./index.html">
           <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
         </a>
 
@@ -58,22 +58,22 @@
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="who-we-are.html">Who We Are</a>
+              <a href="./who-we-are.html">Who We Are</a>
             </li>
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="how-we-do-it.html">How We Do it</a>
+              <a href="./how-we-do-it.html">How We Do it</a>
             </li>
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="invest.html">Invest</a>
+              <a href="./invest.html">Invest</a>
             </li>
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="contact.html">Contact</a>
+              <a href="./contact.html">Contact</a>
             </li>
           </ul>
 
@@ -96,16 +96,16 @@
         <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
         <ul class="flex flex-col items-center gap-8">
           <li class="cursor-pointer">
-            <a href="who-we-are.html" onclick="toggleMenu()">Who We Are</a>
+            <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
           </li>
           <li class="cursor-pointer">
-            <a href="how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
+            <a href="./how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
           </li>
           <li class="cursor-pointer">
-            <a href="invest.html" onclick="toggleMenu()">Invest</a>
+            <a href="./invest.html" onclick="toggleMenu()">Invest</a>
           </li>
           <li class="cursor-pointer">
-            <a href="contact.html" onclick="toggleMenu()">Contact</a>
+            <a href="./contact.html" onclick="toggleMenu()">Contact</a>
           </li>
         </ul>
       </div>
@@ -138,7 +138,7 @@
               Explore our vision
             </h4>
             <img
-              src="assets/Links/arrow.svg"
+              src="./assets/Links/arrow.svg"
               alt="arrow"
               class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
             />
@@ -183,7 +183,7 @@
               class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
             >
               <img
-                src="/assets/Links/compressed-img/north-43-2.webp"
+                src="./assets/Links/compressed-img/north-43-2.webp"
                 alt="Private Residential"
                 class="w-full h-full object-cover transition-transform duration-700 rounded"
               />
@@ -260,7 +260,7 @@
               class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
             >
               <img
-                src="/assets/Links/compressed-img/exceptional1.webp"
+                src="./assets/Links/compressed-img/exceptional1.webp"
                 alt="Commercial Residential"
                 class="w-full h-full relative object-cover transition-transform duration-700 rounded z-10"
               />
@@ -411,7 +411,7 @@
                 class="min-w-full md:min-w-[calc(50%-8px)] aspect-[16/9] relative"
               >
                 <img
-                  src="/assets/Links/compressed-img/north-43-10.webp"
+                  src="./assets/Links/compressed-img/north-43-10.webp"
                   alt="Gallery Image 1"
                   class="w-full h-full object-cover"
                 />
@@ -421,7 +421,7 @@
                 class="min-w-full md:min-w-[calc(50%-8px)] aspect-[16/9] relative"
               >
                 <img
-                  src="/assets/Links/compressed-img/north-43-9.webp"
+                  src="./assets/Links/compressed-img/north-43-9.webp"
                   alt="Gallery Image 2"
                   class="w-full h-full object-cover"
                 />
@@ -431,7 +431,7 @@
                 class="min-w-full md:min-w-[calc(50%-8px)] aspect-[16/9] relative"
               >
                 <img
-                  src="/assets/Links/compressed-img/north-43-2.webp"
+                  src="./assets/Links/compressed-img/north-43-2.webp"
                   alt="Gallery Image 3"
                   class="w-full h-full object-cover"
                 />
@@ -441,7 +441,7 @@
                 class="min-w-full md:min-w-[calc(50%-8px)] aspect-[16/9] relative"
               >
                 <img
-                  src="/assets/Links/compressed-img/exceptional1.webp"
+                  src="./assets/Links/compressed-img/exceptional1.webp"
                   alt="Gallery Image 4"
                   class="w-full h-full object-cover"
                 />
@@ -641,5 +641,10 @@
         }
       });
     </script>
-  </body>
+  
+<!-- 
+GitHub Pages Asset Path Fixes:
+Original: /assets/Links/compressed-img/how-hero.webp -> Fixed: ./assets/Links/compressed-img/how-hero.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: /assets/Links/compressed-img/north-43-2.webp -> Fixed: ./assets/Links/compressed-img/north-43-2.webp\nOriginal: /assets/Links/compressed-img/exceptional1.webp -> Fixed: ./assets/Links/compressed-img/exceptional1.webp\nOriginal: /assets/Links/compressed-img/north-43-10.webp -> Fixed: ./assets/Links/compressed-img/north-43-10.webp\nOriginal: /assets/Links/compressed-img/north-43-9.webp -> Fixed: ./assets/Links/compressed-img/north-43-9.webp
+-->
+</body>
 </html>
