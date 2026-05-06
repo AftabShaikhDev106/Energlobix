@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnerGlobix | Investment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <style>
+      .hero-bg {
+        background-image: url("/assets/Links/compressed-img/invest-hero.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .card-bg {
+        background-image: url("/assets/Links/compressed-img/circle-img-1.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .section-bg {
+        background-image: url("/assets/Links/compressed-img/page-1-index.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Mobile menu transition */
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      #mobile-menu.hidden-menu {
+        transform: translateX(100%);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar -->
+
+    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
+      <nav
+        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
+      >
+        <a href="index.html">
+          <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
+        </a>
+
+        <div class="flex items-center gap-6 lg:gap-14">
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="who-we-are.html">Who We Are</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="how-we-do-it.html">How We Do it</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="invest.html">Invest</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <i
+            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
+            onclick="toggleMenu()"
+          ></i>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
+      >
+        <i
+          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
+          onclick="toggleMenu()"
+        ></i>
+        <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
+        <ul class="flex flex-col items-center gap-8">
+          <li class="cursor-pointer">
+            <a href="who-we-are.html" onclick="toggleMenu()">Who We Are</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="invest.html" onclick="toggleMenu()">Invest</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="contact.html" onclick="toggleMenu()">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section
+      class="min-h-screen lg:h-[105vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
+    >
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div
+        class="relative z-10 w-full flex items-center justify-center px-6 py-20"
+      >
+        <div class="max-w-5xl w-full">
+          <h4
+            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
+          >
+            EnerGlobix Development
+          </h4>
+          <h4
+            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
+          >
+            Investment for a brighter future
+          </h4>
+          <div class="flex flex-col items-center">
+            <h4
+              class="mt-8 text-lg lg:text-xl text-white font-bold text-center"
+            >
+              Explore our vision
+            </h4>
+            <img
+              src="assets/Links/arrow.svg"
+              alt="arrow"
+              class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
+    >
+      <div
+        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-black rounded-[100%]"
+      ></div>
+
+      <div class="relative z-20 py-20 lg:py-28 px-6 md:px-12">
+        <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
+          <h2
+            class="text-2xl lg:text-[30px] font-bold mb-4 text-[#B8A685] leading-tight"
+          >
+            Signature Development investment
+          </h2>
+          <p
+            class="text-white leading-tight text-lg lg:text-[26px] max-w-full lg:max-w-[60%] mx-auto"
+          >
+            We focus on opportunities where quality, location, and concept come
+            together naturally, not where they need to be forced.
+          </p>
+        </div>
+
+        <div
+          class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 mb-20"
+        >
+          <div
+            class="card-bg w-full p-8 lg:p-10 rounded flex flex-col items-center gap-4 text-center"
+          >
+            <h1
+              class="text-2xl lg:text-[30px] font-bold text-black leading-tight"
+            >
+              Your Investment
+            </h1>
+            <h4 class="text-black leading-tight text-lg lg:text-[22px] mx-auto">
+              As an investor, you participate in the full development cycle,
+              from concept to completion, with a clear objective:
+            </h4>
+            <h4
+              class="text-black leading-tight text-lg lg:text-[22px] mx-auto font-bold"
+            >
+              To realise capital growth through well-positioned, high-quality
+              developments.
+            </h4>
+          </div>
+
+          <div
+            class="card-bg w-full p-8 lg:p-10 rounded flex flex-col items-center gap-4 text-center"
+          >
+            <h1
+              class="text-2xl lg:text-[30px] font-bold text-black leading-tight"
+            >
+              Our Approach
+            </h1>
+            <h4 class="text-black leading-tight text-lg lg:text-[22px] mx-auto">
+              This approach is suited for investors seeking:
+            </h4>
+            <ul class="flex flex-col gap-4 lg:gap-6 items-center">
+              <li class="text-black font-semibold text-base lg:text-2xl">
+                1. Defined investment timelines
+              </li>
+              <li class="text-black font-semibold text-base lg:text-2xl">
+                2. Capital growth through development
+              </li>
+              <li class="text-black font-semibold text-base lg:text-2xl">
+                3. Exposure to high-demand real estate segments
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="w-full mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 border border-[#B8A685] mb-20 lg:mb-[100px]"
+        >
+          <div
+            class="w-full h-full flex flex-col gap-4 items-center border-b lg:border-b-0 lg:border-r border-[#B8A685] p-10 lg:p-16"
+          >
+            <h1
+              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+            >
+              Build & Sell Development for Capital Growth
+            </h1>
+            <p
+              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center"
+            >
+              You gain access to developments structured for value creation and
+              timely realisation.
+            </p>
+            <p
+              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center mt-4"
+            >
+              Each project is positioned to meet market demand and deliver
+              capital growth through quality, clarity, and precise timing.
+            </p>
+
+            <button
+              class="py-2.5 mt-8 lg:mt-7 text-lg px-12 bg-[#B8A685] text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
+            >
+              See more here
+            </button>
+          </div>
+
+          <div
+            class="w-full h-full flex flex-col gap-4 items-center p-10 lg:p-16"
+          >
+            <h1
+              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+            >
+              Long-Term Investment Income & Asset Strength
+            </h1>
+            <p
+              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center"
+            >
+              You invest in assets designed to perform beyond completion.
+            </p>
+            <p
+              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center mt-4"
+            >
+              These properties generate stable income while building long-term
+              value - offering a strong and enduring foundation for your
+              capital.
+            </p>
+
+            <button
+              class="py-2.5 mt-8 lg:mt-7 text-lg px-12 bg-[#B8A685] text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
+            >
+              See more here
+            </button>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center mb-16 px-4">
+          <h2
+            class="text-2xl lg:text-[30px] font-bold mb-6 text-[#B8A685] leading-tight"
+          >
+            Why Invest in Dubai Real Estate
+          </h2>
+          <p
+            class="text-white leading-tight text-lg lg:text-2xl max-w-full lg:max-w-[80%] mx-auto"
+          >
+            A Market Defined by Growth, Demand, and Global Capital Dubai has
+            established itself as one of the world’s most dynamic real estate
+            markets, attracting international investors through a combination of
+            growth, liquidity, and long-term opportunity.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center px-4">
+          <h2
+            class="text-2xl lg:text-[30px] font-bold mb-6 text-[#B8A685] leading-tight"
+          >
+            Consistent Demand at Global Scale
+          </h2>
+          <p
+            class="text-white leading-tight text-lg lg:text-2xl max-w-full lg:max-w-[80%] mx-auto"
+          >
+            Driven by population growth, international migration, and business
+            expansion, Dubai continues to see strong and sustained demand across
+            both residential and commercial real estate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="w-full min-h-[110vh] bg-black -mt-[140px] section-bg py-24 lg:py-[200px] pt-[220px] lg:pt-[280px] flex flex-col relative px-6"
+    >
+      <div
+        class="w-full absolute h-full top-0 left-0 z-10 bg-gradient-to-b from-black/30 via-black/70 to-black/90"
+      ></div>
+
+      <h1
+        class="text-2xl lg:text-[30px] relative z-20 font-bold mb-16 lg:mb-[100px] text-white text-center leading-tight w-full lg:max-w-[35%] mx-auto"
+      >
+        EnerGlobix - Part of the Dubai Leading Property Development Plan
+      </h1>
+
+      <div
+        class="w-full lg:max-w-5xl relative z-20 lg:absolute lg:bottom-0 lg:translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-28"
+      >
+        <div
+          class="w-full aspect-square rounded-full border-2 border-[#B8A685] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
+        >
+          <div
+            class="hidden lg:flex flex-col absolute top-0 -translate-y-[140%] items-center"
+          >
+            <div
+              class="w-2 aspect-square rounded-full border-2 border-white"
+            ></div>
+
+            <div class="h-24 rounded-full w-[2px] bg-white"></div>
+          </div>
+
+          <h1 class="text-white text-center text-xl lg:text-2xl">
+            Total transactions recorded 215,000+ deals in 2025.
+          </h1>
+        </div>
+
+        <div
+          class="w-full aspect-square rounded-full border-2 border-[#B8A685] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
+        >
+          <div
+            class="hidden lg:flex flex-col absolute top-0 -translate-y-[140%] items-center"
+          >
+            <div
+              class="w-2 aspect-square rounded-full border-2 border-white"
+            ></div>
+
+            <div class="h-24 rounded-full w-[2px] bg-white"></div>
+          </div>
+
+          <h1 class="text-white text-center text-xl lg:text-2xl">
+            Sustained capital growth across high-demand districts.
+          </h1>
+        </div>
+
+        <div
+          class="w-full aspect-square rounded-full border-2 border-[#B8A685] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
+        >
+          <div
+            class="hidden lg:flex flex-col absolute top-0 -translate-y-[140%] items-center"
+          >
+            <div
+              class="w-2 aspect-square rounded-full border-2 border-white"
+            ></div>
+
+            <div class="h-24 rounded-full w-[2px] bg-white"></div>
+          </div>
+
+          <h1 class="text-white text-center text-xl lg:text-2xl">
+            A global destination for institutional & private capital.
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="w-full min-h-screen bg-black py-20 lg:py-28 pt-[100px] lg:pt-[250px] px-6"
+    >
+      <h1
+        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[#B8A685] text-center leading-tight"
+      >
+        Contact us
+      </h1>
+
+      <div
+        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
+      >
+        <!-- Left Side: Contact Info -->
+        <div class="flex flex-col gap-6 lg:gap-2">
+          <div>
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+              Office Location
+            </h2>
+            <p class="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+          </div>
+          <div>
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+              Address
+            </h2>
+            <p class="text-gray-400 text-sm">Business Bay, Dubai</p>
+          </div>
+          <div>
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+              Contact
+            </h2>
+            <p class="text-gray-400 text-sm">info@energlobix.com</p>
+          </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <form action="#" class="flex flex-col gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input
+              type="text"
+              placeholder="Name*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+            <input
+              type="text"
+              placeholder="Phone*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input
+              type="email"
+              placeholder="Email*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+            <input
+              type="text"
+              placeholder="Company*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Subject*"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+          />
+          <textarea
+            placeholder="Message*"
+            rows="4"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="w-full flex flex-col gap-10 items-center mt-24">
+        <div class="flex flex-col gap-1">
+          <img src="./assets/Links/logo-white.png" class="w-36" />
+          <p
+            class="text-[9px] tracking-widest text-center text-white uppercase"
+          >
+            Development
+          </p>
+        </div>
+
+        <h4 class="text-xl lg:text-[22px] text-[#B8A685]">
+          Explore Our Businesses
+        </h4>
+
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
+          <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
+          <div class="flex gap-8">
+            <h4
+              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+            >
+              Terms of use
+            </h4>
+            <h4
+              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+            >
+              Privacy policy
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Mobile Menu Toggle
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden-menu");
+      }
+    </script>
+  </body>
+</html>

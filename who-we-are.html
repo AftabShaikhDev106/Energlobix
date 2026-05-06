@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who We Are | EnerGlobix Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <style>
+      .hero-bg {
+        background-image: url("/assets/Links/compressed-img/who-we-are-hero.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .circle-img {
+        background-image: url("/assets/Links/compressed-img/circle-img-1.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Mobile menu transition */
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      #mobile-menu.hidden-menu {
+        transform: translateX(100%);
+      }
+
+      .circle-1 {
+        background-image: url("/assets/Links/compressed-img/who-circle-1.webp");
+        background-size: 350%;
+        background-position: 75% 50%;
+        background-repeat: no-repeat;
+      }
+
+      .circle-2 {
+        background-image: url("/assets/Links/compressed-img/page-1-index.webp");
+        background-size: 350%;
+        background-position: 30% 50%;
+        background-repeat: no-repeat;
+      }
+
+      .circle-3 {
+        background-image: url("/assets/Links/compressed-img/who-circle-3.webp");
+        background-size: 260%;
+        background-position: 30% top;
+        background-repeat: no-repeat;
+      }
+
+      .circle-4 {
+        background-image: url("/assets/Links/compressed-img/who-circle-4.webp");
+        background-size: 350%;
+        background-position: 75% bottom;
+        background-repeat: no-repeat;
+      }
+
+      .circle-5 {
+        background-image: url("/assets/Links/compressed-img/who-circle-5.webp");
+        background-size: 200%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar -->
+
+    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
+      <nav
+        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
+      >
+        <a href="index.html">
+          <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
+        </a>
+
+        <div class="flex items-center gap-6 lg:gap-14">
+          <!-- Desktop Menu -->
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="who-we-are.html">Who We Are</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="how-we-do-it.html">How We Do it</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="invest.html">Invest</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Toggle: Using consistent text-white for visibility on hero -->
+          <i
+            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
+            onclick="toggleMenu()"
+          ></i>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
+      >
+        <i
+          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
+          onclick="toggleMenu()"
+        ></i>
+        <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
+        <ul class="flex flex-col items-center gap-8">
+          <li class="cursor-pointer">
+            <a href="who-we-are.html" onclick="toggleMenu()">Who We Are</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="invest.html" onclick="toggleMenu()">Invest</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="contact.html" onclick="toggleMenu()">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section: Improved mobile typography scaling -->
+    <section
+      class="min-h-screen lg:h-[105vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/100"
+      ></div>
+      <div
+        class="relative z-10 w-full flex items-center justify-center px-6 py-20"
+      >
+        <div class="max-w-5xl w-full">
+          <h4
+            class="text-white leading-[1.2] text-center text-3xl md:text-5xl lg:text-[44px]"
+          >
+            EnerGlobix Development
+          </h4>
+          <h4
+            class="text-white leading-[1.2] text-center text-3xl md:text-5xl lg:text-[44px]"
+          >
+            Investment Development Beyond Returns
+          </h4>
+          <div class="flex flex-col items-center">
+            <h4
+              class="mt-8 text-lg lg:text-xl text-white font-bold text-center"
+            >
+              Explore our vision
+            </h4>
+            <img
+              src="assets/Links/arrow.svg"
+              alt="arrow"
+              class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section: Improved background curve responsiveness -->
+    <section
+      class="relative z-10 h-fit -mt-[80px] sm:-mt-[100px] lg:-mt-[140px] overflow-x-hidden"
+    >
+      <!-- Curve: Adjusted width for better fit across breakpoints -->
+      <div
+        class="absolute top-0 h-full left-1/2 z-10 border border-white -translate-x-1/2 w-[500%] sm:w-[400%] md:w-[280%] lg:w-[280%] rounded-[100%] bg-[#00070A]"
+      ></div>
+
+      <div
+        id="section-who-inner"
+        class="relative z-20 pt-16 sm:pt-20 lg:pt-28 px-6 md:px-12"
+      >
+        <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2
+            class="text-2xl sm:text-3xl lg:text-[30px] font-bold mb-4 text-[--color-beige-c] leading-tight"
+          >
+            Who We Are
+          </h2>
+          <!-- Paragraphs: Responsive font size and line height -->
+          <p
+            class="text-white leading-relaxed lg:leading-tight text-base sm:text-lg lg:text-[26px] mb-6 max-w-full lg:max-w-[90%] mx-auto"
+          >
+            Before capital moves, before markets expand, before industries
+            scale, there is agriculture. It powers economies and supply chains,
+            every day. It is constant, essential, and globally demanded. At
+            EnerGlobix Agriculture, we operate within this foundation,
+            positioned at the intersection of global supply, infrastructure, and
+            long-term demand.
+          </p>
+          <p
+            class="text-white leading-relaxed lg:leading-tight text-base sm:text-lg lg:text-[26px] mb-4 max-w-full lg:max-w-[90%] mx-auto"
+          >
+            Every project begins with a clear ambition: to create something that
+            stands apart, not only in how it looks, but in how it performs and
+            endures over time
+          </p>
+        </div>
+
+        <!-- Circles Grid: Responsive column counts and sizing -->
+        <div
+          class="grid grid-cols-3 md:grid-cols-5 w-full lg:w-[70%] gap-4 lg:gap-10 mt-10 mx-auto px-2 sm:px-4"
+        >
+          <div
+            class="aspect-square rounded-full circle-1 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-2 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-3 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-4 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-5 shadow-lg border-2 border-white"
+          ></div>
+        </div>
+
+        <!-- Vision & Mission Grid: Stacks on mobile, border adjustment -->
+        <div
+          class="w-full max-w-7xl mx-auto grid grid-cols-1 mt-16 sm:mt-20 lg:grid-cols-2 mb-10 sm:mb-12 lg:mb-[100px]"
+        >
+          <!-- Vision -->
+          <div
+            class="w-full h-full flex flex-col gap-4 items-center border-b lg:border-b-0 lg:border-r border-[#B8A685] p-8 sm:p-10 lg:p-16"
+          >
+            <h1
+              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+            >
+              Vision
+            </h1>
+            <p
+              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
+            >
+              We aim to create properties that people actively choose, for how
+              they live, how they function, and how they endure
+            </p>
+            <p
+              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
+            >
+              Our vision is to establish EnerGlobix Development as a trusted
+              name in commercial and private real estate, recognised for
+              building assets that hold their position, perform over time, and
+              contribute to stronger, more considered environments
+            </p>
+          </div>
+
+          <!-- Mission -->
+          <div
+            class="w-full h-full flex flex-col gap-4 items-center p-8 sm:p-10 lg:p-16"
+          >
+            <h1
+              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+            >
+              Mission
+            </h1>
+            <p
+              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
+            >
+              To originate and develop real estate with clarity, discipline, and
+              purpose, where every project is defined by quality from the outset
+            </p>
+            <p
+              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
+            >
+              We focus on:
+            </p>
+            <p
+              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
+            >
+              Developing commercial and private assets with real demand.
+              Creating properties that combine usability with long-term
+              investment value. Ensuring that every development is positioned to
+              perform beyond completion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accordion Section: Improved absolute positioning on mobile -->
+    <section
+      id="section-contact-accordion"
+      class="w-full min-h-screen bg-black relative -mt-[100px] lg:-mt-[140px] flex flex-col justify-center"
+    >
+      <!-- Floating container: Added relative width on mobile to avoid edge-to-edge -->
+      <div
+        id="overlap-div"
+        class="w-[90%] sm:w-[85%] lg:w-full z-30 border border-[--color-beige-c] lg:max-w-[85%] xl:max-w-[60%] bg-black p-6 sm:p-8 lg:p-10 rounded flex flex-col items-center absolute top-[100px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <h1
+          class="text-xl sm:text-2xl lg:text-3xl w-full lg:max-w-[65%] font-bold leading-[1.4] text-[#B8A685] text-center"
+        >
+          OUR STANDARD, OUR APPROACH, YOUR INVESTMENT
+        </h1>
+        <div class="w-full lg:max-w-[70%] mt-6 lg:mt-2">
+          <!-- Accordion Item 1 -->
+          <div
+            class="border-[#B8A685]/30 py-4 group cursor-pointer"
+            onclick="toggleAccordion(this)"
+          >
+            <div
+              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
+            >
+              <span class="text-[#B8A685] transition-transform duration-300">
+                <i
+                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
+                ></i>
+              </span>
+              <h3
+                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+              >
+                Quality as a Non-Negotiable Standard
+              </h3>
+            </div>
+            <div
+              class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
+            >
+              <p
+                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+              >
+                We maintain the highest standards of construction and design,
+                ensuring that every project reflects our commitment to
+                excellence and durability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div
+            class="border-t border-[#B8A685]/30 py-4 group cursor-pointer"
+            onclick="toggleAccordion(this)"
+          >
+            <div
+              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
+            >
+              <span class="text-[#B8A685] transition-transform duration-300">
+                <i
+                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
+                ></i>
+              </span>
+              <h3
+                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+              >
+                Capital Deployed Where Demand Is Real
+              </h3>
+            </div>
+            <div
+              class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
+            >
+              <p
+                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+              >
+                Strategic investment in high-growth areas where market demand is
+                proven and sustainable for long-term returns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div
+            class="border-t border-[#B8A685]/30 py-4 group cursor-pointer"
+            onclick="toggleAccordion(this)"
+          >
+            <div
+              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
+            >
+              <span class="text-[#B8A685] transition-transform duration-300">
+                <i
+                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
+                ></i>
+              </span>
+              <h3
+                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+              >
+                Assets Built for Enduring Value
+              </h3>
+            </div>
+            <div
+              class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
+            >
+              <p
+                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+              >
+                Our properties are designed to appreciate over time, combining
+                aesthetic appeal with functional longevity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div
+            class="border-t border-[#B8A685]/30 py-4 group cursor-pointer"
+            onclick="toggleAccordion(this)"
+          >
+            <div
+              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
+            >
+              <span class="text-[#B8A685] transition-transform duration-300">
+                <i
+                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
+                ></i>
+              </span>
+              <h3
+                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+              >
+                A Disciplined Approach to Investment
+              </h3>
+            </div>
+            <div
+              class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
+            >
+              <p
+                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+              >
+                Rigorous analysis and conservative financial modeling guide
+                every decision we make in the development process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact us Title: Improved spacing for mobile -->
+      <h1
+        class="text-2xl sm:text-3xl lg:text-[32px] font-bold mb-8 sm:mb-10 lg:mb-14 text-[#B8A685] text-center leading-tight"
+      >
+        Contact us
+      </h1>
+
+      <div
+        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 lg:gap-0 px-6 sm:px-12 lg:px-6"
+      >
+        <!-- Left Side: Contact Info -->
+        <div class="flex flex-col gap-6 lg:gap-2 text-center md:text-left">
+          <div>
+            <h2
+              class="text-white text-lg lg:text-[21px] font-medium mb-1 sm:mb-2"
+            >
+              Office Location
+            </h2>
+            <p class="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+          </div>
+          <div>
+            <h2
+              class="text-white text-lg lg:text-[21px] font-medium mb-1 sm:mb-2"
+            >
+              Address
+            </h2>
+            <p class="text-gray-400 text-sm">Business Bay, Dubai</p>
+          </div>
+          <div>
+            <h2
+              class="text-white text-lg lg:text-[21px] font-medium mb-1 sm:mb-2"
+            >
+              Contact
+            </h2>
+            <p class="text-gray-400 text-sm">info@energlobix.com</p>
+          </div>
+        </div>
+
+        <!-- Right Side: Form: Mobile gap refinement -->
+        <form action="#" class="flex flex-col gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input
+              type="text"
+              placeholder="Name*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+            <input
+              type="text"
+              placeholder="Phone*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input
+              type="email"
+              placeholder="Email*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+            <input
+              type="text"
+              placeholder="Company*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Subject*"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+          />
+          <textarea
+            placeholder="Message*"
+            rows="4"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-full sm:w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Footer Bottom: Responsive layout stacking -->
+      <div
+        class="w-full flex flex-col gap-8 sm:gap-10 items-center mt-20 sm:mt-24 px-6"
+      >
+        <div class="flex flex-col gap-1 items-center">
+          <img src="./assets/Links/logo-white.png" class="w-32 sm:w-36" />
+          <p
+            class="text-[9px] tracking-widest text-center text-white uppercase"
+          >
+            Development
+          </p>
+        </div>
+
+        <h4
+          class="text-lg sm:text-xl lg:text-[22px] text-[#B8A685] text-center"
+        >
+          Explore Our Businesses
+        </h4>
+
+        <div
+          class="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-16"
+        >
+          <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
+          <div class="flex gap-6 sm:gap-8">
+            <h4
+              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+            >
+              Terms of use
+            </h4>
+            <h4
+              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+            >
+              Privacy policy
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Accordion Functionality
+      function toggleAccordion(item) {
+        const content = item.querySelector(".overflow-hidden");
+        const isOpen = item.getAttribute("data-open") === "true";
+
+        // Close other items
+        document.querySelectorAll(".group.cursor-pointer").forEach((other) => {
+          if (other !== item) {
+            other.setAttribute("data-open", "false");
+            other.querySelector(".overflow-hidden").style.maxHeight = "0";
+            other.querySelector(".overflow-hidden").style.opacity = "0";
+            other.querySelector("span").style.transform = "rotate(0deg)";
+          }
+        });
+
+        if (isOpen) {
+          item.setAttribute("data-open", "false");
+          content.style.maxHeight = "0";
+          content.style.opacity = "0";
+          item.querySelector("span").style.transform = "rotate(0deg)";
+        } else {
+          item.setAttribute("data-open", "true");
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.opacity = "1";
+          item.querySelector("span").style.transform = "rotate(90deg)";
+        }
+      }
+
+      // Mobile Menu Toggle
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden-menu");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const overlapDiv = document.getElementById("overlap-div");
+        const sectionWhoInner = document.getElementById("section-who-inner");
+        const sectionContactAccordion = document.getElementById(
+          "section-contact-accordion",
+        );
+
+        if (overlapDiv && sectionWhoInner && sectionContactAccordion) {
+          const adjustOverlapPadding = () => {
+            const overlapHeight = overlapDiv.offsetHeight;
+            const halfHeight = overlapHeight / 2;
+            const isMobile = window.innerWidth < 1024;
+            const gap = isMobile ? 56 : 80; // 56px = py-14, 80px = py-20
+            const topOffset = isMobile ? 100 : 140; // match the -mt-[100px] vs -mt-[140px]
+
+            sectionWhoInner.style.paddingBottom = `${halfHeight + gap}px`;
+            sectionContactAccordion.style.paddingTop = `${topOffset + halfHeight + gap}px`;
+          };
+
+          const resizeObserver = new ResizeObserver(() => {
+            adjustOverlapPadding();
+          });
+
+          resizeObserver.observe(overlapDiv);
+          window.addEventListener("resize", adjustOverlapPadding);
+
+          setTimeout(adjustOverlapPadding, 100);
+        }
+      });
+    </script>
+  </body>
+</html>

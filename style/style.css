@@ -1,0 +1,63 @@
+@font-face {
+            font-family: 'MinionPro';
+            src: url('../assets/Document fonts/MinionPro-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Symbol';
+            src: url('../assets/Document fonts/Symbol.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('../assets/Document fonts/Times New Roman.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Times New Roman Bold';
+            src: url('../assets/Document fonts/Times New Roman Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Times New Roman Bold Italic';
+            src: url('../assets/Document fonts/Times New Roman Bold Italic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root{
+             --color-beige-c: #B8A685;
+             --color-agri-a: #25431c;
+             --color-blue: #1a2d51;
+        }
+       
+        .symbol{
+            font-family: 'Symbol', sans-serif;
+        }        
+        
+        .font-serif-custom {
+            font-family: 'MinionPro', serif;
+        }
+
+        .times-new-roman{
+            font-family: 'Times New Roman', serif;
+        }
+
+        .times-new-roman-bold{
+            font-family: 'Times New Roman Bold', serif;
+        }
+
+        .times-new-roman-bold-italic{
+            font-family: 'Times New Roman Bold Italic', serif;
+        }
+
+
+        *{
+            font-family: 'Symbol', sans-serif;
+        }
