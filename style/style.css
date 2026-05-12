@@ -33,8 +33,11 @@
 
         :root{
              --color-beige-c: #B8A685;
-             --color-agri-a: #25431c;
+             --color-beige-dark: #dcc59d;
+             --color-agri-a: #213e1a;
+             --color-agri-dark: #0e230a;
              --color-blue: #1a2d51;
+             --color-orange: #e38b1a;
         }
        
         .symbol{
