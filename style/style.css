@@ -44,6 +44,10 @@
              --color-blue: #1a2d51;
              --color-orange: #e38b1a;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
        
         .symbol{
             font-family: 'Symbol', sans-serif;

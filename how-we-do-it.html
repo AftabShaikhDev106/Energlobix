@@ -10,14 +10,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="preload" as="image" href="./assets/Links/compressed-img/how-hero.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/Links/compressed-img/how-hero.webp"
+    />
     <style>
-      body { visibility: hidden; opacity: 0; transition: opacity 0.3s ease; }
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
     </style>
     <script>
-      window.addEventListener('load', () => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+        document.body.style.opacity = "1";
       });
     </script>
     <style>
@@ -83,7 +91,7 @@
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="./contact.html">Contact</a>
+              <a href="#section-contact">Contact</a>
             </li>
           </ul>
 
@@ -117,7 +125,7 @@
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
           </li>
           <li class="cursor-pointer">
-            <a href="./contact.html" onclick="toggleMenu()">Contact</a>
+            <a href="#section-contact" onclick="toggleMenu()">Contact</a>
           </li>
         </ul>
       </div>
@@ -388,12 +396,12 @@
               living experience at North 43.
             </p>
 
-            <button
-              type="submit"
-              class="bg-[#9e8b6d] text-sm text-black py-3 px-4 w-fit mt-6 font-bold hover:bg-[#B8A685] transition-colors"
+            <a
+              href="#section-contact"
+              class="bg-[#9e8b6d] text-sm text-black py-3 px-4 w-fit mt-6 font-bold hover:bg-[#B8A685] transition-colors block"
             >
-              Register interets here
-            </button>
+              Register interests here
+            </a>
           </div>
         </div>
 
