@@ -3,6 +3,7 @@
             src: url('../assets/Document fonts/MinionPro-Regular.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap;
         }
 
         @font-face {
@@ -10,6 +11,7 @@
             src: url('../assets/Document fonts/Symbol.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap;
         }
 
         @font-face {
@@ -17,18 +19,21 @@
             src: url('../assets/Document fonts/Times New Roman.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Times New Roman Bold';
             src: url('../assets/Document fonts/Times New Roman Bold.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Times New Roman Bold Italic';
             src: url('../assets/Document fonts/Times New Roman Bold Italic.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap;
         }
 
         :root{
@@ -63,4 +68,13 @@
 
         *{
             font-family: 'Symbol', sans-serif;
+        }
+
+        .active-link {
+            color: white !important;
+            font-weight: bold !important;
+        }
+
+        #main-header.bg-white .active-link {
+            color: var(--color-beige-c) !important;
         }

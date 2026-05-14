@@ -10,6 +10,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/Links/compressed-img/page-1-index.webp"
+    />
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+        document.body.style.opacity = "1";
+      });
+    </script>
     <style>
       .hero-bg {
         background-image: url("./assets/Links/compressed-img/page-1-index.webp");
@@ -61,7 +79,7 @@
 
         <div class="flex items-center gap-6 lg:gap-14">
           <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-black">
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
@@ -632,19 +650,14 @@
 
       <div class="w-full flex flex-col gap-10 items-center mt-24">
         <div class="flex flex-col gap-1">
-          <img src="./assets/Links/logo-white.png" class="w-36" />
-          <p
-            class="text-[9px] tracking-widest text-center text-white uppercase"
-          >
-            Development
-          </p>
+          <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
         </div>
 
         <h4 class="text-xl lg:text-[22px] text-[#B8A685]">
           Explore Our Businesses
         </h4>
 
-        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
+        <div class="flex flex-col lg:flex-row items-center gap-8">
           <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
           <div class="flex gap-8">
             <h4

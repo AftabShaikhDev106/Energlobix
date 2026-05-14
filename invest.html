@@ -10,6 +10,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preload" as="image" href="./assets/Links/compressed-img/invest-hero.webp" />
+    <style>
+      body { visibility: hidden; opacity: 0; transition: opacity 0.3s ease; }
+    </style>
+    <script>
+      window.addEventListener('load', () => {
+        document.body.style.visibility = 'visible';
+        document.body.style.opacity = '1';
+      });
+    </script>
     <style>
       .hero-bg {
         background-image: url("./assets/Links/compressed-img/invest-hero.webp");
@@ -53,7 +63,7 @@
         </a>
 
         <div class="flex items-center gap-6 lg:gap-14">
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-black">
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
@@ -67,7 +77,7 @@
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="./invest.html">Invest</a>
+              <a href="./invest.html" class="active-link">Invest</a>
             </li>
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
@@ -98,7 +108,9 @@
             <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
           </li>
           <li class="cursor-pointer">
-            <a href="./how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
+            <a href="./how-we-do-it.html" onclick="toggleMenu()"
+              >How We Do it</a
+            >
           </li>
           <li class="cursor-pointer">
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
@@ -460,19 +472,14 @@
 
       <div class="w-full flex flex-col gap-10 items-center mt-24">
         <div class="flex flex-col gap-1">
-          <img src="./assets/Links/logo-white.png" class="w-36" />
-          <p
-            class="text-[9px] tracking-widest text-center text-white uppercase"
-          >
-            Development
-          </p>
+          <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
         </div>
 
         <h4 class="text-xl lg:text-[22px] text-[#B8A685]">
           Explore Our Businesses
         </h4>
 
-        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
+        <div class="flex flex-col lg:flex-row items-center gap-8">
           <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
           <div class="flex gap-8">
             <h4
@@ -497,11 +504,11 @@
         menu.classList.toggle("hidden-menu");
       }
     </script>
-  
-<!-- 
+
+    <!-- 
 GitHub Pages Asset Path Fixes:
 Original: /assets/Links/compressed-img/invest-hero.webp -> Fixed: ./assets/Links/compressed-img/invest-hero.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: /assets/Links/compressed-img/page-1-index.webp -> Fixed: ./assets/Links/compressed-img/page-1-index.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg
 -->
     <script src="./navbar-scroll.js"></script>
-</body>
+  </body>
 </html>
