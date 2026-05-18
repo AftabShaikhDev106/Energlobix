@@ -10,14 +10,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="preload" as="image" href="./assets/Links/compressed-img/invest-hero.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/Links/compressed-img/invest-hero.webp"
+    />
     <style>
-      body { visibility: hidden; opacity: 0; transition: opacity 0.3s ease; }
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
     </style>
     <script>
-      window.addEventListener('load', () => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+        document.body.style.opacity = "1";
       });
     </script>
     <style>
@@ -63,7 +71,9 @@
         </a>
 
         <div class="flex items-center gap-6 lg:gap-14">
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-black">
+          <ul
+            class="hidden lg:flex gap-14 text-[15px] items-center font-medium text-black"
+          >
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
@@ -80,9 +90,9 @@
               <a href="./invest.html" class="active-link">Invest</a>
             </li>
             <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors flex items-center"
             >
-              <a href="#section-contact">Contact</a>
+              <i class="fa-solid fa-bars text-xl"></i>
             </li>
           </ul>
 
@@ -115,9 +125,6 @@
           <li class="cursor-pointer">
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
           </li>
-          <li class="cursor-pointer">
-            <a href="#section-contact" onclick="toggleMenu()">Contact</a>
-          </li>
         </ul>
       </div>
     </header>
@@ -130,26 +137,20 @@
         class="relative z-10 w-full flex items-center justify-center px-6 py-20"
       >
         <div class="max-w-5xl w-full">
-          <h4
-            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
-          >
+          <h4 class="hero-title text-white text-center">
             EnerGlobix Development
           </h4>
-          <h4
-            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
-          >
+          <h4 class="hero-title text-white text-center">
             Investment for a brighter future
           </h4>
           <div class="flex flex-col items-center">
-            <h4
-              class="mt-8 text-lg lg:text-xl text-white font-bold text-center"
-            >
+            <h4 class="mt-8 description-link text-white font-bold text-center">
               Explore our vision
             </h4>
             <img
               src="./assets/Links/arrow.svg"
               alt="arrow"
-              class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
+              class="explore-arrow transition-all duration-500 cursor-pointer"
             />
           </div>
         </div>
@@ -165,16 +166,17 @@
 
       <div class="relative z-20 py-20 lg:py-28 px-6 md:px-12">
         <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
-          <h2
-            class="text-2xl lg:text-[30px] font-bold mb-4 text-[#B8A685] leading-tight"
-          >
+          <h2 class="common-heading font-bold mb-4 text-[--color-beige-c]">
             Signature Development investment
           </h2>
-          <p
-            class="text-white leading-tight text-lg lg:text-[26px] max-w-full lg:max-w-[60%] mx-auto"
-          >
-            We focus on opportunities where quality, location, and concept come
-            together naturally, not where they need to be forced.
+          <p class="common-description text-white max-w-full mx-auto">
+            We focus on opportunities where quality,<br
+              class="hide-on-mobile"
+            />
+            location, and concept come together naturally, not<br
+              class="hide-on-mobile"
+            />
+            where they need to be forced.
           </p>
         </div>
 
@@ -182,44 +184,34 @@
           class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 mb-20"
         >
           <div
-            class="card-bg w-full p-8 lg:p-10 rounded flex flex-col items-center gap-4 text-center"
+            class="card-bg w-full p-8 lg:p-10 rounded flex flex-col items-center gap-3 text-center"
           >
-            <h1
-              class="text-2xl lg:text-[30px] font-bold text-black leading-tight"
-            >
-              Your Investment
-            </h1>
-            <h4 class="text-black leading-tight text-lg lg:text-[22px] mx-auto">
+            <h1 class="common-heading font-bold text-black">Your Investment</h1>
+            <h4 class="common-description text-black mx-auto">
               As an investor, you participate in the full development cycle,
               from concept to completion, with a clear objective:
             </h4>
-            <h4
-              class="text-black leading-tight text-lg lg:text-[22px] mx-auto font-bold"
-            >
+            <h4 class="common-description text-black mx-auto font-bold">
               To realise capital growth through well-positioned, high-quality
               developments.
             </h4>
           </div>
 
           <div
-            class="card-bg w-full p-8 lg:p-10 rounded flex flex-col items-center gap-4 text-center"
+            class="card-bg w-full p-8 lg:p-10 rounded flex flex-col items-center gap-3 text-center"
           >
-            <h1
-              class="text-2xl lg:text-[30px] font-bold text-black leading-tight"
-            >
-              Our Approach
-            </h1>
-            <h4 class="text-black leading-tight text-lg lg:text-[22px] mx-auto">
+            <h1 class="common-heading font-bold text-black">Our Approach</h1>
+            <h4 class="common-description text-black mx-auto">
               This approach is suited for investors seeking:
             </h4>
-            <ul class="flex flex-col gap-4 lg:gap-6 items-center">
-              <li class="text-black font-semibold text-base lg:text-2xl">
+            <ul class="flex flex-col gap-3 items-center">
+              <li class="text-black font-semibold common-description">
                 1. Defined investment timelines
               </li>
-              <li class="text-black font-semibold text-base lg:text-2xl">
+              <li class="text-black font-semibold common-description">
                 2. Capital growth through development
               </li>
-              <li class="text-black font-semibold text-base lg:text-2xl">
+              <li class="text-black font-semibold common-description">
                 3. Exposure to high-demand real estate segments
               </li>
             </ul>
@@ -227,53 +219,45 @@
         </div>
 
         <div
-          class="w-full mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 border border-[#B8A685] mb-20 lg:mb-[100px]"
+          class="w-[92%] md:w-[94%] lg:w-full mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 border border-[--color-beige-c] mb-20 lg:mb-[100px]"
         >
           <div
-            class="w-full h-full flex flex-col gap-4 items-center border-b lg:border-b-0 lg:border-r border-[#B8A685] p-10 lg:p-16"
+            class="w-full h-full flex flex-col gap-3 items-center border-b lg:border-b-0 lg:border-r border-[--color-beige-c] p-10 lg:p-16"
           >
             <h1
-              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+              class="common-heading font-bold text-[--color-beige-c] text-center max-w-full"
             >
               Build & Sell Development for Capital Growth
             </h1>
-            <p
-              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               You gain access to developments structured for value creation and
               timely realisation.
             </p>
-            <p
-              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center mt-4"
-            >
+            <p class="common-description text-white mx-auto text-center">
               Each project is positioned to meet market demand and deliver
               capital growth through quality, clarity, and precise timing.
             </p>
 
             <a
               href="./how-we-do-it.html"
-              class="py-2.5 mt-8 lg:mt-7 text-lg px-12 bg-[#B8A685] text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
+              class="description-link py-2.5 mt-4 px-12 bg-[--color-beige-c] leading-none text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
             >
               See more here
             </a>
           </div>
 
           <div
-            class="w-full h-full flex flex-col gap-4 items-center p-10 lg:p-16"
+            class="w-full h-full flex flex-col gap-3 items-center p-10 lg:p-16"
           >
             <h1
-              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+              class="common-heading font-bold text-[--color-beige-c] text-center max-w-full"
             >
               Long-Term Investment Income & Asset Strength
             </h1>
-            <p
-              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               You invest in assets designed to perform beyond completion.
             </p>
-            <p
-              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center mt-4"
-            >
+            <p class="common-description text-white mx-auto text-center">
               These properties generate stable income while building long-term
               value - offering a strong and enduring foundation for your
               capital.
@@ -281,40 +265,40 @@
 
             <a
               href="./how-we-do-it.html"
-              class="py-2.5 mt-8 lg:mt-7 text-lg px-12 bg-[#B8A685] text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
+              class="description-link py-2.5 mt-4 px-12 bg-[--color-beige-c] leading-none text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
             >
               See more here
             </a>
           </div>
         </div>
 
-        <div class="max-w-4xl mx-auto text-center mb-16 px-4">
-          <h2
-            class="text-2xl lg:text-[30px] font-bold mb-6 text-[#B8A685] leading-tight"
-          >
+        <div class="w-full mx-auto text-center mb-10 px-4">
+          <h2 class="common-heading font-bold mb-3 text-[--color-beige-c]">
             Why Invest in Dubai Real Estate
           </h2>
           <p
-            class="text-white leading-tight text-lg lg:text-2xl max-w-full lg:max-w-[80%] mx-auto"
+            class="common-description text-white max-w-full lg:max-w-[80%] mx-auto"
           >
-            A Market Defined by Growth, Demand, and Global Capital Dubai has
-            established itself as one of the world’s most dynamic real estate
-            markets, attracting international investors through a combination of
-            growth, liquidity, and long-term opportunity.
+            A Market Defined by Growth, Demand, and Global Capital
+            <br class="hide-on-mobile" />
+            Dubai has established itself as one of the world’s most dynamic real
+            estate <br class="hide-on-mobile" />markets, attracting
+            international investors through a combination of growth,<br
+              class="hide-on-mobile"
+            />
+            liquidity, and long-term opportunity.
           </p>
         </div>
 
-        <div class="max-w-4xl mx-auto text-center px-4">
-          <h2
-            class="text-2xl lg:text-[30px] font-bold mb-6 text-[#B8A685] leading-tight"
-          >
+        <div class="mx-auto text-center px-4">
+          <h2 class="common-heading font-bold mb-3 text-[--color-beige-c]">
             Consistent Demand at Global Scale
           </h2>
-          <p
-            class="text-white leading-tight text-lg lg:text-2xl max-w-full lg:max-w-[80%] mx-auto"
-          >
-            Driven by population growth, international migration, and business
-            expansion, Dubai continues to see strong and sustained demand across
+          <p class="common-description text-white max-w-full mx-auto">
+            Driven by population growth, international migration, and
+            business<br class="hide-on-mobile" />
+            expansion, Dubai continues to see strong and sustained demand
+            across<br class="hide-on-mobile" />
             both residential and commercial real estate.
           </p>
         </div>
@@ -329,16 +313,17 @@
       ></div>
 
       <h1
-        class="text-2xl lg:text-[30px] relative z-20 font-bold mb-16 lg:mb-[100px] text-white text-center leading-tight w-full lg:max-w-[35%] mx-auto"
+        class="common-heading relative z-20 font-bold mb-16 lg:mb-[100px] text-white text-center w-full mx-auto"
       >
-        EnerGlobix - Part of the Dubai Leading Property Development Plan
+        EnerGlobix - Part of the Dubai <br class="hide-on-mobile" />
+        Leading Property Development Plan
       </h1>
 
       <div
-        class="w-full lg:max-w-5xl relative z-20 lg:absolute lg:bottom-0 lg:translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-28"
+        class="w-[92%] md:w-[94%] lg:w-full mx-auto lg:max-w-5xl relative z-20 lg:absolute lg:bottom-0 lg:translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-28"
       >
         <div
-          class="w-full aspect-square rounded-full border-2 border-[#B8A685] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
+          class="w-full aspect-square rounded-full border-2 border-[--color-beige-c] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
         >
           <div
             class="hidden lg:flex flex-col absolute top-0 -translate-y-[140%] items-center"
@@ -350,13 +335,13 @@
             <div class="h-24 rounded-full w-[2px] bg-white"></div>
           </div>
 
-          <h1 class="text-white text-center text-xl lg:text-2xl">
+          <h1 class="common-description text-white text-center">
             Total transactions recorded 215,000+ deals in 2025.
           </h1>
         </div>
 
         <div
-          class="w-full aspect-square rounded-full border-2 border-[#B8A685] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
+          class="w-full aspect-square rounded-full border-2 border-[--color-beige-c] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
         >
           <div
             class="hidden lg:flex flex-col absolute top-0 -translate-y-[140%] items-center"
@@ -368,13 +353,13 @@
             <div class="h-24 rounded-full w-[2px] bg-white"></div>
           </div>
 
-          <h1 class="text-white text-center text-xl lg:text-2xl">
-            Sustained capital growth across high-demand districts.
+          <h1 class="common-description text-white text-center">
+            Total sales value in property sales AED 682–686 billion in 2025.
           </h1>
         </div>
 
         <div
-          class="w-full aspect-square rounded-full border-2 border-[#B8A685] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
+          class="w-full aspect-square rounded-full border-2 border-[--color-beige-c] flex items-center justify-center p-8 lg:p-6 relative bg-black/40 backdrop-blur-sm"
         >
           <div
             class="hidden lg:flex flex-col absolute top-0 -translate-y-[140%] items-center"
@@ -386,8 +371,9 @@
             <div class="h-24 rounded-full w-[2px] bg-white"></div>
           </div>
 
-          <h1 class="text-white text-center text-xl lg:text-2xl">
-            A global destination for institutional & private capital.
+          <h1 class="common-description text-white text-center">
+            Total real estate sector transactions incl. leases AED 917 billion
+            in 2025
           </h1>
         </div>
       </div>
@@ -398,7 +384,7 @@
       class="w-full min-h-screen bg-black py-20 lg:py-28 pt-[100px] lg:pt-[250px] px-6"
     >
       <h1
-        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[#B8A685] text-center leading-tight"
+        class="common-heading font-bold mb-10 lg:mb-14 text-[--color-beige-c] text-center"
       >
         Contact us
       </h1>
@@ -407,24 +393,23 @@
         class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
       >
         <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-6 lg:gap-2">
+        <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+            <h2 class="text-white text-[30px] font-medium mb-1">
               Office Location
             </h2>
-            <p class="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+            <p class="text-[--color-beige-c] description-link">
+              Office 2704,<br />
+              Jumeirah Business<br />
+              Center 2 (JBC 2),<br />
+              JLT, Dubai, UAE
+            </p>
           </div>
           <div>
-            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
-              Address
-            </h2>
-            <p class="text-gray-400 text-sm">Business Bay, Dubai</p>
-          </div>
-          <div>
-            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
-              Contact
-            </h2>
-            <p class="text-gray-400 text-sm">info@energlobix.com</p>
+            <h2 class="text-white text-[30px] font-medium mb-1">Contact</h2>
+            <p class="text-[--color-beige-c] description-link">
+              info@energlobix.com
+            </p>
           </div>
         </div>
 
@@ -434,39 +419,39 @@
             <input
               type="text"
               placeholder="Name*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
             <input
               type="text"
               placeholder="Phone*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <input
               type="email"
               placeholder="Email*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
             <input
               type="text"
               placeholder="Company*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
           </div>
           <input
             type="text"
             placeholder="Subject*"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
           />
           <textarea
             placeholder="Message*"
             rows="4"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
           ></textarea>
           <button
             type="submit"
-            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[--color-beige-c] transition-colors"
           >
             Send Message
           </button>
@@ -478,20 +463,22 @@
           <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
         </div>
 
-        <h4 class="text-xl lg:text-[22px] text-[#B8A685]">
+        <h4 class="common-description text-[--color-beige-c]">
           Explore Our Businesses
         </h4>
 
         <div class="flex flex-col lg:flex-row items-center gap-8">
-          <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
+          <h4 class="text-xs font-bold text-[--color-beige-c]">
+            © EnerGlobix 2024
+          </h4>
           <div class="flex gap-8">
             <h4
-              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
             >
               Terms of use
             </h4>
             <h4
-              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
             >
               Privacy policy
             </h4>

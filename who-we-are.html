@@ -10,14 +10,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="preload" as="image" href="./assets/Links/compressed-img/who-we-are-hero.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/Links/compressed-img/who-we-are-hero.webp"
+    />
     <style>
-      body { visibility: hidden; opacity: 0; transition: opacity 0.3s ease; }
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
     </style>
     <script>
-      window.addEventListener('load', () => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+        document.body.style.opacity = "1";
       });
     </script>
     <style>
@@ -92,7 +100,9 @@
 
         <div class="flex items-center gap-6 lg:gap-14">
           <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-black">
+          <ul
+            class="hidden lg:flex gap-14 text-[15px] items-center font-medium text-black"
+          >
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
@@ -109,9 +119,9 @@
               <a href="./invest.html">Invest</a>
             </li>
             <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors flex items-center"
             >
-              <a href="#section-contact">Contact</a>
+              <i class="fa-solid fa-bars text-xl"></i>
             </li>
           </ul>
 
@@ -145,9 +155,6 @@
           <li class="cursor-pointer">
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
           </li>
-          <li class="cursor-pointer">
-            <a href="#section-contact" onclick="toggleMenu()">Contact</a>
-          </li>
         </ul>
       </div>
     </header>
@@ -163,26 +170,20 @@
         class="relative z-10 w-full flex items-center justify-center px-6 py-20"
       >
         <div class="max-w-5xl w-full">
-          <h4
-            class="text-white leading-[1.2] text-center text-3xl md:text-5xl lg:text-[44px]"
-          >
+          <h4 class="hero-title text-white text-center">
             EnerGlobix Development
           </h4>
-          <h4
-            class="text-white leading-[1.2] text-center text-3xl md:text-5xl lg:text-[44px]"
-          >
+          <h4 class="hero-title text-white text-center">
             Investment Development Beyond Returns
           </h4>
           <div class="flex flex-col items-center">
-            <h4
-              class="mt-8 text-lg lg:text-xl text-white font-bold text-center"
-            >
+            <h4 class="mt-8 description-link text-white font-bold text-center">
               Explore our vision
             </h4>
             <img
               src="./assets/Links/arrow.svg"
               alt="arrow"
-              class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
+              class="explore-arrow transition-all duration-500 cursor-pointer"
             />
           </div>
         </div>
@@ -195,7 +196,7 @@
     >
       <!-- Curve: Adjusted width for better fit across breakpoints -->
       <div
-        class="absolute top-0 h-full left-1/2 z-10 border border-white -translate-x-1/2 w-[500%] sm:w-[400%] md:w-[280%] lg:w-[280%] rounded-[100%] bg-[#00070A]"
+        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[500%] sm:w-[400%] md:w-[280%] lg:w-[280%] rounded-[100%] bg-[#00070A]"
       ></div>
 
       <div
@@ -203,28 +204,26 @@
         class="relative z-20 pt-16 sm:pt-20 lg:pt-28 px-6 md:px-12"
       >
         <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2
-            class="text-2xl sm:text-3xl lg:text-[30px] font-bold mb-4 text-[--color-beige-c] leading-tight"
-          >
+          <h2 class="common-heading font-bold mb-3 text-[--color-beige-c]">
             Who We Are
           </h2>
           <!-- Paragraphs: Responsive font size and line height -->
-          <p
-            class="text-white leading-relaxed lg:leading-tight text-base sm:text-lg lg:text-[26px] mb-6 max-w-full lg:max-w-[90%] mx-auto"
-          >
-            Before capital moves, before markets expand, before industries
-            scale, there is agriculture. It powers economies and supply chains,
-            every day. It is constant, essential, and globally demanded. At
-            EnerGlobix Agriculture, we operate within this foundation,
-            positioned at the intersection of global supply, infrastructure, and
-            long-term demand.
+          <p class="common-description text-white mb-3 max-w-full mx-auto">
+            EnerGlobix Development creates commercial and private real
+            <br class="hide-on-mobile" />
+            estate in Dubai and Abu Dhabi, with a clear focus on properties
+            <br class="hide-on-mobile" />
+            that combine lasting quality, strong presence, and long-term<br
+              class="hide-on-mobile"
+            />
+            investment value.
           </p>
-          <p
-            class="text-white leading-relaxed lg:leading-tight text-base sm:text-lg lg:text-[26px] mb-4 max-w-full lg:max-w-[90%] mx-auto"
-          >
-            Every project begins with a clear ambition: to create something that
-            stands apart, not only in how it looks, but in how it performs and
-            endures over time
+          <p class="common-description text-white max-w-full mx-auto">
+            Every project begins with a clear ambition: to create something
+            <br class="hide-on-mobile" />
+            that stands apart, not only in how it looks, but in how it
+            <br class="hide-on-mobile" />
+            performs and endures over time.
           </p>
         </div>
 
@@ -232,21 +231,11 @@
         <div
           class="grid grid-cols-3 md:grid-cols-5 w-full lg:w-[70%] gap-4 lg:gap-10 mt-10 mx-auto px-2 sm:px-4"
         >
-          <div
-            class="aspect-square rounded-full circle-1 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-2 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-3 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-4 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-5 shadow-lg border-2 border-white"
-          ></div>
+          <div class="aspect-square rounded-full circle-1 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-2 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-3 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-4 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-5 shadow-lg"></div>
         </div>
 
         <!-- Vision & Mission Grid: Stacks on mobile, border adjustment -->
@@ -255,22 +244,18 @@
         >
           <!-- Vision -->
           <div
-            class="w-full h-full flex flex-col gap-4 items-center border-b lg:border-b-0 lg:border-r border-[#B8A685] p-8 sm:p-10 lg:p-16"
+            class="w-full h-full flex flex-col gap-3 items-center border-b lg:border-b-0 lg:border-r border-[--color-beige-c] p-8 sm:p-10 lg:p-16"
           >
             <h1
-              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+              class="common-heading font-bold text-[--color-beige-c] text-center max-w-full lg:max-w-[80%]"
             >
               Vision
             </h1>
-            <p
-              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               We aim to create properties that people actively choose, for how
               they live, how they function, and how they endure
             </p>
-            <p
-              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               Our vision is to establish EnerGlobix Development as a trusted
               name in commercial and private real estate, recognised for
               building assets that hold their position, perform over time, and
@@ -280,27 +265,21 @@
 
           <!-- Mission -->
           <div
-            class="w-full h-full flex flex-col gap-4 items-center p-8 sm:p-10 lg:p-16"
+            class="w-full h-full flex flex-col gap-3 items-center p-8 sm:p-10 lg:p-16"
           >
             <h1
-              class="text-2xl lg:text-[30px] font-bold mb-2 text-[#B8A685] text-center leading-tight max-w-full lg:max-w-[80%]"
+              class="common-heading font-bold text-[--color-beige-c] text-center max-w-full lg:max-w-[80%]"
             >
               Mission
             </h1>
-            <p
-              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               To originate and develop real estate with clarity, discipline, and
               purpose, where every project is defined by quality from the outset
             </p>
-            <p
-              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               We focus on:
             </p>
-            <p
-              class="text-white leading-tight text-lg sm:text-xl lg:text-2xl mx-auto text-center"
-            >
+            <p class="common-description text-white mx-auto text-center">
               Developing commercial and private assets with real demand.
               Creating properties that combine usability with long-term
               investment value. Ensuring that every development is positioned to
@@ -319,30 +298,27 @@
       <!-- Floating container: Added relative width on mobile to avoid edge-to-edge -->
       <div
         id="overlap-div"
-        class="w-[90%] sm:w-[85%] lg:w-full z-30 border border-[--color-beige-c] lg:max-w-[85%] xl:max-w-[60%] bg-black p-6 sm:p-8 lg:p-10 rounded flex flex-col items-center absolute top-[100px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2"
+        class="w-[90%] sm:w-[85%] lg:w-full z-30 border border-[--color-beige-c] lg:max-w-[75%] bg-black p-6 sm:p-8 lg:p-10 rounded flex flex-col items-center absolute top-[100px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <h1
-          class="text-xl sm:text-2xl lg:text-3xl w-full lg:max-w-[65%] font-bold leading-[1.4] text-[#B8A685] text-center"
+          class="common-heading w-full font-bold text-[--color-beige-c] text-center"
         >
-          OUR STANDARD, OUR APPROACH, YOUR INVESTMENT
+          OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
+          YOUR INVESTMENT
         </h1>
         <div class="w-full lg:max-w-[70%] mt-6 lg:mt-2">
           <!-- Accordion Item 1 -->
           <div
-            class="border-[#B8A685]/30 py-4 group cursor-pointer"
+            class="border-[--color-beige-c]/30 py-4 group cursor-pointer"
             onclick="toggleAccordion(this)"
           >
-            <div
-              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
-            >
-              <span class="text-[#B8A685] transition-transform duration-300">
-                <i
-                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
-                ></i>
-              </span>
-              <h3
-                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+            <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
+              <span
+                class="text-[--color-beige-c] transition-transform duration-300"
               >
+                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
+              </span>
+              <h3 class="text-white common-description tracking-wide">
                 Quality as a Non-Negotiable Standard
               </h3>
             </div>
@@ -350,7 +326,7 @@
               class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
             >
               <p
-                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+                class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
               >
                 We maintain the highest standards of construction and design,
                 ensuring that every project reflects our commitment to
@@ -361,20 +337,16 @@
 
           <!-- Accordion Item 2 -->
           <div
-            class="border-t border-[#B8A685]/30 py-4 group cursor-pointer"
+            class="border-t border-[--color-beige-c]/30 py-4 group cursor-pointer"
             onclick="toggleAccordion(this)"
           >
-            <div
-              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
-            >
-              <span class="text-[#B8A685] transition-transform duration-300">
-                <i
-                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
-                ></i>
-              </span>
-              <h3
-                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+            <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
+              <span
+                class="text-[--color-beige-c] transition-transform duration-300"
               >
+                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
+              </span>
+              <h3 class="text-white common-description tracking-wide">
                 Capital Deployed Where Demand Is Real
               </h3>
             </div>
@@ -382,7 +354,7 @@
               class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
             >
               <p
-                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+                class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
               >
                 Strategic investment in high-growth areas where market demand is
                 proven and sustainable for long-term returns.
@@ -392,20 +364,16 @@
 
           <!-- Accordion Item 3 -->
           <div
-            class="border-t border-[#B8A685]/30 py-4 group cursor-pointer"
+            class="border-t border-[--color-beige-c]/30 py-4 group cursor-pointer"
             onclick="toggleAccordion(this)"
           >
-            <div
-              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
-            >
-              <span class="text-[#B8A685] transition-transform duration-300">
-                <i
-                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
-                ></i>
-              </span>
-              <h3
-                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+            <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
+              <span
+                class="text-[--color-beige-c] transition-transform duration-300"
               >
+                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
+              </span>
+              <h3 class="text-white common-description tracking-wide">
                 Assets Built for Enduring Value
               </h3>
             </div>
@@ -413,7 +381,7 @@
               class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
             >
               <p
-                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+                class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
               >
                 Our properties are designed to appreciate over time, combining
                 aesthetic appeal with functional longevity.
@@ -423,20 +391,16 @@
 
           <!-- Accordion Item 4 -->
           <div
-            class="border-t border-[#B8A685]/30 py-4 group cursor-pointer"
+            class="border-t border-[--color-beige-c]/30 py-4 group cursor-pointer"
             onclick="toggleAccordion(this)"
           >
-            <div
-              class="flex items-center gap-4 sm:gap-6 lg:gap-20 pl-4 sm:pl-6 lg:pl-6"
-            >
-              <span class="text-[#B8A685] transition-transform duration-300">
-                <i
-                  class="fa-solid fa-chevron-right text-base sm:text-xl lg:text-2xl"
-                ></i>
-              </span>
-              <h3
-                class="text-white text-base sm:text-lg lg:text-2xl tracking-wide"
+            <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
+              <span
+                class="text-[--color-beige-c] transition-transform duration-300"
               >
+                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
+              </span>
+              <h3 class="text-white common-description tracking-wide">
                 A Disciplined Approach to Investment
               </h3>
             </div>
@@ -444,7 +408,7 @@
               class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
             >
               <p
-                class="text-gray-400 mt-4 ml-8 sm:ml-10 lg:ml-14 text-sm sm:text-base lg:text-lg leading-relaxed"
+                class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
               >
                 Rigorous analysis and conservative financial modeling guide
                 every decision we make in the development process.
@@ -457,7 +421,7 @@
       <!-- Contact us Title: Improved spacing for mobile -->
       <h1
         id="section-contact"
-        class="scroll-mt-[100px] lg:scroll-mt-[140px] text-2xl sm:text-3xl lg:text-[32px] font-bold mb-8 sm:mb-10 lg:mb-14 text-[#B8A685] text-center leading-tight"
+        class="scroll-mt-[100px] lg:scroll-mt-[140px] common-heading font-bold mb-8 sm:mb-10 lg:mb-14 text-[--color-beige-c] text-center"
       >
         Contact us
       </h1>
@@ -466,30 +430,23 @@
         class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 lg:gap-0 px-6 sm:px-12 lg:px-6"
       >
         <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-6 lg:gap-2 text-center md:text-left">
+        <div class="flex flex-col gap-3">
           <div>
-            <h2
-              class="text-white text-lg lg:text-[21px] font-medium mb-1 sm:mb-2"
-            >
+            <h2 class="text-white text-[30px] font-medium mb-1">
               Office Location
             </h2>
-            <p class="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+            <p class="text-[--color-beige-c] description-link">
+              Office 2704,<br />
+              Jumeirah Business<br />
+              Center 2 (JBC 2),<br />
+              JLT, Dubai, UAE
+            </p>
           </div>
           <div>
-            <h2
-              class="text-white text-lg lg:text-[21px] font-medium mb-1 sm:mb-2"
-            >
-              Address
-            </h2>
-            <p class="text-gray-400 text-sm">Business Bay, Dubai</p>
-          </div>
-          <div>
-            <h2
-              class="text-white text-lg lg:text-[21px] font-medium mb-1 sm:mb-2"
-            >
-              Contact
-            </h2>
-            <p class="text-gray-400 text-sm">info@energlobix.com</p>
+            <h2 class="text-white text-[30px] font-medium mb-1">Contact</h2>
+            <p class="text-[--color-beige-c] description-link">
+              info@energlobix.com
+            </p>
           </div>
         </div>
 
@@ -499,39 +456,39 @@
             <input
               type="text"
               placeholder="Name*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
             <input
               type="text"
               placeholder="Phone*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <input
               type="email"
               placeholder="Email*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
             <input
               type="text"
               placeholder="Company*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
           </div>
           <input
             type="text"
             placeholder="Subject*"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
           />
           <textarea
             placeholder="Message*"
             rows="4"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
           ></textarea>
           <button
             type="submit"
-            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-full sm:w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-full sm:w-fit mt-4 uppercase tracking-widest hover:bg-[--color-beige-c] transition-colors"
           >
             Send Message
           </button>
@@ -546,22 +503,22 @@
           <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
         </div>
 
-        <h4
-          class="text-lg sm:text-xl lg:text-[22px] text-[#B8A685] text-center"
-        >
+        <h4 class="common-description text-[--color-beige-c] text-center">
           Explore Our Businesses
         </h4>
 
         <div class="flex flex-col lg:flex-row items-center gap-8">
-          <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
+          <h4 class="text-xs font-bold text-[--color-beige-c]">
+            © EnerGlobix 2024
+          </h4>
           <div class="flex gap-8">
             <h4
-              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
             >
               Terms of use
             </h4>
             <h4
-              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
             >
               Privacy policy
             </h4>
