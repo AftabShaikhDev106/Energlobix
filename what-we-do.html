@@ -121,7 +121,8 @@
         </a>
 
         <div class="flex items-center gap-6 lg:gap-14">
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+          <!-- Desktop Menu -->
+          <ul class="hidden lg:flex gap-10 text-[18px] items-center font-medium text-white">
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
@@ -130,12 +131,23 @@
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
-              <a href="./what-we-do.html">What We Do</a>
+              <a href="./what-we-do.html" class="active-link">What We Do</a>
             </li>
             <li
               class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
             >
               <a href="./how-we-do-it.html">How We Do it</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="./invest.html">Invest</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors flex items-center"
+              onclick="toggleMenu()"
+            >
+              <i class="fa-solid fa-bars text-xl"></i>
             </li>
           </ul>
 
@@ -146,10 +158,10 @@
         </div>
       </nav>
 
-      <!-- Mobile Menu Overlay -->
+      <!-- Full-Screen Menu Overlay (shared between mobile and desktop) -->
       <div
         id="mobile-menu"
-        class="fixed inset-0 bg-[--color-new-black] z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
+        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu"
       >
         <i
           class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
@@ -158,12 +170,16 @@
         <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
         <ul class="flex flex-col items-center gap-8">
           <li class="cursor-pointer">
+            <a href="./index.html" onclick="toggleMenu()">Home</a>
+          </li>
+          <li class="cursor-pointer">
             <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
           </li>
           <li class="cursor-pointer">
-            <a href="./how-we-do-it.html" onclick="toggleMenu()"
-              >How We Do it</a
-            >
+            <a href="./what-we-do.html" onclick="toggleMenu()">What We Do</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="./how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
           </li>
           <li class="cursor-pointer">
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
@@ -239,16 +255,14 @@
           </p>
 
           <div class="mt-6 flex flex-col items-center justify-center">
-            <a
-              href="./who-we-are.html"
-              class="description-link text-[--color-new-black] font-bold"
-              >Learn More</a
-            >
-            <img
-              src="./assets/Links/arrow-black.svg"
-              alt="arrow"
-              class="explore-arrow transition-all duration-500 cursor-pointer"
-            />
+            <a href="./who-we-are.html" class="flex flex-col items-center justify-center w-fit">
+              <span class="description-link text-[--color-new-black] font-bold">Learn More</span>
+              <img
+                src="./assets/Links/arrow-black.svg"
+                alt="arrow"
+                class="explore-arrow cursor-pointer"
+              />
+            </a>
           </div>
         </div>
 
@@ -354,15 +368,16 @@
             </p>
             <div>
               <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
+                href="./how-we-do-it.html"
+                class="flex flex-col items-start w-fit"
               >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
+                <span class="description-link text-[--color-agri-a] font-bold block">Read more</span>
+                <img
+                  src="./assets/Links/arrow-gold.svg"
+                  alt="arrow"
+                  class="explore-arrow cursor-pointer mt-2"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -400,15 +415,16 @@
             </p>
             <div>
               <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
+                href="./how-we-do-it.html"
+                class="flex flex-col items-start w-fit"
               >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
+                <span class="description-link text-[--color-agri-a] font-bold block">Read more</span>
+                <img
+                  src="./assets/Links/arrow-gold.svg"
+                  alt="arrow"
+                  class="explore-arrow cursor-pointer mt-2"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -446,15 +462,16 @@
             </p>
             <div>
               <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
+                href="./how-we-do-it.html"
+                class="flex flex-col items-start w-fit"
               >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
+                <span class="description-link text-[--color-agri-a] font-bold block">Read more</span>
+                <img
+                  src="./assets/Links/arrow-gold.svg"
+                  alt="arrow"
+                  class="explore-arrow cursor-pointer mt-2"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -492,15 +509,16 @@
             </p>
             <div>
               <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
+                href="./how-we-do-it.html"
+                class="flex flex-col items-start w-fit"
               >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
+                <span class="description-link text-[--color-agri-a] font-bold block">Read more</span>
+                <img
+                  src="./assets/Links/arrow-gold.svg"
+                  alt="arrow"
+                  class="explore-arrow cursor-pointer mt-2"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -671,9 +689,20 @@
           <img src="./assets/Links/logo.png" class="w-32 sm:w-36" />
         </div>
 
-        <h4 class="common-description text-[--color-beige-c]">
-          Explore Our Businesses
-        </h4>
+        <div class="flex flex-col items-center gap-4">
+          <h4 class="common-description text-[--color-beige-c] font-semibold text-sm uppercase tracking-wider text-center">
+            Explore Our Businesses
+          </h4>
+          <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 mt-1">
+            <a href="./index.html" class="text-white hover:text-[--color-beige-c] transition-colors text-sm font-medium border-b border-transparent hover:border-[--color-beige-c] pb-1 uppercase tracking-wider">
+              Real Estate & Development
+            </a>
+            <span class="hidden sm:inline text-[--color-beige-c] opacity-50">|</span>
+            <a href="./what-we-do.html" class="text-white hover:text-[--color-beige-c] transition-colors text-sm font-medium border-b border-transparent hover:border-[--color-beige-c] pb-1 uppercase tracking-wider">
+              Agriculture & Commodities
+            </a>
+          </div>
+        </div>
 
         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           <h4 class="text-xs md:text-sm font-bold text-[--color-beige-c]">

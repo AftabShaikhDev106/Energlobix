@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileIcon.classList.remove("text-white");
         mobileIcon.classList.add("text-black");
       }
+      if (desktopMenu && desktopMenu.classList.contains("text-white")) {
+        desktopMenu.classList.remove("text-white");
+        desktopMenu.classList.add("text-black", "scrolled-text-black");
+      }
     } else {
       if (header) {
         header.classList.remove("bg-white", "shadow-md");
@@ -32,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mobileIcon) {
         mobileIcon.classList.remove("text-black");
         mobileIcon.classList.add("text-white");
+      }
+      if (desktopMenu && desktopMenu.classList.contains("scrolled-text-black")) {
+        desktopMenu.classList.remove("text-black", "scrolled-text-black");
+        desktopMenu.classList.add("text-white");
       }
     }
   });
