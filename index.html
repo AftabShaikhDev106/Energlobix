@@ -1,710 +1,769 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EnerGlobix Development | Quality Defines What We Build</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EnerGlobix :: Home</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/Links/compressed-img/page-1-index.webp"
-    />
-    <style>
-      body {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-    </style>
-    <script>
-      window.addEventListener("load", () => {
-        document.body.style.visibility = "visible";
-        document.body.style.opacity = "1";
-      });
-    </script>
-    <style>
-      .hero-bg {
-        background-image: url("./assets/Links/compressed-img/page-1-index.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
 
-      .circle-img {
-        background-image: url("./assets/Links/compressed-img/circle-img-1.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .split-right-img {
-        background-image: url("./assets/Links/compressed-img/split-right-1.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .split-left-img {
-        background-image: url("./assets/Links/compressed-img/split-right-1.webp");
-        background-size: 200%;
-        background-position: left 48%;
-        background-repeat: no-repeat;
-      }
-
-      /* Mobile menu transition */
-      #mobile-menu {
-        transition: transform 0.3s ease-in-out;
-      }
-      #mobile-menu.hidden-menu {
-        transform: translateX(100%);
-      }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/local.css" />
   </head>
-  <body class="bg-white text-gray-900 overflow-x-hidden">
-    <!-- Navbar -->
 
-    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
-      <nav
-        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
-      >
-        <a href="./index.html">
-          <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
-        </a>
-
-        <div class="flex items-center gap-6 lg:gap-14">
-          <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-10 text-[18px] font-medium text-black">
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./who-we-are.html">Who We Are</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./how-we-do-it.html">How We Do it</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./invest.html">Invest</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors flex items-center"
-              onclick="toggleMenu()"
-            >
-              <i class="fa-solid fa-bars text-xl"></i>
-            </li>
-          </ul>
-
-          <i
-            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
-            onclick="toggleMenu()"
-          ></i>
+  <body>
+    <!-- Loader -->
+    <div id="loader" style="height: 100vh;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
         </div>
-      </nav>
-
-      <!-- Full-Screen Menu Overlay (shared between mobile and desktop) -->
-      <div
-        id="mobile-menu"
-        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu"
-      >
-        <i
-          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
-          onclick="toggleMenu()"
-        ></i>
-        <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
-        <ul class="flex flex-col items-center gap-8">
-          <li class="cursor-pointer">
-            <a href="./index.html" onclick="toggleMenu()">Home</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./invest.html" onclick="toggleMenu()">Invest</a>
-          </li>
-        </ul>
       </div>
-    </header>
+    </div>
 
-    <section
-      class="min-h-screen lg:h-[105vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/100"
-      ></div>
-      <div
-        class="relative z-10 w-full flex items-center justify-center px-6 py-20"
-      >
-        <div class="max-w-5xl w-full">
-          <h4 class="hero-title text-white text-center">
-            Quality defines what we build
-          </h4>
-          <h4 class="hero-title text-white text-center">
-            Value defines why we build
-          </h4>
-          <div class="flex flex-col items-center">
-            <h4 class="mt-8 description-link text-white font-bold text-center">
-              Explore our vision
-            </h4>
-            <a href="#second-section" class="block">
-              <img
-                src="./assets/Links/arrow.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </a>
+    <div id="main-content" style="display: none;">
+      <div class="navbar-container">
+        <div class="energlobix__navbar">
+          <a href="index.html">
+            <img src="assets/Links/logo.png" alt="" class="logo" />
+          </a>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+          </button>
+
+          <div class="navlinks">
+            <ul>
+              <a href="whoweare.html"><li>Who We Are</li></a>
+              <a href="whatwedo.html"><li>What We Do</li></a>
+              <a href="howwedoit.html"><li>How We Do it</li></a>
+              <a href="insights.html"><li>Insights</li></a>
+              <a href="contact.html"><li>Contact</li></a>
+            </ul>
+          </div>
+
+          <div class="navlinks-mobile">
+            <ul>
+              <li>
+                <div
+                  onclick="toggleSubmenu('who-we-are-m-links')"
+                  class="link-header text-white"
+                >
+                  Who We Are
+                  <img src="assets/images/chevron-right.svg" alt="right" />
+                </div>
+                <ul id="who-we-are-m-links">
+                  <a href="whoweare.html"><li>Welcome</li></a>
+                  <a href="whoweare.html#Purpose-and-Values"
+                    ><li>Purpose and Values</li></a
+                  >
+                  <a href="whoweare.html#Vision-and-Mission"
+                    ><li>Vision and Mission</li></a
+                  >
+                  <a href="whoweare.html#story"><li>EnerGlobix Story</li></a>
+                  <a href="whoweare.html#Key-achievements"
+                    ><li>Key achievements</li></a
+                  >
+                  <a href="whoweare.html#Commitment-to-excellence"
+                    ><li>Commitment to excellence</li></a
+                  >
+                </ul>
+              </li>
+              <li>
+                <div
+                  onclick="toggleSubmenu('what-we-do-m-links')"
+                  class="link-header text-white active"
+                >
+                  What We Do
+                  <img src="assets/images/chevron-right.svg" alt="right" />
+                </div>
+                <ul id="what-we-do-m-links">
+                  <a href="whatwedo.html"><li>Our Commodities</li></a>
+                  <a href="whatwedo.html#TC1-Aviation-Fuel"
+                    ><li>TC1 Aviation Fuel</li></a
+                  >
+                  <a href="whatwedo.html#Diesel"><li>Diesel</li></a>
+                  <a href="whatwedo.html#Petrol"><li>Petrol</li></a>
+                  <a href="whatwedo.html#Crude"><li>Crude</li></a>
+                  <a href="whatwedo.html#Coal"><li>Coal</li></a>
+                  <a href="whatwedo.html#Fertilizer"><li>Fertilizer</li></a>
+                </ul>
+              </li>
+
+              <li>
+                <div
+                  onclick="toggleSubmenu('how-we-do-it-m-links')"
+                  class="link-header text-white"
+                >
+                  How We Do it
+                  <img src="assets/images/chevron-right.svg" alt="right" />
+                </div>
+                <ul id="how-we-do-it-m-links">
+                  <a href="howwedoit.html"><li>Our Commitment</li></a>
+                  <a href="howwedoit.html#Supply"><li>Supply</li></a>
+                  <a href="howwedoit.html#Supply-solutions"
+                    ><li>Supply solutions</li></a
+                  >
+                  <a href="howwedoit.html#Distribution"
+                    ><li>Distribution</li></a
+                  >
+                  <a href="howwedoit.html#Distribution-solutions"
+                    ><li>Distribution solutions</li></a
+                  >
+                  <a href="howwedoit.html#Investment"><li>Investment</li></a>
+                  <a href="howwedoit.html#Investment-solutions"
+                    ><li>Investment solutions</li></a
+                  >
+                </ul>
+              </li>
+
+              <li>
+                <div
+                  onclick="toggleSubmenu('insights-m-links')"
+                  class="link-header text-white"
+                >
+                  Insights
+                  <img src="assets/images/chevron-right.svg" alt="right" />
+                </div>
+                <ul id="insights-m-links">
+                  <a href="insights.html"><li>Our Culture</li></a>
+                  <a href="insights.html#Employees"><li>Employees</li></a>
+                  <a href="insights.html#Achievements"><li>Achievements</li></a>
+                  <a href="insights.html#Careers"><li>Careers</li></a>
+                </ul>
+              </li>
+
+              <li class="link-header">
+                <a class="text-white" href="contact.html"
+                  >Contact
+                  <img src="assets/images/chevron-right.svg" alt="right"
+                /></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
 
-    <section
-      id="second-section"
-      class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
-    >
-      <div
-        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-[#f8f7f2] rounded-[100%] circle-img"
-      ></div>
+      <div class="hero-slider-section">
+        <div
+          class="slide active"
+          style="
+            background-image: url('assets/Links/compressed-img/page-1-index.webp');
+          "
+        >
+          <div class="hero-mid-section">
+            <img
+              class="single-logo-transparent"
+              src="assets/images/single-logo-transparent.png"
+              alt=""
+            />
+            <div class="hero-mid-section-content">
+              <div class="hero-title">
+                Quality defines what we build
+              </div>
+              <div class="hero-title">Value defines why we build</div>
+            </div>
+          </div>
 
-      <div
-        id="section-approach-inner"
-        class="relative z-20 py-16 lg:py-28 pb-28 lg:pb-36 px-6 md:px-12"
-      >
-        <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
-          <h2 class="common-heading font-bold mb-3 text-black">
+          <div class="hero-lower-section">
+            <div class="">
+              <a class="explore-link" href="#about-us">
+                <div class="explore-text">Explore our vision</div>
+                <img src="assets/Links/arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="about-section" style="background-position: top;">
+        <div
+          class="curve-overlay position-absolute top-0 start-50 translate-middle-x bg-black z-1 index-bg"
+        ></div>
+
+        <div id="about-us" class="oval-container">
+          <div class="energlobix__title text-center text-black font-bold">
             Welcome to EnerGlobix Development
-          </h2>
-          <p class="common-description text-black max-w-full mx-auto">
+          </div>
+
+          <div
+            class="container energlobix__text mt-3 text-center text-[--black-color]"
+          >
             EnerGlobix Development creates commercial and private
+
             <br class="hide-on-mobile" />
             real estate in Dubai and UAE with a clear focus on
+
             <br class="hide-on-mobile" />
-            properties that combine lasting quality, strong presence,<br
-              class="hide-on-mobile"
-            />
+            properties that combine lasting quality, strong presence,
+            <br class="hide-on-mobile" />
             and long-term investment value.
-          </p>
-          <div class="mt-6 flex flex-col items-center justify-center">
-            <a href="./who-we-are.html" class="flex flex-col items-center justify-center w-fit">
-              <span class="description-link text-black font-bold">Learn More</span>
-              <img
-                src="./assets/Links/arrow-black.svg"
-                alt="arrow"
-                class="explore-arrow cursor-pointer"
-              />
-            </a>
+          </div>
+
+          <div class="mt-3">
+            <a class="energlobix__links text-black" href="whoweare.html"
+              >Learn More</a
+            >
+          </div>
+
+          <a href="whoweare.html"
+            ><img class="mt-1" src="assets/Links/arrow-black.svg" alt=""
+          /></a>
+
+          <div class="h-fit">
+            <div class="row about-us">
+              <div
+                id="Purpose-and-Values"
+                class="col-lg-6 col-md-6 col-sm-12 mt-3"
+              >
+                <div class="about-us-card">
+                  <div class="card-image-container text-center">
+                    <img
+                      class="card-image-2"
+                      src="assets/Links/compressed-img/north-43-2.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-content-2">
+                    <div class="divider-logo-container">
+                      <img
+                        class="divider-logo"
+                        src="assets/Links/logo-mini.png"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="energlobix__card-title text-black mt-3 font-bold"
+                    >
+                      Private Residential
+                    </div>
+                    <div
+                      class="energlobix__card-text text-[--black-color] mt-3"
+                    >
+                      We create residential properties that go beyond standard
+                      living.
+                    </div>
+                    <div class="mt-3">
+                      <a
+                        class="energlobix__links text-gold"
+                        href="whatwedo.html#TC1-Aviation-Fuel"
+                        >Read More</a
+                      >
+                    </div>
+                    <img
+                      src="assets/Links/arrow-gold.svg"
+                      class="read-more-arrow2 mt-1"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="Vision-and-Mission"
+                class="col-lg-6 col-md-6 col-sm-12 mt-3"
+              >
+                <div class="about-us-card">
+                  <div class="card-image-container text-center">
+                    <img
+                      class="card-image-2"
+                      src="assets/Links/compressed-img/exceptional1.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-content-2">
+                    <div class="divider-logo-container">
+                      <img
+                        class="divider-logo"
+                        src="assets/Links/logo-mini.png"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="energlobix__card-title text-black mt-3 font-bold"
+                    >
+                      Commercial Residential
+                    </div>
+                    <div
+                      class="energlobix__card-text text-[--black-color] mt-3"
+                    >
+                      We develop commercial properties creates real business
+                      activity.
+                    </div>
+                    <div class="mt-3">
+                      <a
+                        class="energlobix__links text-gold"
+                        href="whatwedo.html#TC1-Aviation-Fuel"
+                        >Read More</a
+                      >
+                    </div>
+                    <img
+                      src="assets/Links/arrow-gold.svg"
+                      class="read-more-arrow2 mt-1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-12 col-md-8 col-sm-12">
+                <div id="approach-accordion" class="approach-accordion-card">
+                  <h1 class="energlobix__title text-center">
+                    OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
+                    YOUR INVESTMENT
+                  </h1>
+                  <div class="approach-accordion-list">
+                    <!-- Accordion Item 1 -->
+                    <div
+                      class="approach-accordion-item"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <div class="approach-accordion-header">
+                        <span class="approach-accordion-icon">
+                          <i
+                            class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                          ></i>
+                        </span>
+                        <h3 class="text-white energlobix__text tracking-wide">
+                          Quality as a Non-Negotiable Standard
+                        </h3>
+                      </div>
+                      <div class="approach-accordion-body">
+                        <p
+                          class="energlobix__card-text approach-accordion-text"
+                        >
+                          We maintain the highest standards of construction and
+                          design, ensuring that every project reflects our
+                          commitment to excellence and durability.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div
+                      class="approach-accordion-item has-border-top"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <div class="approach-accordion-header">
+                        <span class="approach-accordion-icon">
+                          <i
+                            class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                          ></i>
+                        </span>
+                        <h3 class="text-white energlobix__text tracking-wide">
+                          Capital Deployed Where Demand Is Real
+                        </h3>
+                      </div>
+                      <div class="approach-accordion-body">
+                        <p
+                          class="energlobix__card-text approach-accordion-text"
+                        >
+                          Strategic investment in high-growth areas where market
+                          demand is proven and sustainable for long-term
+                          returns.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div
+                      class="approach-accordion-item has-border-top"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <div class="approach-accordion-header">
+                        <span class="approach-accordion-icon">
+                          <i
+                            class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                          ></i>
+                        </span>
+                        <h3 class="text-white energlobix__text tracking-wide">
+                          Assets Built for Enduring Value
+                        </h3>
+                      </div>
+                      <div class="approach-accordion-body">
+                        <p
+                          class="energlobix__card-text approach-accordion-text"
+                        >
+                          Our properties are designed to appreciate over time,
+                          combining aesthetic appeal with functional longevity.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div
+                      class="approach-accordion-item has-border-top"
+                      onclick="toggleAccordion(this)"
+                    >
+                      <div class="approach-accordion-header">
+                        <span class="approach-accordion-icon">
+                          <i
+                            class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                          ></i>
+                        </span>
+                        <h3 class="text-white energlobix__text tracking-wide">
+                          A Disciplined Approach to Investment
+                        </h3>
+                      </div>
+                      <div class="approach-accordion-body">
+                        <p
+                          class="energlobix__card-text approach-accordion-text"
+                        >
+                          Rigorous analysis and conservative financial modeling
+                          guide every decision we make in the development
+                          process.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div
-          class="w-full lg:max-w-[95%] xl:max-w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14"
-        >
-          <!-- CARD 1: Private Residential -->
+      <!-- How we do it Section -->
+      <div class="black-section">
+        <div class="commodities-section">
           <div
-            class="group shadow-xl shadow-black/5 overflow-hidden flex flex-col"
+            class="energlobix__title text-center text-gold font-bold"
+            style="margin-bottom: 73px;"
           >
-            <div
-              class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
-            >
-              <img
-                src="./assets/Links/compressed-img/north-43-2.webp"
-                alt="Private Residential"
-                class="w-full h-full object-cover transition-transform duration-700 rounded"
-              />
-              <img
-                src="./assets/Links/logo-mini.png"
-                class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7"
-              />
-              <div
-                class="absolute inset-0 bg-black/10 z-20 transition-opacity"
-              ></div>
+            Energlobix Signature Development Investments
+          </div>
+
+          <div class="latest-news-section container">
+            <div class="latest-news">
+              <div class="news-title">
+                <div class="energlobix__title text-gold text-center font-bold">
+                  Build & Sell Development <br class="hide-on-mobile" />
+                  for Capital Growth
+                </div>
+              </div>
+              <div class="energlobix__text mt-3 text-center text-white">
+                You gain access to developments structured for
+                <br class="hide-on-mobile" />
+                value creation and timely realisation.
+              </div>
+
+              <div class="energlobix__text mt-3 text-center text-white">
+                Each project is positioned to meet market
+                <br class="hide-on-mobile" />demand and deliver capital growth
+                through <br class="hide-on-mobile" />
+                quality, clarity, and precise timing.
+              </div>
+
+              <a
+                href="./invest.html"
+                class="description-link mt-4 px-5 py-2 d-inline-flex align-items-center justify-content-center fw-semibold text-black border-0"
+              >
+                See more here
+              </a>
             </div>
 
-            <div
-              class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-white rounded flex-1"
-            >
-              <h3 class="card-title font-bold mb-2.5 text-black">
-                Private Residential
-              </h3>
-              <p class="card-desc text-black mb-4 lg:mb-3">
-                We create residential properties that go beyond standard living.
-              </p>
-              <div>
-                <a
-                  href="./how-we-do-it.html"
-                  class="flex flex-col items-start w-fit"
-                >
-                  <span class="description-link text-[--color-beige-c] font-bold block">Read more</span>
-                  <img
-                    src="./assets/Links/arrow-gold.svg"
-                    alt="arrow"
-                    class="explore-arrow cursor-pointer mt-2"
-                  />
-                </a>
+            <div class="vertical-divider"></div>
+
+            <div class="latest-news">
+              <div class="news-title">
+                <div class="energlobix__title text-gold text-center font-bold">
+                  Long-Term Investment Income<br class="hide-on-mobile" />
+                  & Asset Strength
+                </div>
               </div>
+              <div class="energlobix__text mt-3 text-center text-white">
+                You invest in assets designed to
+                <br class="hide-on-mobile" />
+                perform beyond completion.
+              </div>
+
+              <div class="energlobix__text mt-3 text-center text-white">
+                These properties generate stable income while
+
+                <br class="hide-on-mobile" />building long-term value - offering
+                a strong and <br class="hide-on-mobile" />
+                enduring foundation for your capital.
+              </div>
+
+              <a
+                href="./invest.html"
+                class="description-link mt-4 px-5 py-2 d-inline-flex align-items-center justify-content-center fw-semibold text-black border-0"
+              >
+                See more here
+              </a>
             </div>
           </div>
 
-          <!-- CARD 2: Commercial Residential -->
           <div
-            class="group shadow-xl shadow-black/5 overflow-hidden flex flex-col"
+            class="energlobix__title text-center text-gold font-bold"
+            style="margin-top: 73px;"
           >
-            <div
-              class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
-            >
-              <img
-                src="./assets/Links/compressed-img/exceptional1.webp"
-                alt="Commercial Residential"
-                class="w-full h-full relative object-cover transition-transform duration-700 rounded z-10"
-              />
-              <img
-                src="./assets/Links/logo-mini.png"
-                class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-              />
-              <div
-                class="absolute inset-0 bg-black/10 z-20 transition-opacity"
-              ></div>
-            </div>
+            RRS NEWs feed - real estate
+          </div>
 
-            <div
-              class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-white rounded flex-1"
-            >
-              <h3 class="card-title font-bold mb-2.5 text-black">
-                Commercial Residential
-              </h3>
-              <p class="card-desc text-black mb-4 lg:mb-3">
-                We develop commercial properties creates real business activity.
-              </p>
-              <div>
-                <a
-                  href="./how-we-do-it.html"
-                  class="flex flex-col items-start w-fit"
-                >
-                  <span class="description-link text-[--color-beige-c] font-bold block">Read more</span>
-                  <img
-                    src="./assets/Links/arrow-gold.svg"
-                    alt="arrow"
-                    class="explore-arrow cursor-pointer mt-2"
-                  />
-                </a>
-              </div>
-            </div>
+          <div
+            class="energlobix__title text-center text-gold font-bold"
+            style="margin-top: 73px;"
+          >
+            How we do it
+          </div>
+
+          <div class="energlobix__text mt-3 text-center text-white">
+            We Choose with Clarity
+          </div>
+
+          <div class="energlobix__text mt-3 text-center text-white">
+            We focus on opportunities where quality, location,
+            <br class="hide-on-mobile" />
+            and concept come together naturally, not where
+            <br class="hide-on-mobile" />
+            they need to be forced.
           </div>
         </div>
 
-        <div
-          id="approach-accordion"
-          class="w-full lg:max-w-[75%] bg-black p-6 lg:p-10 mx-auto mt-14 rounded flex flex-col items-center"
-        >
-          <h1
-            class="common-heading w-full font-bold text-[--color-beige-c] text-center"
+        <div class="row mt-5">
+          <!-- Row 1 -->
+
+          <div
+            id="Employees"
+            class="col-lg-6 col-sm-12 insights-box"
+            style="
+              background: linear-gradient(
+                  rgba(184, 166, 133, 0.85),
+                  rgba(184, 166, 133, 0.85)
+                ),
+                url('assets/Links/compressed-img/split-right-cropped.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            "
           >
-            OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
-            YOUR INVESTMENT
-          </h1>
-          <div class="w-full lg:max-w-[70%] mt-6 lg:mt-2">
-            <!-- Accordion Item 1 -->
-            <div
-              class="border-[--color-beige-c]/30 py-4 group cursor-pointer"
-              onclick="toggleAccordion(this)"
-            >
-              <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
-                <span
-                  class="text-[--color-beige-c] transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-                </span>
-                <h3 class="text-white common-description tracking-wide">
-                  Quality as a Non-Negotiable Standard
-                </h3>
-              </div>
-              <div
-                class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
-              >
-                <p
-                  class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
-                >
-                  We maintain the highest standards of construction and design,
-                  ensuring that every project reflects our commitment to
-                  excellence and durability.
-                </p>
-              </div>
+            <div class="text-center">
+              <img
+                src="assets/Links/logo-mini-white.png"
+                alt=""
+                class="default-logo-size"
+              />
             </div>
-
-            <!-- Accordion Item 2 -->
             <div
-              class="border-t border-[--color-beige-c]/30 py-4 group cursor-pointer"
-              onclick="toggleAccordion(this)"
-            >
-              <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
-                <span
-                  class="text-[--color-beige-c] transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-                </span>
-                <h3 class="text-white common-description tracking-wide">
-                  Capital Deployed Where Demand Is Real
-                </h3>
-              </div>
-              <div
-                class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
-              >
-                <p
-                  class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
-                >
-                  Strategic investment in high-growth areas where market demand
-                  is proven and sustainable for long-term returns.
-                </p>
-              </div>
-            </div>
-
-            <!-- Accordion Item 3 -->
-            <div
-              class="border-t border-[--color-beige-c]/30 py-4 group cursor-pointer"
-              onclick="toggleAccordion(this)"
-            >
-              <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
-                <span
-                  class="text-[--color-beige-c] transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-                </span>
-                <h3 class="text-white common-description tracking-wide">
-                  Assets Built for Enduring Value
-                </h3>
-              </div>
-              <div
-                class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
-              >
-                <p
-                  class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
-                >
-                  Our properties are designed to appreciate over time, combining
-                  aesthetic appeal with functional longevity.
-                </p>
-              </div>
-            </div>
-
-            <!-- Accordion Item 4 -->
-            <div
-              class="border-t border-[--color-beige-c]/30 py-4 group cursor-pointer"
-              onclick="toggleAccordion(this)"
-            >
-              <div class="flex items-center gap-6 lg:gap-20 pl-2 lg:pl-6">
-                <span
-                  class="text-[--color-beige-c] transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-                </span>
-                <h3 class="text-white common-description tracking-wide">
-                  A Disciplined Approach to Investment
-                </h3>
-              </div>
-              <div
-                class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0"
-              >
-                <p
-                  class="text-gray-400 mt-4 ml-10 lg:ml-14 card-desc leading-relaxed"
-                >
-                  Rigorous analysis and conservative financial modeling guide
-                  every decision we make in the development process.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="section-signature"
-      class="w-full min-h-screen bg-black -mt-[140px] py-20 lg:py-[140px] pt-[100px] lg:pt-[140px] flex flex-col justify-center"
-    >
-      <h1
-        class="common-heading font-bold mb-10 lg:mb-[100px] text-[--color-beige-c] text-center px-6"
-      >
-        Energlobix Signature Development Investments
-      </h1>
-
-      <div
-        class="w-[92%] md:w-[90%] lg:w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 border border-[--color-beige-c] mb-12 lg:mb-[100px]"
-      >
-        <div
-          class="w-full h-full flex flex-col gap-3 items-center border-b lg:border-b-0 lg:border-r border-[--color-beige-c] p-10 lg:p-16"
-        >
-          <h1
-            class="common-heading font-bold text-[--color-beige-c] text-center max-w-full"
-          >
-            Build & Sell Development for Capital Growth
-          </h1>
-          <p class="common-description text-white mx-auto text-center">
-            You gain access to developments structured for value creation and
-            timely realisation.
-          </p>
-          <p class="common-description text-white mx-auto text-center">
-            Each project is positioned to meet market demand and deliver capital
-            growth through quality, clarity, and precise timing.
-          </p>
-
-          <a
-            href="./invest.html"
-            class="description-link py-2.5 mt-4 px-12 bg-[--color-beige-c] leading-none text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
-          >
-            See more here
-          </a>
-        </div>
-
-        <div
-          class="w-full h-full flex flex-col gap-3 items-center p-10 lg:p-16"
-        >
-          <h1
-            class="common-heading font-bold text-[--color-beige-c] text-center max-w-full"
-          >
-            Long-Term Investment Income & Asset Strength
-          </h1>
-          <p class="common-description text-white mx-auto text-center">
-            You invest in assets designed to perform beyond completion.
-          </p>
-          <p class="common-description text-white mx-auto text-center">
-            These properties generate stable income while building long-term
-            value - offering a strong and enduring foundation for your capital.
-          </p>
-
-          <a
-            href="./invest.html"
-            class="description-link py-2.5 mt-4 px-12 bg-[--color-beige-c] leading-none text-black font-semibold flex items-center justify-center hover:bg-white transition-colors"
-          >
-            See more here
-          </a>
-        </div>
-      </div>
-
-      <h1
-        class="common-heading font-bold mb-14 text-[--color-beige-c] text-center px-6"
-      >
-        RSS News feed - real estate
-      </h1>
-
-      <div class="flex flex-col gap-3 px-6">
-        <h1 class="common-heading font-bold text-[--color-beige-c] text-center">
-          How we do it
-        </h1>
-        <h4 class="common-description text-white mx-auto text-center">
-          We Choose with Clarity
-        </h4>
-        <h4 class="common-description text-white mx-auto text-center w-full">
-          We focus on opportunities where quality, location,
-          <br class="hide-on-mobile" />
-          and concept come together naturally, not where
-          <br class="hide-on-mobile" />
-          they need to be forced.
-        </h4>
-      </div>
-    </section>
-
-    <section
-      class="w-full bg-black grid grid-cols-1 lg:grid-cols-2 items-stretch"
-    >
-      <div class="w-full split-left-img min-h-[500px] lg:min-h-0">
-        <div
-          class="flex relative flex-col items-center gap-10 py-20 px-6 h-full w-full bg-[rgba(194,177,143,0.8)]"
-        >
-          <img src="./assets/Links/logo-mini-white.png" class="w-14" />
-          <div class="flex flex-col items-center gap-3">
-            <h4
-              class="common-description text-black mx-auto font-semibold text-center w-full max-w-full"
+              class="energlobix__text text-black text-center mt-4"
+              style="font-weight: bold;"
             >
               We Build for the Long Term <br class="hide-on-mobile" />
               Our developments are designed to:
-            </h4>
-            <ul class="flex flex-col gap-3 items-start lg:items-center">
-              <li
-                class="text-black leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-black"
-                ></span>
-                Remain attractive in the market
-              </li>
-              <li
-                class="text-black leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-black"
-                ></span>
-                Support consistent demand
-              </li>
-              <li
-                class="text-black leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-black"
-                ></span>
-                Hold and strengthen their value over time
-              </li>
-            </ul>
+            </div>
+            <div class="energlobix__text text-black text-center mt-3">
+              • Remain attractive in the market
+            </div>
 
-            <div class="flex flex-col items-center mt-5">
-              <a
-                href="./how-we-do-it.html"
-                class="description-link text-black font-bold block hover:underline"
-                >See more here</a
-              >
-              <img
-                src="./assets/Links/arrow-black.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
+            <div class="energlobix__text text-black text-center mt-3">
+              • Support consistent demand
+            </div>
+
+            <div class="energlobix__text text-black text-center mt-3">
+              • Hold and strengthen their value over time
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-sm-12 insights-box d-none d-lg-block d-xl-block"
+            style="
+              background-image: url('assets/Links/compressed-img/split-right-1.webp');
+              background-size: cover;
+            "
+          ></div>
+
+          <div
+            class="col-lg-6 col-sm-12 insights-box d-block d-sm-none"
+            style="
+              background-image: url('assets/images/insights-box-bg-1.png');
+              background-size: cover;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <section
+        id="section-contact"
+        class="bg-black"
+        style="padding-top: 120px; padding-bottom: 100px; min-height: 100vh;"
+      >
+        <div class="container contact-container">
+          <!-- Heading -->
+          <h1
+            class="energlobix__title text-center text-gold"
+            style="font-weight: bold;"
+          >
+            Contact us
+          </h1>
+
+          <!-- Main Row -->
+          <div class="contact-layout">
+            <!-- LEFT -->
+            <div class="contact-info">
+              <div class="mb-5">
+                <h2 class="contact-side-title">
+                  Office Location
+                </h2>
+
+                <p class="contact-side-text">
+                  Office 2704,<br />
+                  Jumeirah Business Center 2 (JBC 2),<br />
+                  JLT, Dubai, UAE
+                </p>
+              </div>
+
+              <div>
+                <h2 class="contact-side-title">
+                  Contact
+                </h2>
+
+                <p class="contact-side-text">
+                  info@energlobix.com
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="contact-form-wrapper">
+              <div class="form-grid">
+                <input type="text" placeholder="Name*" class="custom-input" />
+
+                <input type="text" placeholder="Phone*" class="custom-input" />
+
+                <input type="email" placeholder="Email*" class="custom-input" />
+
+                <input
+                  type="text"
+                  placeholder="Company*"
+                  class="custom-input"
+                />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Subject*"
+                class="custom-input subject-input"
               />
+
+              <textarea
+                placeholder="Message*"
+                class="custom-input custom-textarea"
+              ></textarea>
+
+              <button type="submit" class="contact-btn">
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="contact-footer">
+            <img
+              src="./assets/Links/footer-img.png"
+              class="footer-logo"
+              alt=""
+            />
+
+            <h3 class="footer-subtitle">
+              Explore Our Businesses
+            </h3>
+
+            <div class="footer-links-wrapper">
+              <h4 class="footer-link-text">
+                © EnerGlobix 2024
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Terms of use
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Privacy policy
+              </h4>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-full h-64 lg:h-auto py-28 split-right-img"></div>
-    </section>
+      </section>
+    </div>
 
-    <section
-      id="section-contact"
-      class="w-full min-h-screen bg-black py-20 lg:py-28 px-6"
-    >
-      <h1
-        class="common-heading font-bold mb-10 lg:mb-14 text-[--color-beige-c] text-center"
-      >
-        Contact us
-      </h1>
+    <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
-      <div
-        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
-      >
-        <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-3">
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">
-              Office Location
-            </h2>
-            <p class="text-[--color-beige-c] description-link">
-              Office 2704,<br />
-              Jumeirah Business<br />
-              Center 2 (JBC 2),<br />
-              JLT, Dubai, UAE
-            </p>
-          </div>
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">Contact</h2>
-            <p class="text-[--color-beige-c] description-link">
-              info@energlobix.com
-            </p>
-          </div>
-        </div>
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-        <!-- Right Side: Form -->
-        <form action="#" class="flex flex-col gap-3">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="text"
-              placeholder="Name*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Phone*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="email"
-              placeholder="Email*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Company*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Subject*"
-            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          />
-          <textarea
-            placeholder="Message*"
-            rows="4"
-            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[--color-beige-c] transition-colors"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <div class="w-full flex flex-col gap-10 items-center mt-24">
-        <div class="flex flex-col gap-1">
-          <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
-        </div>
-
-
-
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <h4 class="text-xs font-bold text-[--color-beige-c]">
-            © EnerGlobix 2024
-          </h4>
-          <div class="flex gap-8">
-            <h4
-              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
-            >
-              Terms of use
-            </h4>
-            <h4
-              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
-            >
-              Privacy policy
-            </h4>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Javascript -->
+    <script src="assets/js/script.js"></script>
 
     <script>
+      // Wait until the entire page is loaded
+      window.addEventListener("load", function () {
+        // Hide the loader
+        document.getElementById("loader").style.display = "none";
+        // Show the main content
+        document.getElementById("main-content").style.display = "block";
+        // Show message in console
+        console.log("Content is loaded");
+      });
+
       // Accordion Functionality
       function toggleAccordion(item) {
-        const content = item.querySelector(".overflow-hidden");
+        const content = item.querySelector(".approach-accordion-body");
         const isOpen = item.getAttribute("data-open") === "true";
 
         // Close other items
-        document.querySelectorAll(".group.cursor-pointer").forEach((other) => {
-          if (other !== item) {
-            other.setAttribute("data-open", "false");
-            other.querySelector(".overflow-hidden").style.maxHeight = "0";
-            other.querySelector(".overflow-hidden").style.opacity = "0";
-            other.querySelector("span").style.transform = "rotate(0deg)";
-          }
-        });
+        document
+          .querySelectorAll(".approach-accordion-item")
+          .forEach((other) => {
+            if (other !== item) {
+              other.setAttribute("data-open", "false");
+              const otherBody = other.querySelector(".approach-accordion-body");
+              if (otherBody) {
+                otherBody.style.maxHeight = "0";
+                otherBody.style.opacity = "0";
+              }
+              const otherIcon = other.querySelector(".approach-accordion-icon");
+              if (otherIcon) {
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            }
+          });
 
+        const icon = item.querySelector(".approach-accordion-icon");
         if (isOpen) {
           item.setAttribute("data-open", "false");
-          content.style.maxHeight = "0";
-          content.style.opacity = "0";
-          item.querySelector("span").style.transform = "rotate(0deg)";
+          if (content) {
+            content.style.maxHeight = "0";
+            content.style.opacity = "0";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(0deg)";
+          }
         } else {
           item.setAttribute("data-open", "true");
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.style.opacity = "1";
-          item.querySelector("span").style.transform = "rotate(90deg)";
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(90deg)";
+          }
         }
       }
 
@@ -718,7 +777,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         const approachAccordion = document.getElementById("approach-accordion");
         const sectionApproachInner = document.getElementById(
-          "section-approach-inner",
+          "section-approach-inner"
         );
         const sectionSignature = document.getElementById("section-signature");
 
@@ -745,11 +804,5 @@
         }
       });
     </script>
-
-    <!-- 
-GitHub Pages Asset Path Fixes:
-Original: /assets/Links/compressed-img/page-1-index.webp -> Fixed: ./assets/Links/compressed-img/page-1-index.webp\nOriginal: assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: assets/Links/arrow-black.svg -> Fixed: ./assets/Links/arrow-black.svg\nOriginal: /assets/Links/compressed-img/north-43-2.webp -> Fixed: ./assets/Links/compressed-img/north-43-2.webp\nOriginal: assets/Links/arrow-gold.svg -> Fixed: ./assets/Links/arrow-gold.svg\nOriginal: /assets/Links/compressed-img/exceptional1.webp -> Fixed: ./assets/Links/compressed-img/exceptional1.webp
--->
-    <script src="./navbar-scroll.js"></script>
   </body>
 </html>

@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "MinionPro";
+  src: url("../assets/Document fonts/MinionPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Symbol";
+  src: url("../assets/Document fonts/Symbol.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  src: url("../assets/Document fonts/Times New Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Times New Roman Bold";
+  src: url("../assets/Document fonts/Times New Roman Bold.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Times New Roman Bold Italic";
+  src: url("../assets/Document fonts/Times New Roman Bold Italic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-beige-c: rgb(194, 177, 143);
+  --color-beige-dark: #dcc59d;
+  --color-beige-card: #dbd2c2;
+  --color-agri-a: rgb(47, 70, 30);
+  --color-agri-dark: #0e230a;
+  --color-blue: rgb(25, 45, 80);
+  --color-orange: #e38b1a;
+  --color-new-black: rgb(3, 2, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.symbol {
+  font-family: "Symbol", sans-serif;
+}
+
+.font-serif-custom {
+  font-family: "MinionPro", serif;
+}
+
+.times-new-roman {
+  font-family: "Times New Roman", serif;
+}
+
+.times-new-roman-bold {
+  font-family: "Times New Roman Bold", serif;
+}
+
+.times-new-roman-bold-italic {
+  font-family: "Times New Roman Bold Italic", serif;
+}
+
+* {
+  font-family: "Symbol", sans-serif;
+}
+
+.active-link {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+#main-header.bg-white .active-link {
+  color: var(--color-beige-c) !important;
+}
+
+/* --- TYPOGRAPHY STYLING GUIDE --- */
+
+/* Base Styles */
+.hero-title {
+  font-size: 52.74px;
+  line-height: 63.688px;
+}
+
+.common-heading {
+  font-size: 38px;
+  line-height: 46px;
+}
+
+.common-description {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.description-link {
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.explore-arrow {
+  width: 35px;
+  margin-top: 8px;
+}
+
+.card-title {
+  font-size: 34.575px;
+  line-height: 41.89px;
+}
+
+.card-desc {
+  font-size: 18.81px;
+  line-height: 22.81px;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet & Notebook Viewports */
+@media (max-width: 1024px) {
+  .common-heading {
+    font-size: calc(38px * 0.75);
+    line-height: calc(46px * 0.75);
+  }
+
+  .common-description {
+    font-size: calc(28px * 0.75);
+    line-height: calc(36px * 0.75);
+  }
+
+  .description-link {
+    font-size: calc(18px * 0.75);
+    line-height: calc(21.6px * 0.75);
+  }
+
+  .card-title {
+    font-size: calc(34.575px * 0.75);
+    line-height: calc(41.89px * 0.75);
+  }
+
+  .card-desc {
+    font-size: calc(28px * 0.75);
+    line-height: calc(36px * 0.75);
+  }
+}
+
+/* Mobile Viewports */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 41.055px;
+    line-height: 49.266px;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .card-title {
+    font-size: calc(34.575px * 0.75);
+    line-height: calc(41.89px * 0.75);
+  }
+
+  .common-heading {
+    font-size: calc(34.575px * 0.75);
+    line-height: calc(41.89px * 0.75);
+  }
+
+  .common-description {
+    font-size: calc(28px * 0.6);
+    line-height: calc(36px * 0.6);
+  }
+
+  .description-link {
+    font-size: calc(18px * 0.75);
+    line-height: calc(21.6px * 0.75);
+  }
+  .card-desc {
+    font-size: calc(28px * 0.6);
+    line-height: calc(36px * 0.6);
+  }
+}
