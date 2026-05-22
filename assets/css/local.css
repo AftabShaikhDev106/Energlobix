@@ -31,11 +31,28 @@
 }
 
 :root {
+  --color-gold-card: #dbd2c2;
   --gold-color: rgb(184, 166, 133);
   --black-color: rgb(3, 12, 21);
   --dark-blue-color: rgb(25, 45, 80);
   --dark-blue-color-2: rgb(20, 39, 62);
   --light-blue-color: rgb(113, 152, 188);
+  --dark-green-color: #0e230a;
+  --light-green-color: rgb(47, 70, 30);
+  --color-orange: #e38b1a;
+}
+
+.bg-card-gold {
+  background-color: var(--color-gold-card) !important;
+}
+
+.bg-light-green {
+  background-color: var(--light-green-color);
+  background-color: var(--light-green-color);
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green-color);
 }
 
 .bg-dark-blue {
@@ -160,8 +177,8 @@ a:active {
 
 .energlobix__links {
   font-family: "Adelle-Sans-Bold", sans-serif;
-  font-size: 18px;
-  line-height: 21.6px;
+  font-size: 18px !important;
+  line-height: 21.6px !important;
   text-decoration: none;
 }
 
@@ -205,8 +222,8 @@ a:active {
   }
 
   .energlobix__links {
-    font-size: calc(18px * 0.75);
-    line-height: calc(21.6px * 0.75);
+    font-size: calc(18px * 0.75) !important;
+    line-height: calc(21.6px * 0.75) !important;
   }
 
   .energlobix__card-title {
@@ -217,10 +234,6 @@ a:active {
   .energlobix__card-text {
     font-size: calc(28px * 0.75);
     line-height: calc(36px * 0.75);
-  }
-
-  .read-more-arrow2 {
-    margin-top: -8px !important;
   }
 }
 
@@ -263,6 +276,18 @@ a:active {
 /* 3 Text colors */
 .text-gold {
   color: var(--gold-color);
+}
+
+.text-light-green {
+  color: var(--light-green-color);
+}
+
+.text-dark-green {
+  color: var(--dark-green-color);
+}
+
+.text-orange {
+  color: var(--color-orange);
 }
 
 .text-blue {
@@ -309,7 +334,7 @@ body {
   }
 
   .curve-overlay {
-    width: 320%;
+    width: 250% !important;
   }
 }
 
@@ -581,7 +606,7 @@ body {
   }
 
   .curve-overlay {
-    width: 500%;
+    width: 400% !important;
   }
 
   .energlobix__navbar .navlinks-mobile ul li {
@@ -599,7 +624,7 @@ body {
 
 .slide {
   position: absolute;
-  padding-top: 202.937px;
+  /* padding-top: 202.937px; */
   height: 100%;
   top: 0;
   left: 0;
@@ -667,21 +692,52 @@ body {
   }
 }
 
+.hero-content-wrapper {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-map-bg {
+  background-image: url("../assets/Links/compressed-img/worldmap-empty-light.png");
+  background-size: 150%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.gold-map-bg {
+  background-image: url("../assets/Links/compressed-img/worldmap-empty-cream.png");
+  background-size: 140%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .hero-content-wrapper {
+    height: 100svh;
+  }
+}
+
 .hero-mid-section {
-  margin-top: 159.596px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
   font-family: "Adelle-Sans-Light", sans-serif;
+  width: 100%;
 }
 
 @media (max-width: 576px) {
-  .hero-mid-section {
-    margin-top: 100px;
-  }
+  /* margin-top removed to let flexbox do the centering */
 }
 
 .single-logo-transparent {
@@ -698,6 +754,7 @@ body {
   position: relative;
   z-index: 2;
   padding: 0 2rem;
+  width: 100%;
   /* Ensures the content is above the image */
 }
 
@@ -807,7 +864,7 @@ body {
 }
 
 .curve-overlay {
-  width: 200%;
+  width: 170%;
   height: 100%;
   border-radius: 100%;
   z-index: 1;
@@ -816,10 +873,19 @@ body {
 .who-we-are-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("/Energlobix/assets/images/who-we-are-about-us-bg.png");
+  background-image: url("../assets/Links/compressed-img/agriculture-img/agriculture-img7.webp");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-who-we-are {
+  background-image: url("../assets/Links/compressed-img/agriculture-img/agriculture-img6.webp");
+  background-size: cover;
+  background-position: 50% 85%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .what-we-do-about-section {
@@ -850,7 +916,7 @@ body {
 }
 
 .contact-container {
-  max-width: 1280px;
+  max-width: 1150px;
 }
 
 /* Heading */
@@ -890,16 +956,12 @@ body {
 
 /* LEFT */
 .contact-info {
-  width: 60%;
+  width: 48%;
 }
 
 /* RIGHT */
 .contact-form-wrapper {
-  width: 40%;
-}
-
-.contact-form-wrapper {
-  width: 100%;
+  width: 48%;
 }
 
 .form-grid {
@@ -1079,10 +1141,11 @@ body {
 .oval-container {
   width: 100%;
   /* height: 1871.5px; */
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 151.597px;
+  padding-top: 120.597px;
   padding-bottom: 151.597px;
   position: relative;
   z-index: 10;
@@ -1096,6 +1159,8 @@ body {
   align-items: center;
   padding-top: 183.38px;
   padding-bottom: 151.597px;
+  position: relative;
+  z-index: 10;
 }
 
 .oval-container-3 {
@@ -1108,6 +1173,44 @@ body {
   padding-bottom: 300px;
 }
 
+.circle-placeholder {
+  width: 12%;
+  max-width: 150px;
+  aspect-ratio: 1;
+  background: red;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.gold-border {
+  border: 2px solid var(--gold-color);
+}
+
+@media (max-width: 992px) {
+  .circle-placeholder {
+    width: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle-placeholder {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .circle-placeholder {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 576px) {
   .about-section {
     margin-top: -535px;
@@ -1118,8 +1221,8 @@ body {
   }
 
   .oval-container {
-    padding-top: 250px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .oval-container-2 {
@@ -1186,17 +1289,29 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 576px) {
+.video-ratio-image {
+  aspect-ratio: 16 / 9 !important;
+}
+
+@media (max-width: 1199px) {
   .card-image {
-    max-width: 97%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .card-image-2 {
-    max-width: 97%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .about-us-card {
     margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .card-content,
+  .card-content-2 {
+    width: 100%;
   }
 }
 
@@ -1236,7 +1351,7 @@ body {
   background: #f8f6f3;
   padding: 34px 30px;
   padding-top: 64px;
-  margin-top: -87px;
+  margin: -87px auto 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -1252,6 +1367,13 @@ body {
   margin-top: -280px;
   padding-top: 300px;
   background-color: #000;
+}
+
+.green-section {
+  z-index: -1;
+  margin-top: -280px;
+  padding-top: 300px;
+  background-color: var(--dark-green-color);
 }
 
 .how-we-do-it-section {
@@ -1325,7 +1447,8 @@ body {
 
 .latest-news {
   padding: 25px 0px;
-
+  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1620,21 +1743,56 @@ body {
 }
 
 .insights-box {
-  padding-top: 71px;
-  padding-bottom: 71px;
-  padding-left: 192px;
-  padding-right: 192px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  padding-left: 60px;
+  padding-right: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 543px;
+  min-height: 450px;
 }
 
 .contact-us-maps {
   width: 667.084px;
   height: 381.192px;
   margin-top: 128.735px;
+}
+
+.circle-1 {
+  background-image: url("../Links/compressed-img/who-circle-1.webp");
+  background-size: cover;
+  background-position: 75% 50%;
+  background-repeat: no-repeat;
+}
+
+.circle-2 {
+  background-image: url("../Links/compressed-img/page-1-index.webp");
+  background-size: cover;
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+}
+
+.circle-3 {
+  background-image: url("../Links/compressed-img/who-circle-3.webp");
+  background-size: cover;
+  background-position: 30% top;
+  background-repeat: no-repeat;
+}
+
+.circle-4 {
+  background-image: url("../Links/compressed-img/who-circle-4.webp");
+  background-size: cover;
+  background-position: 75% bottom;
+  background-repeat: no-repeat;
+}
+
+.circle-5 {
+  background-image: url("../Links/compressed-img/who-circle-5.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 576px) {
@@ -1687,7 +1845,6 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: none; /* Hidden by default */
   background-color: var(--gold-color);
   color: white;
   border: none;
@@ -1702,6 +1859,14 @@ body {
   cursor: pointer;
   z-index: 1000;
   font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#backToTopBtn.show-btn {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #backToTopBtn:hover {
@@ -1838,4 +2003,74 @@ body {
   .approach-accordion-text {
     margin-left: 56px;
   }
+}
+
+.map-container-align {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .map-container-align {
+    width: calc(72% + 7.5rem);
+    max-width: 1020px;
+  }
+}
+
+.vision-mission-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.vision-image-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.vision-card-image {
+  width: 92%;
+  max-width: 515px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.vision-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  margin-top: -100px;
+  padding-top: 125px;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 559.5px;
+  border-radius: 5.225px;
+}
+
+.empty-green-map-section {
+  z-index: -1;
+  margin-top: -280px;
+  padding-top: 300px;
+  background-color: var(--dark-green-color);
+  background-image: url("../assets/Links/compressed-img/worldmap-empty-light.png");
+  background-size: min(1300px, 115%);
+  background-position: center calc(50% + 140px);
+  background-repeat: no-repeat;
+  min-height: calc(100vh + 280px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-green-map-section .approach-accordion-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+  margin-top: 0;
 }

@@ -1,595 +1,593 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Who We Are | EnerGlobix Development</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EnerGlobix :: Home</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="assets/css/local.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/Links/compressed-img/who-we-are-hero.webp"
-    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/local.css" />
     <style>
-      body {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+      .description-link-custom {
+        padding: 0.625rem 3rem;
+        background-color: var(
+          --color-beige-c,
+          #dbd2c2
+        ); /* fallback to gold-card if variable is missing */
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
-    </style>
-    <script>
-      window.addEventListener("load", () => {
-        document.body.style.visibility = "visible";
-        document.body.style.opacity = "1";
-      });
-    </script>
-    <style>
-      .hero-bg {
-        background-image: url("./assets/Links/compressed-img/who-we-are-hero.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .circle-img {
-        background-image: url("./assets/Links/compressed-img/circle-img-1.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      /* Mobile menu transition */
-      #mobile-menu {
-        transition: transform 0.3s ease-in-out;
-      }
-      #mobile-menu.hidden-menu {
-        transform: translateX(100%);
-      }
-
-      .circle-1 {
-        background-image: url("./assets/Links/compressed-img/who-circle-1.webp");
-        background-size: 350%;
-        background-position: 75% 50%;
-        background-repeat: no-repeat;
-      }
-
-      .circle-2 {
-        background-image: url("./assets/Links/compressed-img/page-1-index.webp");
-        background-size: 350%;
-        background-position: 30% 50%;
-        background-repeat: no-repeat;
-      }
-
-      .circle-3 {
-        background-image: url("./assets/Links/compressed-img/who-circle-3.webp");
-        background-size: 260%;
-        background-position: 30% top;
-        background-repeat: no-repeat;
-      }
-
-      .circle-4 {
-        background-image: url("./assets/Links/compressed-img/who-circle-4.webp");
-        background-size: 350%;
-        background-position: 75% bottom;
-        background-repeat: no-repeat;
-      }
-
-      .circle-5 {
-        background-image: url("./assets/Links/compressed-img/who-circle-5.webp");
-        background-size: 200%;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      /* Overlapping accordion card style */
-      #overlap-div {
-        position: absolute;
-        top: 100px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 30;
-        background-color: #000000;
-        padding: 24px;
-        border-radius: 5.225px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-      }
-
-      @media (min-width: 576px) {
-        #overlap-div {
-          width: 85%;
-          padding: 32px;
-        }
-      }
-
-      @media (min-width: 992px) {
-        #overlap-div {
-          top: 140px;
-          width: 100%;
-          max-width: 1143px; /* Exactly matches and aligns with the combined card width */
-          padding: 40px;
-        }
+      .description-link-custom:hover {
+        background-color: #ffffff !important;
       }
     </style>
   </head>
-  <body class="bg-white text-gray-900 overflow-x-hidden">
-    <!-- Navbar -->
 
-    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
-      <nav
-        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
-      >
-        <a href="./index.html">
-          <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
-        </a>
-
-        <div class="flex items-center gap-6 lg:gap-14">
-          <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-10 text-[18px] items-center font-medium text-black">
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./who-we-are.html" class="active-link">Who We Are</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./how-we-do-it.html">How We Do it</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./invest.html">Invest</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors flex items-center"
-              onclick="toggleMenu()"
-            >
-              <i class="fa-solid fa-bars text-xl"></i>
-            </li>
-          </ul>
-
-          <!-- Mobile Toggle: Using consistent text-white for visibility on hero -->
-          <i
-            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
-            onclick="toggleMenu()"
-          ></i>
+  <body>
+    <!-- Loader -->
+    <div id="loader" style="height: 100vh;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
         </div>
-      </nav>
-
-      <!-- Full-Screen Menu Overlay (shared between mobile and desktop) -->
-      <div
-        id="mobile-menu"
-        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu"
-      >
-        <i
-          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
-          onclick="toggleMenu()"
-        ></i>
-        <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
-        <ul class="flex flex-col items-center gap-8">
-          <li class="cursor-pointer">
-            <a href="./index.html" onclick="toggleMenu()">Home</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./how-we-do-it.html" onclick="toggleMenu()">How We Do it</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./invest.html" onclick="toggleMenu()">Invest</a>
-          </li>
-        </ul>
       </div>
-    </header>
+    </div>
 
-    <!-- Hero Section: Improved mobile typography scaling -->
-    <section
-      class="min-h-screen lg:h-[105vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/100"
-      ></div>
-      <div
-        class="relative z-10 w-full flex items-center justify-center px-6 py-20"
-      >
-        <div class="max-w-5xl w-full">
-          <h4 class="hero-title text-white text-center">
-            EnerGlobix Development
-          </h4>
-          <h4 class="hero-title text-white text-center">
-            Investment Development Beyond Returns
-          </h4>
-          <div class="flex flex-col items-center">
-            <h4 class="mt-8 description-link text-white font-bold text-center">
-              Explore our vision
-            </h4>
-            <a href="#second-section" class="block">
-              <img
-                src="./assets/Links/arrow.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </a>
+    <div id="main-content" style="display: none;">
+      <div class="navbar-container">
+        <div class="energlobix__navbar">
+          <a href="index.html">
+            <img src="assets/Links/logo.png" alt="" class="logo" />
+          </a>
+          <button
+            class="nav-toggle"
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle navigation"
+          >
+            &#9776;
+          </button>
+
+          <div class="navlinks">
+            <ul>
+              <a href="who-we-are.html"><li class="active">Who We Are</li></a>
+              <a href="how-we-do-it.html"><li>How We Do it</li></a>
+              <a href="invest.html"><li>Invest</li></a>
+            </ul>
+          </div>
+
+          <div class="navlinks-mobile">
+            <ul>
+              <li>
+                <a href="who-we-are.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    Who We Are
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="how-we-do-it.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    How We Do it
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="invest.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    Invest
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Content Section: Improved background curve responsiveness -->
-    <section
-      id="second-section"
-      class="relative z-10 h-fit -mt-[80px] sm:-mt-[100px] lg:-mt-[140px] overflow-x-hidden"
-    >
-      <!-- Curve: Adjusted width for better fit across breakpoints -->
-      <div
-        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[500%] sm:w-[400%] md:w-[280%] lg:w-[280%] rounded-[100%] bg-[#00070A]"
-      ></div>
+      <div class="hero-slider-section">
+        <div
+          class="slide active"
+          style="
+            background-image: url('assets/Links/compressed-img/page-1-index.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+          "
+        >
+          <div class="hero-content-wrapper">
+            <div class="hero-mid-section">
+              <img
+                class="single-logo-transparent"
+                src="assets/images/single-logo-transparent.png"
+                alt=""
+              />
+              <div class="hero-mid-section-content">
+                <div class="hero-title">EnerGlobix Development</div>
+                <div class="hero-title">
+                  Investment Development Beyond Returns
+                </div>
+              </div>
+            </div>
 
-      <div
-        id="section-who-inner"
-        class="relative z-20 pt-16 sm:pt-20 lg:pt-28 px-6 md:px-12"
-      >
-        <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 class="common-heading font-bold mb-3 text-[--color-beige-c]">
+            <div class="hero-lower-section">
+              <div class="">
+                <a class="energlobix__links" href="#about-us">
+                  <div class="energlobix__links">Explore our vision</div>
+                  <img src="assets/Links/arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="about-section" style="background-position: top;">
+        <div
+          class="curve-overlay position-absolute top-0 start-50 translate-middle-x bg-dark-blue z-1"
+        ></div>
+
+        <div id="about-us" class="oval-container">
+          <div class="energlobix__title text-center text-gold font-bold">
             Who We Are
-          </h2>
-          <!-- Paragraphs: Responsive font size and line height -->
-          <p class="common-description text-white mb-3 max-w-full mx-auto">
+          </div>
+
+          <div class="container energlobix__text mt-3 text-center text-white">
             EnerGlobix Development creates commercial and private real
+
             <br class="hide-on-mobile" />
             estate in Dubai and Abu Dhabi, with a clear focus on properties
+
             <br class="hide-on-mobile" />
-            that combine lasting quality, strong presence, and long-term<br
-              class="hide-on-mobile"
-            />
+            that combine lasting quality, strong presence, and long-term
+
+            <br class="hide-on-mobile" />
             investment value.
-          </p>
-          <p class="common-description text-white max-w-full mx-auto">
+          </div>
+
+          <div class="container energlobix__text mt-3 text-center text-white">
             Every project begins with a clear ambition: to create something
+
             <br class="hide-on-mobile" />
             that stands apart, not only in how it looks, but in how it
+
             <br class="hide-on-mobile" />
             performs and endures over time.
-          </p>
-        </div>
+          </div>
 
-        <!-- Circles Grid: Responsive column counts and sizing -->
-        <div
-          class="grid grid-cols-3 md:grid-cols-5 w-full lg:w-[70%] gap-4 lg:gap-10 mt-10 mx-auto px-2 sm:px-4"
-        >
-          <div class="aspect-square rounded-full circle-1 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-2 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-3 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-4 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-5 shadow-lg"></div>
-        </div>
-
-        <!-- Vision & Mission Grid: Stacks on mobile, border adjustment -->
-        <div
-          class="w-full max-w-7xl mx-auto grid grid-cols-1 mt-16 sm:mt-20 lg:grid-cols-2 mb-10 sm:mb-12 lg:mb-[100px]"
-        >
-          <!-- Vision -->
-          <div
-            class="w-full h-full flex flex-col gap-3 items-center border-b lg:border-b-0 lg:border-r border-[--color-beige-c] p-8 sm:p-10 lg:p-16"
-          >
-            <h1
-              class="common-heading font-bold text-[--color-beige-c] text-center max-w-full lg:max-w-[80%]"
+          <div class="container mt-5">
+            <div
+              class="d-flex justify-content-center align-items-center flex-wrap gap-2 gap-md-3 gap-lg-4"
             >
-              Vision
-            </h1>
-            <p class="common-description text-white mx-auto text-center">
-              We aim to create properties that people actively choose, for how
-              they live, how they function, and how they endure
-            </p>
-            <p class="common-description text-white mx-auto text-center">
-              Our vision is to establish EnerGlobix Development as a trusted
-              name in commercial and private real estate, recognised for
-              building assets that hold their position, perform over time, and
-              contribute to stronger, more considered environments
-            </p>
+              <div class="circle-placeholder circle-1"></div>
+              <div class="circle-placeholder circle-2"></div>
+              <div class="circle-placeholder circle-3"></div>
+              <div class="circle-placeholder circle-4"></div>
+              <div class="circle-placeholder circle-5"></div>
+            </div>
           </div>
 
-          <!-- Mission -->
           <div
-            class="w-full h-full flex flex-col gap-3 items-center p-8 sm:p-10 lg:p-16"
+            class="latest-news-section mt-5 container no-border"
+            style="padding-bottom: 200px;"
           >
-            <h1
-              class="common-heading font-bold text-[--color-beige-c] text-center max-w-full lg:max-w-[80%]"
-            >
-              Mission
-            </h1>
-            <p class="common-description text-white mx-auto text-center">
-              To originate and develop real estate with clarity, discipline, and
-              purpose, where every project is defined by quality from the outset
-            </p>
-            <p class="common-description text-white mx-auto text-center">
-              We focus on:
-            </p>
-            <p class="common-description text-white mx-auto text-center">
-              Developing commercial and private assets with real demand.
-              Creating properties that combine usability with long-term
-              investment value. Ensuring that every development is positioned to
-              perform beyond completion.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="latest-news">
+              <div class="news-title">
+                <div class="energlobix__title text-gold text-center font-bold">
+                  Vision
+                </div>
+              </div>
+              <div class="energlobix__text mt-3 text-center text-white">
+                We aim to create properties that people
 
-    <!-- Accordion Section: Improved absolute positioning on mobile -->
-    <section
-      id="section-contact-accordion"
-      class="w-full min-h-screen bg-black relative -mt-[100px] lg:-mt-[140px] pb-20 lg:pb-28 flex flex-col justify-center"
-    >
-      <!-- Floating container: Styled via internal CSS for perfect absolute layout alignment -->
-      <div id="overlap-div" class="approach-accordion-card has-border">
-        <h1 class="common-heading">
-          OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
-          YOUR INVESTMENT
-        </h1>
-        <div class="approach-accordion-list">
-          <!-- Accordion Item 1 -->
-          <div class="approach-accordion-item" onclick="toggleAccordion(this)">
-            <div class="approach-accordion-header">
-              <span class="approach-accordion-icon">
-                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-              </span>
-              <h3 class="text-white common-description tracking-wide">
-                Quality as a Non-Negotiable Standard
-              </h3>
-            </div>
-            <div class="approach-accordion-body">
-              <p class="approach-accordion-text">
-                We maintain the highest standards of construction and design,
-                ensuring that every project reflects our commitment to
-                excellence and durability.
-              </p>
-            </div>
-          </div>
+                <br class="hide-on-mobile" />
+                actively choose, for how they live, how they
+                <br class="hide-on-mobile" />
+                function, and how they endure.
+              </div>
 
-          <!-- Accordion Item 2 -->
-          <div class="approach-accordion-item has-border-top" onclick="toggleAccordion(this)">
-            <div class="approach-accordion-header">
-              <span class="approach-accordion-icon">
-                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-              </span>
-              <h3 class="text-white common-description tracking-wide">
-                Capital Deployed Where Demand Is Real
-              </h3>
-            </div>
-            <div class="approach-accordion-body">
-              <p class="approach-accordion-text">
-                Strategic investment in high-growth areas where market demand is
-                proven and sustainable for long-term returns.
-              </p>
-            </div>
-          </div>
+              <div class="energlobix__text mt-3 text-center text-white">
+                Our vision is to establish EnerGlobix
 
-          <!-- Accordion Item 3 -->
-          <div class="approach-accordion-item has-border-top" onclick="toggleAccordion(this)">
-            <div class="approach-accordion-header">
-              <span class="approach-accordion-icon">
-                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-              </span>
-              <h3 class="text-white common-description tracking-wide">
-                Assets Built for Enduring Value
-              </h3>
-            </div>
-            <div class="approach-accordion-body">
-              <p class="approach-accordion-text">
-                Our properties are designed to appreciate over time, combining
-                aesthetic appeal with functional longevity.
-              </p>
-            </div>
-          </div>
+                <br class="hide-on-mobile" />
+                Development as a trusted name in commercial
 
-          <!-- Accordion Item 4 -->
-          <div class="approach-accordion-item has-border-top" onclick="toggleAccordion(this)">
-            <div class="approach-accordion-header">
-              <span class="approach-accordion-icon">
-                <i class="fa-solid fa-chevron-right text-xl lg:text-2xl"></i>
-              </span>
-              <h3 class="text-white common-description tracking-wide">
-                A Disciplined Approach to Investment
-              </h3>
+                <br class="hide-on-mobile" />
+                and private real estate, recognised for building
+                <br class="hide-on-mobile" />
+                assets that hold their position, perform over time,
+
+                <br class="hide-on-mobile" />
+                and contribute to stronger, more considered
+                <br class="hide-on-mobile" />
+                environments.
+              </div>
             </div>
-            <div class="approach-accordion-body">
-              <p class="approach-accordion-text">
-                Rigorous analysis and conservative financial modeling guide
-                every decision we make in the development process.
-              </p>
+
+            <div class="vertical-divider"></div>
+
+            <div class="latest-news">
+              <div class="news-title">
+                <div class="energlobix__title text-gold text-center font-bold">
+                  Mission
+                </div>
+              </div>
+              <div class="energlobix__text mt-3 text-center text-white">
+                To originate and develop real estate with clarity,
+
+                <br class="hide-on-mobile" />
+                discipline, and purpose, where every project is
+
+                <br class="hide-on-mobile" />
+                defined by quality from the outset.
+              </div>
+
+              <div class="energlobix__text mt-3 text-center text-white">
+                We focus on:
+              </div>
+
+              <div class="energlobix__text mt-3 text-center text-white">
+                Developing commercial and private assets with
+
+                <br class="hide-on-mobile" />
+                real demand. Creating properties that combine
+
+                <br class="hide-on-mobile" />
+                usability with long-term investment value.
+
+                <br class="hide-on-mobile" />
+                Ensuring that every development is positioned to
+
+                <br class="hide-on-mobile" />
+                perform beyond completion.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Contact us Title: Improved spacing for mobile -->
-      <h1
+      <section
         id="section-contact"
-        class="scroll-mt-[100px] lg:scroll-mt-[140px] common-heading font-bold mb-8 sm:mb-10 lg:mb-14 text-[--color-beige-c] text-center"
+        class="black-section"
+        style="padding-bottom: 100px;"
       >
-        Contact us
-      </h1>
+        <!-- Overlapping Accordion -->
+        <div
+          class="container approach-overlap-container"
+          style="
+            position: relative;
+            z-index: 10;
+            margin-top: -280px;
+            margin-bottom: 120px;
+          "
+        >
+          <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-8 col-sm-12">
+              <div
+                id="approach-accordion"
+                class="approach-accordion-card gold-border"
+                style="margin-top: 0;"
+              >
+                <h1 class="energlobix__title text-center">
+                  OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
+                  YOUR INVESTMENT
+                </h1>
+                <div class="approach-accordion-list">
+                  <!-- Accordion Item 1 -->
+                  <div
+                    class="approach-accordion-item"
+                    onclick="toggleAccordion(this)"
+                  >
+                    <div class="approach-accordion-header">
+                      <span class="approach-accordion-icon">
+                        <i
+                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                        ></i>
+                      </span>
+                      <h3 class="text-white energlobix__text tracking-wide">
+                        Quality as a Non-Negotiable Standard
+                      </h3>
+                    </div>
+                    <div class="approach-accordion-body">
+                      <p class="energlobix__card-text approach-accordion-text">
+                        We maintain the highest standards of construction and
+                        design, ensuring that every project reflects our
+                        commitment to excellence and durability.
+                      </p>
+                    </div>
+                  </div>
 
-      <div
-        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 lg:gap-0 px-6 sm:px-12 lg:px-6"
-      >
-        <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-3">
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">
-              Office Location
-            </h2>
-            <p class="text-[--color-beige-c] description-link">
-              Office 2704,<br />
-              Jumeirah Business<br />
-              Center 2 (JBC 2),<br />
-              JLT, Dubai, UAE
-            </p>
-          </div>
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">Contact</h2>
-            <p class="text-[--color-beige-c] description-link">
-              info@energlobix.com
-            </p>
+                  <!-- Accordion Item 2 -->
+                  <div
+                    class="approach-accordion-item has-border-top"
+                    onclick="toggleAccordion(this)"
+                  >
+                    <div class="approach-accordion-header">
+                      <span class="approach-accordion-icon">
+                        <i
+                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                        ></i>
+                      </span>
+                      <h3 class="text-white energlobix__text tracking-wide">
+                        Capital Deployed Where Demand Is Real
+                      </h3>
+                    </div>
+                    <div class="approach-accordion-body">
+                      <p class="energlobix__card-text approach-accordion-text">
+                        Strategic investment in high-growth areas where market
+                        demand is proven and sustainable for long-term returns.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 3 -->
+                  <div
+                    class="approach-accordion-item has-border-top"
+                    onclick="toggleAccordion(this)"
+                  >
+                    <div class="approach-accordion-header">
+                      <span class="approach-accordion-icon">
+                        <i
+                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                        ></i>
+                      </span>
+                      <h3 class="text-white energlobix__text tracking-wide">
+                        Assets Built for Enduring Value
+                      </h3>
+                    </div>
+                    <div class="approach-accordion-body">
+                      <p class="energlobix__card-text approach-accordion-text">
+                        Our properties are designed to appreciate over time,
+                        combining aesthetic appeal with functional longevity.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 4 -->
+                  <div
+                    class="approach-accordion-item has-border-top"
+                    onclick="toggleAccordion(this)"
+                  >
+                    <div class="approach-accordion-header">
+                      <span class="approach-accordion-icon">
+                        <i
+                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
+                        ></i>
+                      </span>
+                      <h3 class="text-white energlobix__text tracking-wide">
+                        A Disciplined Approach to Investment
+                      </h3>
+                    </div>
+                    <div class="approach-accordion-body">
+                      <p class="energlobix__card-text approach-accordion-text">
+                        Rigorous analysis and conservative financial modeling
+                        guide every decision we make in the development process.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Right Side: Form: Mobile gap refinement -->
-        <form action="#" class="flex flex-col gap-3">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="text"
-              placeholder="Name*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Phone*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="email"
-              placeholder="Email*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Company*"
-              class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Subject*"
-            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          />
-          <textarea
-            placeholder="Message*"
-            rows="4"
-            class="bg-transparent border border-[--color-beige-c] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-full sm:w-fit mt-4 uppercase tracking-widest hover:bg-[--color-beige-c] transition-colors"
+        <div class="container contact-container">
+          <!-- Heading -->
+          <h1
+            class="energlobix__title text-center text-gold"
+            style="font-weight: bold;"
           >
-            Send Message
-          </button>
-        </form>
-      </div>
+            Contact us
+          </h1>
 
-      <!-- Footer Bottom: Responsive layout stacking -->
-      <div
-        class="w-full flex flex-col gap-8 sm:gap-10 items-center mt-20 sm:mt-24 px-6"
-      >
-        <div class="flex flex-col gap-1 items-center">
-          <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
-        </div>
+          <!-- Main Row -->
+          <div class="contact-layout">
+            <!-- LEFT -->
+            <div class="contact-info">
+              <div class="mb-5">
+                <h2 class="contact-side-title">
+                  Office Location
+                </h2>
 
+                <p class="contact-side-text">
+                  Office 2704,<br />
+                  Jumeirah Business Center 2 (JBC 2),<br />
+                  JLT, Dubai, UAE
+                </p>
+              </div>
 
+              <div>
+                <h2 class="contact-side-title">
+                  Contact
+                </h2>
 
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <h4 class="text-xs font-bold text-[--color-beige-c]">
-            © EnerGlobix 2024
-          </h4>
-          <div class="flex gap-8">
-            <h4
-              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
-            >
-              Terms of use
-            </h4>
-            <h4
-              class="text-xs font-bold text-[--color-beige-c] cursor-pointer hover:underline"
-            >
-              Privacy policy
-            </h4>
+                <p class="contact-side-text">
+                  info@energlobix.com
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="contact-form-wrapper">
+              <div class="form-grid">
+                <input type="text" placeholder="Name*" class="custom-input" />
+
+                <input type="text" placeholder="Phone*" class="custom-input" />
+
+                <input type="email" placeholder="Email*" class="custom-input" />
+
+                <input
+                  type="text"
+                  placeholder="Company*"
+                  class="custom-input"
+                />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Subject*"
+                class="custom-input subject-input"
+              />
+
+              <textarea
+                placeholder="Message*"
+                class="custom-input custom-textarea"
+              ></textarea>
+
+              <button type="submit" class="contact-btn">
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="contact-footer">
+            <img
+              src="./assets/Links/footer-img.png"
+              class="footer-logo"
+              alt=""
+            />
+
+            <h3 class="footer-subtitle">
+              Explore Our Businesses
+            </h3>
+
+            <div class="footer-links-wrapper">
+              <h4 class="footer-link-text">
+                © EnerGlobix 2024
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Terms of use
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Privacy policy
+              </h4>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript -->
+    <script src="assets/js/script.js"></script>
 
     <script>
+      // Wait until the entire page is loaded
+      window.addEventListener("load", function () {
+        // Hide the loader
+        document.getElementById("loader").style.display = "none";
+        // Show the main content
+        document.getElementById("main-content").style.display = "block";
+        // Show message in console
+        console.log("Content is loaded");
+      });
+
       // Accordion Functionality
       function toggleAccordion(item) {
-        const content = item.querySelector(".overflow-hidden");
+        const content = item.querySelector(".approach-accordion-body");
         const isOpen = item.getAttribute("data-open") === "true";
 
         // Close other items
-        document.querySelectorAll(".group.cursor-pointer").forEach((other) => {
-          if (other !== item) {
-            other.setAttribute("data-open", "false");
-            other.querySelector(".overflow-hidden").style.maxHeight = "0";
-            other.querySelector(".overflow-hidden").style.opacity = "0";
-            other.querySelector("span").style.transform = "rotate(0deg)";
-          }
-        });
+        document
+          .querySelectorAll(".approach-accordion-item")
+          .forEach((other) => {
+            if (other !== item) {
+              other.setAttribute("data-open", "false");
+              const otherBody = other.querySelector(".approach-accordion-body");
+              if (otherBody) {
+                otherBody.style.maxHeight = "0";
+                otherBody.style.opacity = "0";
+              }
+              const otherIcon = other.querySelector(".approach-accordion-icon");
+              if (otherIcon) {
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            }
+          });
 
+        const icon = item.querySelector(".approach-accordion-icon");
         if (isOpen) {
           item.setAttribute("data-open", "false");
-          content.style.maxHeight = "0";
-          content.style.opacity = "0";
-          item.querySelector("span").style.transform = "rotate(0deg)";
+          if (content) {
+            content.style.maxHeight = "0";
+            content.style.opacity = "0";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(0deg)";
+          }
         } else {
           item.setAttribute("data-open", "true");
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.style.opacity = "1";
-          item.querySelector("span").style.transform = "rotate(90deg)";
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(90deg)";
+          }
         }
       }
 
       // Mobile Menu Toggle
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden-menu");
+      function toggleMobileMenu() {
+        const menu = document.querySelector(".navlinks-mobile");
+        menu.classList.toggle("active");
       }
 
+      // Dynamic padding logic for accordion div
       document.addEventListener("DOMContentLoaded", () => {
-        const overlapDiv = document.getElementById("overlap-div");
-        const sectionWhoInner = document.getElementById("section-who-inner");
-        const sectionContactAccordion = document.getElementById(
-          "section-contact-accordion",
+        const approachAccordion = document.getElementById("approach-accordion");
+        const sectionApproachInner = document.getElementById(
+          "section-approach-inner"
         );
+        const sectionSignature = document.getElementById("section-signature");
 
-        if (overlapDiv && sectionWhoInner && sectionContactAccordion) {
+        if (approachAccordion && sectionApproachInner && sectionSignature) {
           const adjustOverlapPadding = () => {
-            const overlapHeight = overlapDiv.offsetHeight;
-            const halfHeight = overlapHeight / 2;
             const isMobile = window.innerWidth < 1024;
-            const gap = isMobile ? 56 : 80; // 56px = py-14, 80px = py-20
-            const topOffset = isMobile ? 100 : 140; // match the -mt-[100px] vs -mt-[140px]
+            const gap = 112; // 28 in tailwind unit
+            const topOffset = isMobile ? 100 : 140; // matches -mt-[100px] and -mt-[140px]
 
-            sectionWhoInner.style.paddingBottom = `${halfHeight + gap}px`;
-            sectionContactAccordion.style.paddingTop = `${topOffset + halfHeight + gap}px`;
+            // We don't add halfHeight because the accordion is not absolute
+            sectionApproachInner.style.paddingBottom = `${gap}px`;
+            sectionSignature.style.paddingTop = `${topOffset + gap}px`;
           };
 
           const resizeObserver = new ResizeObserver(() => {
             adjustOverlapPadding();
           });
 
-          resizeObserver.observe(overlapDiv);
+          resizeObserver.observe(approachAccordion);
           window.addEventListener("resize", adjustOverlapPadding);
 
+          // Initial calculation
           setTimeout(adjustOverlapPadding, 100);
         }
       });
     </script>
-
-    <!-- 
-GitHub Pages Asset Path Fixes:
-Original: /assets/Links/compressed-img/who-we-are-hero.webp -> Fixed: ./assets/Links/compressed-img/who-we-are-hero.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: /assets/Links/compressed-img/who-circle-1.webp -> Fixed: ./assets/Links/compressed-img/who-circle-1.webp\nOriginal: /assets/Links/compressed-img/page-1-index.webp -> Fixed: ./assets/Links/compressed-img/page-1-index.webp\nOriginal: /assets/Links/compressed-img/who-circle-3.webp -> Fixed: ./assets/Links/compressed-img/who-circle-3.webp\nOriginal: /assets/Links/compressed-img/who-circle-4.webp -> Fixed: ./assets/Links/compressed-img/who-circle-4.webp\nOriginal: /assets/Links/compressed-img/who-circle-5.webp -> Fixed: ./assets/Links/compressed-img/who-circle-5.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg
--->
-    <script src="./navbar-scroll.js"></script>
   </body>
 </html>
