@@ -54,7 +54,6 @@
           </a>
           <button
             class="nav-toggle"
-            onclick="document.querySelector('.navlinks-mobile').classList.toggle('active')"
             aria-label="Toggle navigation"
           >
             &#9776;
@@ -141,7 +140,7 @@
           class="curve-overlay position-absolute top-0 start-50 translate-middle-x bg-dark-blue z-1"
         ></div>
 
-        <div id="about-us" class="oval-container">
+        <div id="about-us" class="oval-container who-we-are-top-card">
           <div class="energlobix__title text-center text-gold font-bold">
             Who We Are
           </div>
@@ -181,10 +180,7 @@
             </div>
           </div>
 
-          <div
-            class="latest-news-section mt-5 container no-border"
-            style="padding-bottom: 200px;"
-          >
+          <div class="latest-news-section mt-5 container no-border">
             <div class="latest-news">
               <div class="news-title">
                 <div class="energlobix__title text-gold text-center font-bold">
@@ -260,20 +256,12 @@
         </div>
       </div>
 
-      <section
-        id="section-contact"
-        class="black-section"
-        style="padding-bottom: 100px;"
-      >
+      <section id="section-contact" class="black-section" style="padding-bottom: 100px;">
         <!-- Overlapping Accordion -->
         <div
+          id="approach-overlap-container"
           class="container approach-overlap-container"
-          style="
-            position: relative;
-            z-index: 10;
-            margin-top: -280px;
-            margin-bottom: 120px;
-          "
+          style="position: relative; z-index: 10;"
         >
           <div class="row justify-content-center">
             <div class="col-lg-12 col-md-8 col-sm-12">
@@ -552,40 +540,132 @@
         }
       }
 
-      // Mobile Menu Toggle
-      function toggleMobileMenu() {
-        const menu = document.querySelector(".navlinks-mobile");
-        menu.classList.toggle("active");
-      }
 
-      // Dynamic padding logic for accordion div
+
       document.addEventListener("DOMContentLoaded", () => {
         const approachAccordion = document.getElementById("approach-accordion");
-        const sectionApproachInner = document.getElementById(
-          "section-approach-inner"
+        const overlapContainer = document.getElementById(
+          "approach-overlap-container"
         );
-        const sectionSignature = document.getElementById("section-signature");
+        const topCard = document.getElementById("about-us");
+        const sectionContact = document.getElementById("section-contact");
 
-        if (approachAccordion && sectionApproachInner && sectionSignature) {
-          const adjustOverlapPadding = () => {
+        if (
+          approachAccordion &&
+          overlapContainer &&
+          topCard &&
+          sectionContact
+        ) {
+          const adjustLayout = () => {
             const isMobile = window.innerWidth < 1024;
-            const gap = 112; // 28 in tailwind unit
-            const topOffset = isMobile ? 100 : 140; // matches -mt-[100px] and -mt-[140px]
 
-            // We don't add halfHeight because the accordion is not absolute
-            sectionApproachInner.style.paddingBottom = `${gap}px`;
-            sectionSignature.style.paddingTop = `${topOffset + gap}px`;
+            if (isMobile) {
+              // MOBILE & TABLET: Settle the accordion inside the blue section
+              if (overlapContainer.parentElement !== topCard) {
+                topCard.appendChild(overlapContainer);
+              }
+              overlapContainer.classList.remove("container");
+              overlapContainer.style.setProperty(
+                "margin-top",
+                "60px",
+                "important"
+              );
+              overlapContainer.style.setProperty(
+                "margin-bottom",
+                "0px",
+                "important"
+              );
+
+              // Fix the deep curve by making the vertical radius fixed!
+              // This prevents the curve from becoming a massive U-shape when the section gets tall.
+              const curveOverlay = document.querySelector(".about-section .curve-overlay");
+              if (curveOverlay) {
+                curveOverlay.style.setProperty("border-radius", "50% / 150px", "important");
+              }
+
+              // Give the top section some breathing room at the bottom
+              topCard.style.setProperty("padding-bottom", "80px", "important");
+              
+              // Ensure the black section overlaps naturally
+              sectionContact.style.removeProperty("margin-top");
+              
+              const contactInner = sectionContact.querySelector('.contact-container');
+              if (contactInner) {
+                contactInner.style.removeProperty("margin-top");
+                contactInner.style.removeProperty("position");
+                contactInner.style.removeProperty("z-index");
+              }
+
+              // FOOLPROOF PADDING CALCULATION:
+              // Mathematically calculate the exact padding required so the heading is ALWAYS 60px below the curve!
+              requestAnimationFrame(() => {
+                if (curveOverlay) {
+                  const curveRect = curveOverlay.getBoundingClientRect();
+                  const sectionRect = sectionContact.getBoundingClientRect();
+                  
+                  let overlap = curveRect.bottom - sectionRect.top;
+                  if (overlap < 0) overlap = 0;
+                  
+                  // The exact padding needed to clear the curve + 60px spacing
+                  let optimalPadding = overlap + 60;
+                  sectionContact.style.setProperty("padding-top", `${optimalPadding}px`, "important");
+                }
+              });
+
+            } else {
+              // Reset the curve on desktop
+              const curveOverlay = document.querySelector(".about-section .curve-overlay");
+              if (curveOverlay) {
+                curveOverlay.style.removeProperty("border-radius");
+              }
+              overlapContainer.classList.add("container");
+              // DESKTOP: Keep the overlapping half-and-half design
+              if (overlapContainer.parentElement !== sectionContact) {
+                sectionContact.insertBefore(
+                  overlapContainer,
+                  sectionContact.firstChild
+                );
+              }
+
+              const accordionHeight = approachAccordion.offsetHeight;
+              const halfHeight = accordionHeight / 2;
+
+              overlapContainer.style.setProperty(
+                "margin-top",
+                `-${halfHeight}px`,
+                "important"
+              );
+              topCard.style.setProperty(
+                "padding-bottom",
+                `${halfHeight + 80}px`,
+                "important"
+              );
+              overlapContainer.style.setProperty(
+                "margin-bottom",
+                `80px`,
+                "important"
+              );
+              sectionContact.style.setProperty(
+                "padding-top",
+                "0px",
+                "important"
+              );
+            }
           };
 
-          const resizeObserver = new ResizeObserver(() => {
-            adjustOverlapPadding();
-          });
+          // Recalculate on window resize
+          window.addEventListener("resize", adjustLayout);
 
+          // Use a ResizeObserver on the accordion to catch any layout shifts (only needed for desktop overlap math)
+          const resizeObserver = new ResizeObserver(() => {
+            if (window.innerWidth >= 1024) {
+              adjustLayout();
+            }
+          });
           resizeObserver.observe(approachAccordion);
-          window.addEventListener("resize", adjustOverlapPadding);
 
           // Initial calculation
-          setTimeout(adjustOverlapPadding, 100);
+          setTimeout(adjustLayout, 100);
         }
       });
     </script>
