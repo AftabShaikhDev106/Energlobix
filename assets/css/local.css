@@ -239,6 +239,20 @@ a:active {
 
 /* Styles for mobiles (50% of the original size) */
 @media (max-width: 576px) {
+  .energlobix__title,
+  .energlobix__text,
+  .energlobix__text_2,
+  .energlobix__text__subtitle,
+  .energlobix__text__reduce_by_1,
+  .energlobix__text__reduce_by_2,
+  .energlobix__card-title,
+  .energlobix__card-title-2,
+  .energlobix__card-text,
+  .common-heading {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
   .energlobix__title {
     /* font-size: calc(38px * 0.60);
         line-height: calc(46px * 0.60); */
@@ -521,7 +535,7 @@ body {
 @media (max-width: 768px) {
   .energlobix__navbar {
     height: auto;
-    padding: 1rem 2rem;
+    padding: 1rem 16px;
   }
 
   .energlobix__navbar .logo {
@@ -571,17 +585,19 @@ body {
   }
 
   .navlinks-mobile.active {
-    z-index: 999;
-    display: flex;
+    z-index: 9999 !important;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
+    right: 0;
+    width: 100%;
     /* background-color: #2b2e34; */
     background-color: var(--dark-blue-color);
     /* Adjust as needed */
-    padding: 1rem 0;
+    padding: 1rem 16px;
     border: none;
   }
 
@@ -859,6 +875,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.invest-bg {
+  background-image: url("../../assets/Links/compressed-img/circle-img-1.webp");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 559.5px;
+  margin: 0 auto;
+}
+
 .font-bold {
   font-weight: bold;
 }
@@ -868,6 +894,21 @@ body {
   height: 100%;
   border-radius: 100%;
   z-index: 1;
+}
+
+.energlobix-stats-section {
+  background-image: url("../../assets/Links/compressed-img/page-1-index.webp");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.no-bottom-curve {
+  border-radius: 100% 0% !important;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0px !important;
 }
 
 .who-we-are-about-section {
@@ -1177,7 +1218,6 @@ body {
   width: 12%;
   max-width: 150px;
   aspect-ratio: 1;
-  background: red;
   border-radius: 50%;
   position: relative;
   z-index: 10;
@@ -2240,6 +2280,87 @@ body {
 
 .overlap-slider-next {
   right: -2.5rem;
+}
+
+/* Energlobix Stats Section */
+.energlobix-stats-section {
+  width: 100%;
+  min-height: 110vh;
+  background-color: #000;
+  margin-top: 0;
+  padding-top: 80px;
+  padding-bottom: 6rem;
+  z-index: 10;
+}
+@media (min-width: 992px) {
+  .energlobix-stats-section {
+    padding-top: 140px;
+    padding-bottom: 200px;
+  }
+}
+
+.gradient-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.stats-heading {
+  margin-bottom: 4rem;
+}
+@media (min-width: 992px) {
+  .stats-heading {
+    margin-bottom: 100px;
+  }
+}
+
+.stats-grid-container {
+  position: relative;
+  z-index: 2;
+  width: 92%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .stats-grid-container {
+    width: 94%;
+  }
+}
+@media (min-width: 992px) {
+  .stats-grid-container {
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.stat-circle {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--gold-color);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.connector-line {
+  top: 0;
+  transform: translateY(-140%);
+}
+.connector-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.connector-path {
+  height: 6rem;
+  width: 2px;
 }
 
 @media (min-width: 992px) {

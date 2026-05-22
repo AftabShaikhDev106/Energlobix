@@ -54,7 +54,7 @@
           </a>
           <button
             class="nav-toggle"
-            onclick="toggleMobileMenu()"
+            onclick="document.querySelector('.navlinks-mobile').classList.toggle('active')"
             aria-label="Toggle navigation"
           >
             &#9776;
@@ -137,9 +137,10 @@
       <div class="about-section" style="background-position: top;">
         <div
           class="curve-overlay position-absolute top-0 start-50 translate-middle-x bg-black z-1"
+          style="border-radius: 50% / 100% 100% 0 0;"
         ></div>
 
-        <div id="about-us" class="oval-container">
+        <div id="about-us" class="oval-container no-bottom-padding">
           <div class="energlobix__title text-center text-gold font-bold">
             Signature Development investment
           </div>
@@ -154,126 +155,59 @@
             where they need to be forced.
           </div>
 
-          <div class="row mt-5">
+          <div class="row mt-5 mb-5 align-items-stretch">
             <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
-              asyudg
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 mt-3">uaysdgh</div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-8 col-sm-12">
-              <div id="approach-accordion" class="approach-accordion-card">
-                <h1 class="energlobix__title text-center">
-                  OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
-                  YOUR INVESTMENT
-                </h1>
-                <div class="approach-accordion-list">
-                  <!-- Accordion Item 1 -->
-                  <div
-                    class="approach-accordion-item"
-                    onclick="toggleAccordion(this)"
+              <div class="about-us-card">
+                <div
+                  class="invest-bg d-flex flex-column justify-content-center align-items-center text-center p-4 p-md-5 rounded shadow-sm h-100"
+                >
+                  <h3
+                    class="font-bold mb-4 text-dark-blue energlobix__card-title"
                   >
-                    <div class="approach-accordion-header">
-                      <span class="approach-accordion-icon">
-                        <i
-                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
-                        ></i>
-                      </span>
-                      <h3 class="text-white energlobix__text tracking-wide">
-                        Quality as a Non-Negotiable Standard
-                      </h3>
-                    </div>
-                    <div class="approach-accordion-body">
-                      <p class="energlobix__card-text approach-accordion-text">
-                        We maintain the highest standards of construction and
-                        design, ensuring that every project reflects our
-                        commitment to excellence and durability.
-                      </p>
-                    </div>
-                  </div>
+                    Your Investment
+                  </h3>
+                  <p class="mb-3 text-black energlobix__text">
+                    As an investor, you participate in the
+                    <br class="hide-on-mobile" />
+                    full development cycle, from concept to
+                    <br class="hide-on-mobile" />
+                    completion, with a clear objective:
+                  </p>
 
-                  <!-- Accordion Item 2 -->
-                  <div
-                    class="approach-accordion-item has-border-top"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="approach-accordion-header">
-                      <span class="approach-accordion-icon">
-                        <i
-                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
-                        ></i>
-                      </span>
-                      <h3 class="text-white energlobix__text tracking-wide">
-                        Capital Deployed Where Demand Is Real
-                      </h3>
-                    </div>
-                    <div class="approach-accordion-body">
-                      <p class="energlobix__card-text approach-accordion-text">
-                        Strategic investment in high-growth areas where market
-                        demand is proven and sustainable for long-term returns.
-                      </p>
-                    </div>
-                  </div>
+                  <p class="mb-3 text-black energlobix__text">
+                    To realise capital growth through
 
-                  <!-- Accordion Item 3 -->
-                  <div
-                    class="approach-accordion-item has-border-top"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="approach-accordion-header">
-                      <span class="approach-accordion-icon">
-                        <i
-                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
-                        ></i>
-                      </span>
-                      <h3 class="text-white energlobix__text tracking-wide">
-                        Assets Built for Enduring Value
-                      </h3>
-                    </div>
-                    <div class="approach-accordion-body">
-                      <p class="energlobix__card-text approach-accordion-text">
-                        Our properties are designed to appreciate over time,
-                        combining aesthetic appeal with functional longevity.
-                      </p>
-                    </div>
-                  </div>
+                    <br class="hide-on-mobile" />
+                    well-positioned, high-quality
 
-                  <!-- Accordion Item 4 -->
-                  <div
-                    class="approach-accordion-item has-border-top"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="approach-accordion-header">
-                      <span class="approach-accordion-icon">
-                        <i
-                          class="fa-solid fa-chevron-right text-xl lg:text-2xl"
-                        ></i>
-                      </span>
-                      <h3 class="text-white energlobix__text tracking-wide">
-                        A Disciplined Approach to Investment
-                      </h3>
-                    </div>
-                    <div class="approach-accordion-body">
-                      <p class="energlobix__card-text approach-accordion-text">
-                        Rigorous analysis and conservative financial modeling
-                        guide every decision we make in the development process.
-                      </p>
-                    </div>
-                  </div>
+                    <br class="hide-on-mobile" />
+                    developments.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- How we do it Section -->
-      <div class="black-section">
-        <div id="commodities" class="commodities-section">
-          <div class="energlobix__title text-center text-gold font-bold">
-            Energlobix Signature Development Investments
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
+              <div class="about-us-card">
+                <div
+                  class="invest-bg d-flex flex-column justify-content-center align-items-center text-center p-3 px-5 rounded shadow-sm h-100"
+                >
+                  <h3 class="font-bold mb-4 text-dark-blue energlobix__title">
+                    Our Approach
+                  </h3>
+                  <p class="mb-3 text-black energlobix__text">
+                    This approach is suited for investors seeking:
+                  </p>
+                  <ul class="list-unstyled mb-0 text-black energlobix__text">
+                    <li class="mb-3">1. Defined investment timelines</li>
+                    <li class="mb-3">2. Capital growth through development</li>
+                    <li class="mb-0">
+                      3. Exposure to high-demand real estate segments
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="latest-news-section my-5 container">
@@ -341,112 +275,134 @@
             </div>
           </div>
 
-          <div class="energlobix__title text-center mb-5 text-gold font-bold">
-            RRS NEWs feed - real estate
+          <div class="energlobix__title text-center mt-5 text-gold font-bold">
+            Why Invest in Dubai Real Estate
           </div>
 
-          <div class="energlobix__title text-center text-gold font-bold">
-            How we do it
-          </div>
-
-          <div class="energlobix__text mt-3 text-center text-white">
-            We Choose with Clarity
-          </div>
-
-          <div class="energlobix__text mt-3 text-center text-white">
-            We focus on opportunities where quality, location,
+          <div class="container energlobix__text mt-3 text-center text-white">
+            A Market Defined by Growth, Demand, and Global Capital
 
             <br class="hide-on-mobile" />
-            and concept come together naturally, not where
+            Dubai has established itself as one of the world’s most dynamic real
+            estate
 
             <br class="hide-on-mobile" />
-            they need to be forced.
+            markets, attracting international investors through a combination of
+            growth,
+            <br class="hide-on-mobile" />
+            liquidity, and long-term opportunity.
           </div>
-        </div>
 
-        <div class="row mt-5">
-          <!-- Row 1 -->
+          <div class="energlobix__title text-center mt-4 text-gold font-bold">
+            Consistent Demand at Global Scale
+          </div>
 
           <div
-            id="Employees"
-            class="col-lg-6 col-sm-12 insights-box"
-            style="
-              background: linear-gradient(
-                  rgba(184, 166, 133, 0.85),
-                  rgba(184, 166, 133, 0.85)
-                ),
-                url('assets/Links/compressed-img/split-right-cropped.png');
-              background-size: cover;
-              background-position: top;
-              background-repeat: no-repeat;
-            "
+            class="container energlobix__text mt-3 text-center text-white mb-5"
           >
-            <div class="text-center mb-3">
-              <img
-                src="assets/Links/logo-mini-white.png"
-                alt=""
-                class="default-logo-size"
-              />
-            </div>
+            Driven by population growth, international migration, and business
 
-            <div class="energlobix__text text-black font-bold text-center mt-3">
-              We Build for the Long Term
+            <br class="hide-on-mobile" />
+            expansion, Dubai continues to see strong and sustained demand across
 
-              <br class="hide-on-mobile" />
-              Our developments are designed to:
-            </div>
-
-            <ul
-              class="energlobix__text text-black mt-3 list-unstyled"
-              style="
-                text-align: center;
-                padding-left: 20px;
-                list-style: none !important;
-                margin-bottom: 0 !important;
-              "
-            >
-              <li class="mb-3">• Remain attractive in the market</li>
-              <li class="mb-3">• Support consistent demand</li>
-              <li class="mb-3">
-                • Hold and strengthen their value over time
-              </li>
-            </ul>
-
-            <div class="mt-3">
-              <a
-                class="energlobix__links font-bold text-black"
-                href="whoweare.html"
-                >See more here</a
-              >
-            </div>
-
-            <a href="whoweare.html"
-              ><img class="mt-1" src="assets/Links/arrow-black.svg" alt=""
-            /></a>
+            <br class="hide-on-mobile" />
+            both residential and commercial real estate.
           </div>
-
-          <div
-            class="col-lg-6 col-sm-12 insights-box d-none d-lg-block d-xl-block"
-            style="
-              background-image: url('assets/Links/compressed-img/split-right-1.webp');
-              background-size: cover;
-            "
-          ></div>
-
-          <div
-            class="col-lg-6 col-sm-12 insights-box d-block d-lg-none"
-            style="
-              background-image: url('assets/Links/compressed-img/split-right-1.webp');
-              background-size: cover;
-            "
-          ></div>
         </div>
       </div>
+
+      <!-- How we do it Section -->
+      <!-- Stats Section (Converted to Bootstrap) -->
+      <section
+        class="energlobix-stats-section section-bg position-relative d-flex flex-column px-3 px-md-4"
+      >
+        <!-- Gradient Overlay -->
+        <div
+          class="gradient-overlay position-absolute top-0 start-0 w-100 h-100 z-1"
+        ></div>
+
+        <!-- Heading -->
+        <h1
+          class="energlobix__title stats-heading position-relative z-2 font-bold text-white text-center w-100 mx-auto"
+        >
+          EnerGlobix - Part of the Dubai <br class="hide-on-mobile" />
+          Leading Property Development Plan
+        </h1>
+        <!-- Stats Grid -->
+        <div class="stats-grid-container z-2">
+          <div class="row justify-content-center gx-lg-5 gy-5">
+            <!-- Stat 1 -->
+            <div
+              class="col-12 col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="stat-circle rounded-circle d-flex align-items-center justify-content-center position-relative p-4 p-lg-4 shadow-sm"
+              >
+                <div
+                  class="connector-line d-none d-lg-flex flex-column align-items-center position-absolute"
+                >
+                  <div
+                    class="connector-dot rounded-circle border border-white border-2"
+                  ></div>
+                  <div class="connector-path bg-white"></div>
+                </div>
+                <h1 class="energlobix__text text-white text-center m-0">
+                  Total transactions recorded 215,000+ deals in 2025.
+                </h1>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div
+              class="col-12 col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="stat-circle rounded-circle d-flex align-items-center justify-content-center position-relative p-4 p-lg-4 shadow-sm"
+              >
+                <div
+                  class="connector-line d-none d-lg-flex flex-column align-items-center position-absolute"
+                >
+                  <div
+                    class="connector-dot rounded-circle border border-white border-2"
+                  ></div>
+                  <div class="connector-path bg-white"></div>
+                </div>
+                <h1 class="energlobix__text text-white text-center m-0">
+                  Total sales value in property sales AED 682–686 billion in
+                  2025.
+                </h1>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div
+              class="col-12 col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="stat-circle rounded-circle d-flex align-items-center justify-content-center position-relative p-4 p-lg-4 shadow-sm"
+              >
+                <div
+                  class="connector-line d-none d-lg-flex flex-column align-items-center position-absolute"
+                >
+                  <div
+                    class="connector-dot rounded-circle border border-white border-2"
+                  ></div>
+                  <div class="connector-path bg-white"></div>
+                </div>
+                <h1 class="energlobix__text text-white text-center m-0">
+                  Total real estate sector transactions incl. leases AED 917
+                  billion in 2025
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section
         id="section-contact"
         class="bg-black"
-        style="padding-top: 120px; padding-bottom: 100px; min-height: 100vh;"
+        style="padding-top: 260px; padding-bottom: 100px; min-height: 100vh;"
       >
         <div class="container contact-container">
           <!-- Heading -->

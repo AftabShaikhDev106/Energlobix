@@ -54,7 +54,7 @@
           </a>
           <button
             class="nav-toggle"
-            onclick="toggleMobileMenu()"
+            onclick="document.querySelector('.navlinks-mobile').classList.toggle('active')"
             aria-label="Toggle navigation"
           >
             &#9776;
@@ -531,6 +531,7 @@
             style="
               background-image: url('assets/Links/compressed-img/split-right-1.webp');
               background-size: cover;
+              background-position: 50% 50%;
             "
           ></div>
         </div>
