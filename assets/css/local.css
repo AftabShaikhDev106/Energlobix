@@ -253,6 +253,16 @@ a:active {
     padding-right: 16px !important;
   }
 
+  .card-content-2 .energlobix__card-title {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .card-content-2 .energlobix__card-text {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
   .energlobix__title {
     /* font-size: calc(38px * 0.60);
         line-height: calc(46px * 0.60); */
@@ -1387,6 +1397,12 @@ body {
 @media (max-width: 576px) {
   .card-content {
     padding-bottom: 10px;
+  }
+  .about-us-card .energlobix__card-title,
+  .about-us-card .energlobix__card-title-2,
+  .about-us-card .energlobix__card-text {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
