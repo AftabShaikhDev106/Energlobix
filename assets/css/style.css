@@ -1,38 +1,30 @@
 @font-face {
-  font-family: "MinionPro";
-  src: url("../assets/Document fonts/MinionPro-Regular.otf") format("opentype");
+  font-family: "MinionPro-Regular";
+  src: url("../fonts/MinionPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Symbol";
-  src: url("../assets/Document fonts/Symbol.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Adelle-Sans-Bold";
+  src: url("../fonts/Adelle-Sans-Bold.otf") format("opentype");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Times New Roman";
-  src: url("../assets/Document fonts/Times New Roman.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Adelle-Sans-Light";
+  src: url("../fonts/Adelle-Sans-Light.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Times New Roman Bold";
-  src: url("../assets/Document fonts/Times New Roman Bold.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Times New Roman Bold Italic";
-  src: url("../assets/Document fonts/Times New Roman Bold Italic.ttf")
-    format("truetype");
+  font-family: "Adelle-Sans-Regular";
+  src: url("../fonts/fonnts.com-Adelle_Sans_ARA_Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -53,28 +45,24 @@ html {
   scroll-behavior: smooth;
 }
 
-.symbol {
-  font-family: "Symbol", sans-serif;
+.font-minion-pro {
+  font-family: "MinionPro-Regular", serif !important;
 }
 
-.font-serif-custom {
-  font-family: "MinionPro", serif;
+.font-adelle-sans-bold {
+  font-family: "Adelle-Sans-Bold", sans-serif !important;
 }
 
-.times-new-roman {
-  font-family: "Times New Roman", serif;
+.font-adelle-sans-light {
+  font-family: "Adelle-Sans-Light", sans-serif !important;
 }
 
-.times-new-roman-bold {
-  font-family: "Times New Roman Bold", serif;
-}
-
-.times-new-roman-bold-italic {
-  font-family: "Times New Roman Bold Italic", serif;
+.font-adelle-sans-regular {
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
 }
 
 * {
-  font-family: "Symbol", sans-serif;
+  font-family: "MinionPro-Regular", serif;
 }
 
 .active-link {

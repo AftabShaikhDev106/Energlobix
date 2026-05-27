@@ -30,6 +30,22 @@
   font-style: normal;
 }
 
+.font-minion-pro {
+  font-family: "MinionPro-Regular", serif !important;
+}
+
+.font-adelle-sans-bold {
+  font-family: "Adelle-Sans-Bold", sans-serif !important;
+}
+
+.font-adelle-sans-light {
+  font-family: "Adelle-Sans-Light", sans-serif !important;
+}
+
+.font-adelle-sans-regular {
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
+}
+
 :root {
   --color-gold-card: #dbd2c2;
   --gold-color: rgb(184, 166, 133);
@@ -880,10 +896,10 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  /* background-image: url("../../assets/Links/compressed-img/circle-img-1.webp");
+  background-image: url("../../assets/Links/compressed-img/circle-img-1.svg");
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 .index-bg {
@@ -932,11 +948,10 @@ body {
 .who-we-are-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/agriculture-img/agriculture-img7.webp");
+  background-image: url("../../assets/Links/compressed-img/who-we-are-circle.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .bg-who-we-are {
@@ -959,16 +974,16 @@ body {
 .how-we-do-it-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("/Energlobix/assets/images/how-we-do-it-about-section-bg.png");
+  background-image: url("../../assets/Links/compressed-img/circle-img-1.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.insights-about-section {
+.invest-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("/Energlobix/assets/images/insights-about-section-bg.png");
+  background-image: url("../../assets/Links/compressed-img/invest-circle.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1177,11 +1192,11 @@ body {
 
 @media (max-width: 576px) {
   .about-section {
-    background-image: url("/Energlobix/assets/images/about_us_mobile.png");
+    background-image: url("/assets/Links/compressed-img/circle-img-mob-1.svg");
   }
 
   .who-we-are-about-section {
-    background-image: url("/Energlobix/assets/images/who-we-are-about-us-bg-mobile.png");
+    background-image: url("/assets/Links/compressed-img/who-we-are-circle-mob.svg");
   }
 
   .what-we-do-about-section {
@@ -1189,11 +1204,11 @@ body {
   }
 
   .how-we-do-it-about-section {
-    background-image: url("/Energlobix/assets/images/how-we-do-it-about-section-bg-mobile.png");
+    background-image: url("/assets/Links/compressed-img/circle-img-mob-1.svg");
   }
 
-  .insights-about-section {
-    background-image: url("/Energlobix/assets/images/insights-about-section-bg-mobile.png");
+  .invest-about-section {
+    background-image: url("../../assets/Links/compressed-img/invest-circle-mob.svg");
   }
 }
 
@@ -1204,7 +1219,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 120.597px;
+  padding-top: 151.597px;
   padding-bottom: 151.597px;
   position: relative;
   z-index: 10;
@@ -1229,7 +1244,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 183.38px;
-  padding-bottom: 300px;
+  padding-bottom: 151.597px;
 }
 
 .circle-placeholder {
@@ -1278,6 +1293,9 @@ body {
     /* background-color: var(--gold-color); */
   }
 
+}
+
+@media (max-width: 1024px) {
   .oval-container {
     padding-top: 80px;
     padding-bottom: 80px;

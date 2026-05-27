@@ -113,3 +113,65 @@ backToTopBtn.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+// --- Image Preloader ---
+document.addEventListener("DOMContentLoaded", function () {
+  const imageUrls = new Set();
+
+  // 1. Get all <img> tags
+  const images = document.querySelectorAll("img");
+  images.forEach((img) => {
+    if (img.src) imageUrls.add(img.src);
+  });
+
+  // 2. Get all elements with background-image
+  const allElements = document.querySelectorAll("*");
+  allElements.forEach((el) => {
+    const bg = window.getComputedStyle(el).backgroundImage;
+    if (bg && bg !== "none") {
+      // Extract URL from "url('...')"
+      const urlMatch = bg.match(/url\(['"]?(.*?)['"]?\)/);
+      if (urlMatch && urlMatch[1]) {
+        imageUrls.add(urlMatch[1]);
+      }
+    }
+  });
+
+  // Remove duplicate/data URIs
+  const urls = Array.from(imageUrls).filter(
+    (url) => !url.startsWith("data:")
+  );
+  let loadedCount = 0;
+  const total = urls.length;
+  let isDone = false;
+
+  function hideLoader() {
+    if (isDone) return;
+    isDone = true;
+    const loader = document.getElementById("loader");
+    const mainContent = document.getElementById("main-content");
+    if (loader) loader.style.display = "none";
+    if (mainContent) mainContent.style.display = "block";
+    console.log(`Preloaded ${total} images/bg-images.`);
+  }
+
+  if (total === 0) {
+    hideLoader();
+  } else {
+    urls.forEach((url) => {
+      const img = new Image();
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount >= total) hideLoader();
+      };
+      img.onerror = () => {
+        loadedCount++;
+        if (loadedCount >= total) hideLoader();
+      };
+      img.src = url;
+    });
+  }
+
+  // Fallback: hide loader after 8 seconds anyway to prevent infinite loading
+  setTimeout(hideLoader, 8000);
+});
