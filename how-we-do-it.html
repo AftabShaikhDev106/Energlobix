@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,17 +28,81 @@
           --color-beige-c,
           #dbd2c2
         ); /* fallback to gold-card if variable is missing */
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
       }
       .description-link-custom:hover {
         background-color: #ffffff !important;
+      }
+      .video-container-placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+      }
+      .floor-plan-circle {
+        width: 130px;
+        height: 130px;
+        border: 1px solid var(--gold-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .floor-plan-circle:hover {
+        background-color: rgba(184, 166, 133, 0.15);
+        transform: scale(1.05);
+      }
+      .floor-plan-box {
+        border: 1px solid var(--gold-color);
+        padding: 8px 12px;
+        min-width: 75px;
+        text-align: center;
+      }
+      .floor-plan-text {
+        font-family: "Adelle-Sans-Regular", sans-serif;
+        color: var(--gold-color);
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0;
+      }
+      #galleryPrevBtn.overlap-slider-prev {
+        left: 0.75rem !important;
+      }
+      #galleryNextBtn.overlap-slider-next {
+        right: 0.75rem !important;
+      }
+      .developments-new-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+      @media (min-width: 576px) {
+        .developments-new-container {
+          padding: 0 24px;
+        }
+      }
+      @media (min-width: 992px) {
+        .developments-new-container {
+          max-width: 1143px !important;
+          padding: 0 !important;
+        }
       }
     </style>
   </head>
 
   <body>
     <!-- Loader -->
-    <div id="loader" style="height: 100vh;">
+    <div id="loader" style="height: 100vh">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="spinner-border" role="status">
           <span class="sr-only"></span>
@@ -46,52 +110,206 @@
       </div>
     </div>
 
-    <div id="main-content" style="display: none;">
+    <div id="main-content" style="display: none">
       <div class="navbar-container">
         <div class="energlobix__navbar">
-          <a href="index.html">
-            <img src="assets/Links/logo.png" alt="" class="logo" />
+          <a
+            href="index.html"
+            class="logo-container"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/Links/top-logo.png"
+              alt="EnerGlobix Holdings"
+              class="logo-img"
+            />
+            <div class="logo-subtitle">Development</div>
           </a>
-          <button class="nav-toggle" aria-label="Toggle navigation">
-            &#9776;
-          </button>
+          <div class="navbar-right-side">
+            <div class="navlinks">
+              <ul>
+                <a href="who-we-are.html"><li>About</li></a>
+                <a href="how-we-do-it.html"
+                  ><li class="active">Developments</li></a
+                >
+                <a href="invest.html"><li>Location</li></a>
+              </ul>
+            </div>
 
-          <div class="navlinks">
-            <ul>
-              <a href="who-we-are.html"><li>Who We Are</li></a>
-              <a href="how-we-do-it.html"
-                ><li class="active">How We Do it</li></a
+            <!-- Hamburger Icon & Menu Dropdown Wrapper -->
+            <div class="menu-wrapper">
+              <button
+                class="hamburger-btn"
+                id="open-menu-btn"
+                aria-label="Toggle navigation"
               >
-              <a href="invest.html"><li>Invest</li></a>
-            </ul>
-          </div>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
 
-          <div class="navlinks-mobile">
-            <ul>
-              <li>
-                <a href="who-we-are.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Who We Are
-                  </div>
-                </a>
-              </li>
+              <!-- Dropdown Menu / Sidebar -->
+              <div class="nav-menu-container" id="nav-menu">
+                <!-- Sidebar Close Button (only visible on mobile/tablet) -->
+                <button
+                  class="close-menu-btn"
+                  id="close-menu-btn"
+                  aria-label="Close navigation"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
 
-              <li>
-                <a href="how-we-do-it.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    How We Do it
-                  </div>
-                </a>
-              </li>
+                <ul class="nav-menu-list">
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Energy
+                      <svg
+                        class="submenu-arrow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li>
+                        <a href="https://energlobix.com/" class="submenu-link"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/whoweare/"
+                          class="submenu-link"
+                          >Who We Are</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/whatwedo/"
+                          class="submenu-link"
+                          >What We Do</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/howwedoit/"
+                          class="submenu-link"
+                          >How We Do It</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/insights/"
+                          class="submenu-link"
+                          >Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/contact"
+                          class="submenu-link"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
 
-              <li>
-                <a href="invest.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Invest
-                  </div>
-                </a>
-              </li>
-            </ul>
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Agriculture
+                      <svg
+                        class="submenu-arrow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/"
+                          class="submenu-link"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/who-we-are.html"
+                          class="submenu-link"
+                          >Who We Are</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/what-we-do.html"
+                          class="submenu-link"
+                          >What We Do</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/how-we-do-it.html"
+                          class="submenu-link"
+                          >How We Do It</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobixholding.kasehub.com/"
+                      class="nav-menu-link"
+                      >Holding</a
+                    >
+                  </li>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobix.kasehub.com/"
+                      class="nav-menu-link"
+                      >Main Page</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +318,9 @@
         <div
           class="slide active"
           style="
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Links/compressed-img/how-hero.webp');
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url(&quot;assets/Links/compressed-img/how-hero.webp&quot;);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -141,10 +361,7 @@
       </div>
 
       <!-- About Section -->
-      <div
-        class="how-we-do-it-about-section"
-        style="background-position: top;"
-      >
+      <div class="how-we-do-it-about-section" style="background-position: top">
         <div id="about-us" class="oval-container">
           <div
             class="energlobix__title font-adelle-sans-bold text-center text-blue font-bold"
@@ -153,7 +370,7 @@
           </div>
 
           <div
-            class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-[--black-color]"
+            class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-black"
           >
             We focus on opportunities where quality,
 
@@ -188,18 +405,19 @@
                   <div
                     class="energlobix__card-title font-adelle-sans-bold text-gold mt-3 font-bold"
                   >
-                    Private
+                    Residential
                   </div>
                   <div
                     class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
                   >
                     We create residential properties that go beyond
+
                     <!-- <br class="hide-on-mobile" /> -->
                     standard living.
                   </div>
 
                   <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3 font-bold"
+                    class="energlobix__card-text font-adelle-sans-bold text-white mt-3 font-bold"
                   >
                     Spaces shaped by:
                   </div>
@@ -213,9 +431,7 @@
                       margin-bottom: 0 !important;
                     "
                   >
-                    <li class="mb-3">
-                      • Thoughtful layouts and natural flow
-                    </li>
+                    <li class="mb-3">• Thoughtful layouts and natural flow</li>
                     <li class="mb-3">
                       • Materials and finishes chosen for durability and feel
                     </li>
@@ -310,9 +526,7 @@
                   >
                     <li class="mb-3">• Support real business activity</li>
                     <li class="mb-3">• Attract consistent tenant demand</li>
-                    <li>
-                      • Offer stability and long-term income potential
-                    </li>
+                    <li>• Offer stability and long-term income potential</li>
                   </ul>
 
                   <div
@@ -333,7 +547,7 @@
       <section
         id="section-contact"
         class="black-section"
-        style="padding-bottom: 100px;"
+        style="padding-bottom: 100px"
       >
         <div
           class="container overlap-container"
@@ -353,15 +567,15 @@
                 <h1
                   class="energlobix__card-title font-adelle-sans-bold font-bold text-center overlap-card-title"
                 >
-                  OUR LATEST PROJECT
+                  VIEW OUR LATEST PROJECT (SOLD OUT)
                 </h1>
 
                 <div class="row w-100 mt-3 align-items-stretch">
-                  <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex">
+                  <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex pe-lg-4">
                     <div class="split-left-img w-100 flex-grow-1"></div>
                   </div>
                   <div
-                    class="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start"
+                    class="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start ps-lg-4"
                   >
                     <h1
                       class="energlobix__card-title font-adelle-sans-bold font-bold text-white text-center text-lg-start"
@@ -387,58 +601,8 @@
                       href="#section-contact"
                       class="description-link font-adelle-sans-bold description-link-custom mt-4 lh-1 text-black fw-semibold d-flex align-items-center justify-content-center text-decoration-none"
                     >
-                      Register interests here
+                      View Project Here
                     </a>
-                  </div>
-                </div>
-
-                <div class="w-100 position-relative overlap-slider-wrap mt-4">
-                  <!-- Navigation Arrows -->
-                  <button
-                    id="prevBtn"
-                    class="overlap-slider-btn overlap-slider-prev"
-                  >
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button
-                    id="nextBtn"
-                    class="overlap-slider-btn overlap-slider-next"
-                  >
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-
-                  <!-- Slider Container -->
-                  <div class="overflow-hidden w-100">
-                    <div id="sliderTrack" class="overlap-slider-track d-flex">
-                      <!-- Slide 1 -->
-                      <div class="overlap-slide">
-                        <img
-                          src="./assets/Links/compressed-img/north-43-10.webp"
-                          alt="Gallery Image 1"
-                        />
-                      </div>
-                      <!-- Slide 2 -->
-                      <div class="overlap-slide">
-                        <img
-                          src="./assets/Links/compressed-img/north-43-9.webp"
-                          alt="Gallery Image 2"
-                        />
-                      </div>
-                      <!-- Slide 3 -->
-                      <div class="overlap-slide">
-                        <img
-                          src="./assets/Links/compressed-img/north-43-2.webp"
-                          alt="Gallery Image 3"
-                        />
-                      </div>
-                      <!-- Slide 4 -->
-                      <div class="overlap-slide">
-                        <img
-                          src="./assets/Links/compressed-img/exceptional1.webp"
-                          alt="Gallery Image 4"
-                        />
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -446,11 +610,152 @@
           </div>
         </div>
 
+        <div
+          class="developments-new-container d-flex flex-column align-items-center mt-5 mb-5"
+        >
+          <!-- Video Container -->
+          <div class="video-container-placeholder w-100 mt-5">
+            <video
+              class="w-100 h-100 rounded"
+              controls
+              poster="assets/Links/compressed-img/exceptional1.webp"
+              style="object-fit: cover"
+            >
+              <source
+                src="https://energlobix.com/wp-content/themes/energlobix_v2/development/assets/North%2043%20-%20Project%20Video.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Gallery Section -->
+          <h2
+            class="energlobix__card-title font-adelle-sans-bold text-center text-gold mt-5 font-bold"
+          >
+            NORTH43 Gallery
+          </h2>
+
+          <div class="w-100 position-relative overlap-slider-wrap mt-4">
+            <!-- Navigation Arrows -->
+            <button
+              id="galleryPrevBtn"
+              class="overlap-slider-btn overlap-slider-prev"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button
+              id="galleryNextBtn"
+              class="overlap-slider-btn overlap-slider-next"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+
+            <!-- Slider Container -->
+            <div class="overflow-hidden w-100">
+              <div id="galleryTrack" class="overlap-slider-track d-flex">
+                <!-- Slide 1 (with Text Overlay) -->
+                <div class="overlap-slide position-relative">
+                  <img
+                    src="assets/Links/compressed-img/north-43-10.webp"
+                    alt="Gallery Image 1"
+                  />
+                  <div
+                    class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+                    style="background-color: rgba(0, 0, 0, 0.35)"
+                  >
+                    <h1
+                      class="text-white font-adelle-sans-bold display-4 font-bold m-0"
+                      style="
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                        font-weight: bold;
+                      "
+                    >
+                      FULLY SERVICED
+                    </h1>
+                    <p
+                      class="text-white font-adelle-sans-regular mt-2"
+                      style="
+                        font-size: 14px;
+                        letter-spacing: 0.15em;
+                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+                      "
+                    >
+                      STUDIO, 1, 2 & 3 BEDROOM RESIDENCES
+                    </p>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="overlap-slide">
+                  <img
+                    src="assets/Links/compressed-img/exceptional1.webp"
+                    alt="Gallery Image 2"
+                  />
+                </div>
+                <!-- Slide 3 -->
+                <div class="overlap-slide">
+                  <img
+                    src="assets/Links/compressed-img/north-43-9.webp"
+                    alt="Gallery Image 3"
+                  />
+                </div>
+                <!-- Slide 4 -->
+                <div class="overlap-slide">
+                  <img
+                    src="assets/Links/compressed-img/north-43-2.webp"
+                    alt="Gallery Image 4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floor Plans Section -->
+          <h2
+            class="energlobix__card-title font-adelle-sans-bold text-center text-gold mt-5 font-bold"
+          >
+            NORTH43 Floor Plans
+          </h2>
+
+          <div
+            class="d-flex justify-content-center align-items-center flex-wrap gap-4 mt-4 w-100"
+          >
+            <div class="floor-plan-circle">
+              <div class="floor-plan-box">
+                <p class="floor-plan-text">Studio</p>
+              </div>
+            </div>
+            <div class="floor-plan-circle">
+              <div class="floor-plan-box">
+                <p class="floor-plan-text">1 bed</p>
+              </div>
+            </div>
+            <div class="floor-plan-circle">
+              <div class="floor-plan-box">
+                <p class="floor-plan-text">2 bed</p>
+              </div>
+            </div>
+            <div class="floor-plan-circle">
+              <div class="floor-plan-box">
+                <p class="floor-plan-text">3 bed</p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="description-link font-adelle-sans-bold description-link-custom mt-5 lh-1 text-black fw-semibold d-flex align-items-center justify-content-center text-decoration-none"
+            style="cursor: pointer"
+          >
+            Download
+          </a>
+        </div>
+
         <div class="container contact-container">
           <!-- Heading -->
           <h1
             class="energlobix__title font-adelle-sans-bold text-center text-gold"
-            style="font-weight: bold;"
+            style="font-weight: bold"
           >
             Contact us
           </h1>
@@ -517,28 +822,29 @@
 
           <!-- Footer -->
           <div class="contact-footer">
-            <img
-              src="./assets/Links/footer-img.png"
-              class="footer-logo"
-              alt=""
-            />
+            <a
+              href="index.html"
+              class="logo-container"
+              style="text-decoration: none"
+            >
+              <img
+                src="assets/Links/top-logo.png"
+                alt="EnerGlobix Holdings"
+                class="logo-img"
+              />
+              <div class="logo-subtitle">Development</div>
+            </a>
 
             <h3 class="footer-subtitle font-adelle-sans-regular">
               Explore Our Businesses
             </h3>
 
             <div class="footer-links-wrapper">
-              <h4 class="footer-link-text">
-                © EnerGlobix 2024
-              </h4>
+              <h4 class="footer-link-text">© EnerGlobix 2024</h4>
 
-              <h4 class="footer-link-text footer-link-hover">
-                Terms of use
-              </h4>
+              <h4 class="footer-link-text footer-link-hover">Terms of use</h4>
 
-              <h4 class="footer-link-text footer-link-hover">
-                Privacy policy
-              </h4>
+              <h4 class="footer-link-text footer-link-hover">Privacy policy</h4>
             </div>
           </div>
         </div>
@@ -625,12 +931,12 @@
               overlapContainer.style.setProperty(
                 "margin-top",
                 "60px",
-                "important"
+                "important",
               );
               overlapContainer.style.setProperty(
                 "margin-bottom",
                 "0px",
-                "important"
+                "important",
               );
 
               // Remove the 'container' class so its width perfectly matches the cards above
@@ -640,13 +946,13 @@
               // Fix the deep curve by making the vertical radius fixed!
               // This prevents the curve from becoming a massive U-shape when the section gets tall.
               const curveOverlay = document.querySelector(
-                ".about-section .curve-overlay"
+                ".about-section .curve-overlay",
               );
               if (curveOverlay) {
                 curveOverlay.style.setProperty(
                   "border-radius",
                   "50% / 150px",
-                  "important"
+                  "important",
                 );
               }
 
@@ -656,9 +962,8 @@
               // Ensure the black section overlaps naturally
               sectionContact.style.removeProperty("margin-top");
 
-              const contactInner = sectionContact.querySelector(
-                ".contact-container"
-              );
+              const contactInner =
+                sectionContact.querySelector(".contact-container");
               if (contactInner) {
                 contactInner.style.removeProperty("margin-top");
                 contactInner.style.removeProperty("position");
@@ -666,11 +971,15 @@
               }
 
               // Use 400px padding: 280px to counteract the -280px margin-top, plus 120px spacing
-              sectionContact.style.setProperty("padding-top", "400px", "important");
+              sectionContact.style.setProperty(
+                "padding-top",
+                "400px",
+                "important",
+              );
             } else {
               // Reset the curve on desktop
               const curveOverlay = document.querySelector(
-                ".about-section .curve-overlay"
+                ".about-section .curve-overlay",
               );
               if (curveOverlay) {
                 curveOverlay.style.removeProperty("border-radius");
@@ -679,7 +988,7 @@
               if (overlapContainer.parentElement !== sectionContact) {
                 sectionContact.insertBefore(
                   overlapContainer,
-                  sectionContact.firstChild
+                  sectionContact.firstChild,
                 );
               }
               overlapContainer.style.removeProperty("margin-top");
@@ -696,22 +1005,22 @@
               overlapContainer.style.setProperty(
                 "margin-top",
                 `-${halfHeight}px`,
-                "important"
+                "important",
               );
               topCard.style.setProperty(
                 "padding-bottom",
                 `${halfHeight + 80}px`,
-                "important"
+                "important",
               );
               overlapContainer.style.setProperty(
                 "margin-bottom",
                 `80px`,
-                "important"
+                "important",
               );
               sectionContact.style.setProperty(
                 "padding-top",
                 "0px",
-                "important"
+                "important",
               );
             }
           };
@@ -726,6 +1035,54 @@
           // Initial calculation
           setTimeout(adjustLayout, 100);
         }
+      });
+
+      // Gallery Slider Functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById("galleryTrack");
+        const prevBtn = document.getElementById("galleryPrevBtn");
+        const nextBtn = document.getElementById("galleryNextBtn");
+        if (!track || !prevBtn || !nextBtn) return;
+
+        let currentIndex = 0;
+        const slides = track.querySelectorAll(".overlap-slide");
+        const totalSlides = slides.length;
+
+        function getVisibleSlidesCount() {
+          return window.innerWidth >= 768 ? 2 : 1;
+        }
+
+        function updateSlider() {
+          const visibleSlides = getVisibleSlidesCount();
+          const maxIndex = totalSlides - visibleSlides;
+
+          if (currentIndex < 0) currentIndex = 0;
+          if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+          prevBtn.style.opacity = currentIndex === 0 ? "0.3" : "1";
+          prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
+          nextBtn.style.opacity = currentIndex === maxIndex ? "0.3" : "1";
+          nextBtn.style.pointerEvents =
+            currentIndex === maxIndex ? "none" : "auto";
+
+          const slideWidth = slides[0].getBoundingClientRect().width;
+          const gap = 16; // 1rem
+          const amount = currentIndex * (slideWidth + gap);
+          track.style.transform = `translateX(-${amount}px)`;
+        }
+
+        prevBtn.addEventListener("click", () => {
+          currentIndex--;
+          updateSlider();
+        });
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex++;
+          updateSlider();
+        });
+
+        window.addEventListener("resize", updateSlider);
+        setTimeout(updateSlider, 100);
       });
     </script>
   </body>

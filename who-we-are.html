@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,9 @@
           --color-beige-c,
           #dbd2c2
         ); /* fallback to gold-card if variable is missing */
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
       }
       .description-link-custom:hover {
         background-color: #ffffff !important;
@@ -38,7 +40,7 @@
 
   <body>
     <!-- Loader -->
-    <div id="loader" style="height: 100vh;">
+    <div id="loader" style="height: 100vh">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="spinner-border" role="status">
           <span class="sr-only"></span>
@@ -46,50 +48,204 @@
       </div>
     </div>
 
-    <div id="main-content" style="display: none;">
+    <div id="main-content" style="display: none">
       <div class="navbar-container">
         <div class="energlobix__navbar">
-          <a href="index.html">
-            <img src="assets/Links/logo.png" alt="" class="logo" />
+          <a
+            href="index.html"
+            class="logo-container"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/Links/top-logo.png"
+              alt="EnerGlobix Holdings"
+              class="logo-img"
+            />
+            <div class="logo-subtitle">Development</div>
           </a>
-          <button class="nav-toggle" aria-label="Toggle navigation">
-            &#9776;
-          </button>
+          <div class="navbar-right-side">
+            <div class="navlinks">
+              <ul>
+                <a href="who-we-are.html"><li class="active">About</li></a>
+                <a href="how-we-do-it.html"><li>Developments</li></a>
+                <a href="invest.html"><li>Location</li></a>
+              </ul>
+            </div>
 
-          <div class="navlinks">
-            <ul>
-              <a href="who-we-are.html"><li class="active">Who We Are</li></a>
-              <a href="how-we-do-it.html"><li>How We Do it</li></a>
-              <a href="invest.html"><li>Invest</li></a>
-            </ul>
-          </div>
+            <!-- Hamburger Icon & Menu Dropdown Wrapper -->
+            <div class="menu-wrapper">
+              <button
+                class="hamburger-btn"
+                id="open-menu-btn"
+                aria-label="Toggle navigation"
+              >
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
 
-          <div class="navlinks-mobile">
-            <ul>
-              <li>
-                <a href="who-we-are.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Who We Are
-                  </div>
-                </a>
-              </li>
+              <!-- Dropdown Menu / Sidebar -->
+              <div class="nav-menu-container" id="nav-menu">
+                <!-- Sidebar Close Button (only visible on mobile/tablet) -->
+                <button
+                  class="close-menu-btn"
+                  id="close-menu-btn"
+                  aria-label="Close navigation"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
 
-              <li>
-                <a href="how-we-do-it.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    How We Do it
-                  </div>
-                </a>
-              </li>
+                <ul class="nav-menu-list">
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Energy
+                      <svg
+                        class="submenu-arrow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li>
+                        <a href="https://energlobix.com/" class="submenu-link"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/whoweare/"
+                          class="submenu-link"
+                          >Who We Are</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/whatwedo/"
+                          class="submenu-link"
+                          >What We Do</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/howwedoit/"
+                          class="submenu-link"
+                          >How We Do It</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/insights/"
+                          class="submenu-link"
+                          >Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/contact"
+                          class="submenu-link"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
 
-              <li>
-                <a href="invest.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Invest
-                  </div>
-                </a>
-              </li>
-            </ul>
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Agriculture
+                      <svg
+                        class="submenu-arrow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/"
+                          class="submenu-link"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/who-we-are.html"
+                          class="submenu-link"
+                          >Who We Are</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/what-we-do.html"
+                          class="submenu-link"
+                          >What We Do</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/how-we-do-it.html"
+                          class="submenu-link"
+                          >How We Do It</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobixholding.kasehub.com/"
+                      class="nav-menu-link"
+                      >Holding</a
+                    >
+                  </li>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobix.kasehub.com/"
+                      class="nav-menu-link"
+                      >Main Page</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -98,7 +254,9 @@
         <div
           class="slide active"
           style="
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Links/compressed-img/who-we-are-hero.webp');
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url(&quot;assets/Links/compressed-img/who-we-are-hero.webp&quot;);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -139,7 +297,7 @@
       </div>
 
       <!-- About Section -->
-      <div class="who-we-are-about-section" style="background-position: top;">
+      <div class="who-we-are-about-section" style="background-position: top">
         <div id="about-us" class="oval-container who-we-are-top-card">
           <div
             class="energlobix__title font-adelle-sans-bold text-center text-gold font-bold"
@@ -150,16 +308,16 @@
           <div
             class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
           >
-            EnerGlobix Development creates commercial and private real
+            EnerGlobix Development creates commercial and residential
 
             <br class="hide-on-mobile" />
-            estate in Dubai and Abu Dhabi, with a clear focus on properties
+            real estate in Dubai and Abu Dhabi, with a clear focus on
 
             <br class="hide-on-mobile" />
-            that combine lasting quality, strong presence, and long-term
+            properties that combine lasting quality, strong presence, and
 
             <br class="hide-on-mobile" />
-            investment value.
+            long-term investment value.
           </div>
 
           <div
@@ -215,14 +373,16 @@
                 Development as a trusted name in commercial
 
                 <br class="hide-on-mobile" />
-                and private real estate, recognised for building
-                <br class="hide-on-mobile" />
-                assets that hold their position, perform over time,
+                and residential real estate, recognised for
 
                 <br class="hide-on-mobile" />
-                and contribute to stronger, more considered
+                building assets that hold their position, perform
+
                 <br class="hide-on-mobile" />
-                environments.
+                over time, and contribute to stronger, more
+
+                <br class="hide-on-mobile" />
+                considered environments.
               </div>
             </div>
 
@@ -249,7 +409,7 @@
               </div>
 
               <div
-                class="energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+                class="energlobix__text font-adelle-sans-bold mt-3 text-center text-white"
               >
                 We focus on:
               </div>
@@ -257,19 +417,19 @@
               <div
                 class="energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
               >
-                Developing commercial and private assets with
+                Developing commercial and residential assets
 
                 <br class="hide-on-mobile" />
-                real demand. Creating properties that combine
+                with real demand. Creating properties that
 
                 <br class="hide-on-mobile" />
-                usability with long-term investment value.
+                combine usability with long-term investment
 
                 <br class="hide-on-mobile" />
-                Ensuring that every development is positioned to
+                value.Ensuring that every development is
 
                 <br class="hide-on-mobile" />
-                perform beyond completion.
+                positioned to perform beyond completion.
               </div>
             </div>
           </div>
@@ -279,20 +439,20 @@
       <section
         id="section-contact"
         class="black-section"
-        style="padding-bottom: 100px;"
+        style="padding-bottom: 100px"
       >
         <!-- Overlapping Accordion -->
         <div
           id="approach-overlap-container"
           class="approach-overlap-container"
-          style="position: relative; z-index: 10;"
+          style="position: relative; z-index: 10"
         >
           <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div
                 id="approach-accordion"
                 class="approach-accordion-card gold-border"
-                style="margin-top: 0;"
+                style="margin-top: 0"
               >
                 <h1 class="energlobix__title font-adelle-sans-bold text-center">
                   OUR STANDARD, OUR APPROACH,<br class="hide-on-mobile" />
@@ -341,7 +501,7 @@
                       <h3
                         class="text-white energlobix__text font-adelle-sans-regular tracking-wide"
                       >
-                        Capital Deployed Where Demand Is Real
+                        Located Where Demand Is Real
                       </h3>
                     </div>
                     <div class="approach-accordion-body">
@@ -368,7 +528,7 @@
                       <h3
                         class="text-white energlobix__text font-adelle-sans-regular tracking-wide"
                       >
-                        Assets Built for Enduring Value
+                        Spaces Built for Enduring Quality
                       </h3>
                     </div>
                     <div class="approach-accordion-body">
@@ -395,7 +555,7 @@
                       <h3
                         class="text-white energlobix__text font-adelle-sans-regular tracking-wide"
                       >
-                        A Disciplined Approach to Investment
+                        A Disciplined Approach to Delivery
                       </h3>
                     </div>
                     <div class="approach-accordion-body">
@@ -417,7 +577,7 @@
           <!-- Heading -->
           <h1
             class="energlobix__title font-adelle-sans-bold text-center text-gold"
-            style="font-weight: bold;"
+            style="font-weight: bold"
           >
             Contact us
           </h1>
@@ -484,28 +644,29 @@
 
           <!-- Footer -->
           <div class="contact-footer">
-            <img
-              src="./assets/Links/footer-img.png"
-              class="footer-logo"
-              alt=""
-            />
+            <a
+              href="index.html"
+              class="logo-container"
+              style="text-decoration: none"
+            >
+              <img
+                src="assets/Links/top-logo.png"
+                alt="EnerGlobix Holdings"
+                class="logo-img"
+              />
+              <div class="logo-subtitle">Development</div>
+            </a>
 
             <h3 class="footer-subtitle font-adelle-sans-regular">
               Explore Our Businesses
             </h3>
 
             <div class="footer-links-wrapper">
-              <h4 class="footer-link-text">
-                © EnerGlobix 2024
-              </h4>
+              <h4 class="footer-link-text">© EnerGlobix 2024</h4>
 
-              <h4 class="footer-link-text footer-link-hover">
-                Terms of use
-              </h4>
+              <h4 class="footer-link-text footer-link-hover">Terms of use</h4>
 
-              <h4 class="footer-link-text footer-link-hover">
-                Privacy policy
-              </h4>
+              <h4 class="footer-link-text footer-link-hover">Privacy policy</h4>
             </div>
           </div>
         </div>
@@ -575,7 +736,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         const approachAccordion = document.getElementById("approach-accordion");
         const overlapContainer = document.getElementById(
-          "approach-overlap-container"
+          "approach-overlap-container",
         );
         const topCard = document.getElementById("about-us");
         const sectionContact = document.getElementById("section-contact");
@@ -598,24 +759,24 @@
               overlapContainer.style.setProperty(
                 "margin-top",
                 "60px",
-                "important"
+                "important",
               );
               overlapContainer.style.setProperty(
                 "margin-bottom",
                 "0px",
-                "important"
+                "important",
               );
 
               // Fix the deep curve by making the vertical radius fixed!
               // This prevents the curve from becoming a massive U-shape when the section gets tall.
               const curveOverlay = document.querySelector(
-                ".about-section .curve-overlay"
+                ".about-section .curve-overlay",
               );
               if (curveOverlay) {
                 curveOverlay.style.setProperty(
                   "border-radius",
                   "50% / 150px",
-                  "important"
+                  "important",
                 );
               }
 
@@ -625,9 +786,8 @@
               // Ensure the black section overlaps naturally to hide the white corners of the SVG curve
               sectionContact.style.removeProperty("margin-top");
 
-              const contactInner = sectionContact.querySelector(
-                ".contact-container"
-              );
+              const contactInner =
+                sectionContact.querySelector(".contact-container");
               if (contactInner) {
                 contactInner.style.removeProperty("margin-top");
                 contactInner.style.removeProperty("position");
@@ -635,11 +795,15 @@
               }
 
               // Use 400px padding: 280px to counteract the -280px margin-top, plus 120px spacing (as in index.html)
-              sectionContact.style.setProperty("padding-top", "400px", "important");
+              sectionContact.style.setProperty(
+                "padding-top",
+                "400px",
+                "important",
+              );
             } else {
               // Reset the curve on desktop
               const curveOverlay = document.querySelector(
-                ".about-section .curve-overlay"
+                ".about-section .curve-overlay",
               );
               if (curveOverlay) {
                 curveOverlay.style.removeProperty("border-radius");
@@ -649,7 +813,7 @@
               if (overlapContainer.parentElement !== sectionContact) {
                 sectionContact.insertBefore(
                   overlapContainer,
-                  sectionContact.firstChild
+                  sectionContact.firstChild,
                 );
               }
 
@@ -659,22 +823,22 @@
               overlapContainer.style.setProperty(
                 "margin-top",
                 `-${halfHeight}px`,
-                "important"
+                "important",
               );
               topCard.style.setProperty(
                 "padding-bottom",
                 `${halfHeight + 80}px`,
-                "important"
+                "important",
               );
               overlapContainer.style.setProperty(
                 "margin-bottom",
                 `80px`,
-                "important"
+                "important",
               );
               sectionContact.style.setProperty(
                 "padding-top",
                 "0px",
-                "important"
+                "important",
               );
             }
           };

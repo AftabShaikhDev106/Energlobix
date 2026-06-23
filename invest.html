@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,17 +28,88 @@
           --color-beige-c,
           #dbd2c2
         ); /* fallback to gold-card if variable is missing */
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
       }
       .description-link-custom:hover {
         background-color: #ffffff !important;
+      }
+
+      /* Circle Icons */
+      .amenity-circle {
+        width: 110px;
+        height: 110px;
+        border: 1.5px solid var(--gold-color, #c5a880);
+        border-radius: 50%;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        background-color: transparent;
+      }
+      .amenity-circle:hover {
+        border-color: #ffffff;
+        background-color: rgba(197, 168, 128, 0.15);
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(197, 168, 128, 0.35);
+      }
+      .amenity-circle svg {
+        transition: stroke 0.3s ease;
+      }
+      .amenity-circle:hover svg {
+        stroke: #ffffff !important;
+      }
+      .amenity-title {
+        font-size: 0.95rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.3s ease;
+      }
+      .col-6:hover .amenity-title {
+        color: var(--gold-color, #c5a880);
+      }
+
+      .amenities-grid {
+        max-width: 680px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* 5-Image Grid */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: #1a1a1a;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+      .gallery-item.landscape {
+        height: 240px;
+      }
+      /* On mobile, stack everything and make all images the same height */
+      @media (max-width: 767px) {
+        .gallery-item.tall {
+          height: 300px !important;
+        }
+        .gallery-item.landscape {
+          height: 200px;
+        }
       }
     </style>
   </head>
 
   <body>
     <!-- Loader -->
-    <div id="loader" style="height: 100vh;">
+    <div id="loader" style="height: 100vh">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="spinner-border" role="status">
           <span class="sr-only"></span>
@@ -46,50 +117,204 @@
       </div>
     </div>
 
-    <div id="main-content" style="display: none;">
+    <div id="main-content" style="display: none">
       <div class="navbar-container">
         <div class="energlobix__navbar">
-          <a href="index.html">
-            <img src="assets/Links/logo.png" alt="" class="logo" />
+          <a
+            href="index.html"
+            class="logo-container"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/Links/top-logo.png"
+              alt="EnerGlobix Holdings"
+              class="logo-img"
+            />
+            <div class="logo-subtitle">Development</div>
           </a>
-          <button class="nav-toggle" aria-label="Toggle navigation">
-            &#9776;
-          </button>
+          <div class="navbar-right-side">
+            <div class="navlinks">
+              <ul>
+                <a href="who-we-are.html"><li>About</li></a>
+                <a href="how-we-do-it.html"><li>Developments</li></a>
+                <a href="invest.html"><li class="active">Location</li></a>
+              </ul>
+            </div>
 
-          <div class="navlinks">
-            <ul>
-              <a href="who-we-are.html"><li>Who We Are</li></a>
-              <a href="how-we-do-it.html"><li>How We Do it</li></a>
-              <a href="invest.html"><li class="active">Invest</li></a>
-            </ul>
-          </div>
+            <!-- Hamburger Icon & Menu Dropdown Wrapper -->
+            <div class="menu-wrapper">
+              <button
+                class="hamburger-btn"
+                id="open-menu-btn"
+                aria-label="Toggle navigation"
+              >
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
 
-          <div class="navlinks-mobile">
-            <ul>
-              <li>
-                <a href="who-we-are.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Who We Are
-                  </div>
-                </a>
-              </li>
+              <!-- Dropdown Menu / Sidebar -->
+              <div class="nav-menu-container" id="nav-menu">
+                <!-- Sidebar Close Button (only visible on mobile/tablet) -->
+                <button
+                  class="close-menu-btn"
+                  id="close-menu-btn"
+                  aria-label="Close navigation"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
 
-              <li>
-                <a href="how-we-do-it.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    How We Do it
-                  </div>
-                </a>
-              </li>
+                <ul class="nav-menu-list">
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Energy
+                      <svg
+                        class="submenu-arrow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li>
+                        <a href="https://energlobix.com/" class="submenu-link"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/whoweare/"
+                          class="submenu-link"
+                          >Who We Are</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/whatwedo/"
+                          class="submenu-link"
+                          >What We Do</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/howwedoit/"
+                          class="submenu-link"
+                          >How We Do It</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/insights/"
+                          class="submenu-link"
+                          >Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobix.com/contact"
+                          class="submenu-link"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
 
-              <li>
-                <a href="invest.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Invest
-                  </div>
-                </a>
-              </li>
-            </ul>
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Agriculture
+                      <svg
+                        class="submenu-arrow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/"
+                          class="submenu-link"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/who-we-are.html"
+                          class="submenu-link"
+                          >Who We Are</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/what-we-do.html"
+                          class="submenu-link"
+                          >What We Do</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://energlobixagriculture.kasehub.com/how-we-do-it.html"
+                          class="submenu-link"
+                          >How We Do It</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobixholding.kasehub.com/"
+                      class="nav-menu-link"
+                      >Holding</a
+                    >
+                  </li>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobix.kasehub.com/"
+                      class="nav-menu-link"
+                      >Main Page</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -98,7 +323,7 @@
         <div
           class="slide active"
           style="
-            background-image: url('assets/Links/compressed-img/invest-hero.webp');
+            background-image: url(&quot;assets/Links/compressed-img/invest-hero.webp&quot;);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -139,12 +364,12 @@
       </div>
 
       <!-- About Section -->
-      <div class="invest-about-section" style="background-position: top;">
+      <div class="invest-about-section" style="background-position: top">
         <div id="about-us" class="oval-container">
           <div
             class="energlobix__title font-adelle-sans-bold text-center text-gold font-bold"
           >
-            Signature Development investment
+            Signature Development Locations
           </div>
 
           <div
@@ -168,28 +393,33 @@
                   <h3
                     class="font-adelle-sans-bold mb-4 text-dark-blue energlobix__card-title"
                   >
-                    Your Investment
+                    Living in Dubai
                   </h3>
                   <p
                     class="mb-3 text-black energlobix__text font-adelle-sans-regular"
                   >
-                    As an investor, you participate in the
-                    <br class="hide-on-mobile" />
-                    full development cycle, from concept to
-                    <br class="hide-on-mobile" />
-                    completion, with a clear objective:
-                  </p>
-
-                  <p
-                    class="mb-3 text-black energlobix__text font-adelle-sans-regular"
-                  >
-                    To realise capital growth through
+                    Living in Dubai means becoming
 
                     <br class="hide-on-mobile" />
-                    well-positioned, high-quality
+                    part of an environment designed for
 
                     <br class="hide-on-mobile" />
-                    developments.
+
+                    convenience, accessibility and high
+                    <br class="hide-on-mobile" />
+                    quality of life. Residential communities
+
+                    <br class="hide-on-mobile" />
+                    across the city combine modern living
+
+                    <br class="hide-on-mobile" />
+
+                    with everyday functionality,creating
+
+                    <br class="hide-on-mobile" />
+                    spaces that support both family life
+                    <br class="hide-on-mobile" />
+                    and individual lifestyles.
                   </p>
                 </div>
               </div>
@@ -203,119 +433,370 @@
                   <h3
                     class="font-bold mb-4 text-dark-blue energlobix__title font-adelle-sans-bold"
                   >
-                    Our Approach
+                    Business in Dubai
                   </h3>
                   <p
                     class="mb-3 text-black energlobix__text font-adelle-sans-regular"
                   >
-                    This approach is suited for investors seeking:
+                    Position Your business in a globally
+                    <br class="hide-on-mobile" />
+                    connected Market
                   </p>
-                  <ul
-                    class="list-unstyled mb-0 text-black energlobix__text font-adelle-sans-regular"
+                  <p
+                    class="text-black energlobix__text font-adelle-sans-regular"
                   >
-                    <li class="mb-3">1. Defined investment timelines</li>
-                    <li class="mb-3">2. Capital growth through development</li>
-                    <li class="mb-0">
-                      3. Exposure to high-demand real estate segments
-                    </li>
-                  </ul>
+                    Dubai has established itself as a leading
+
+                    <br class="hide-on-mobile" />
+                    international business destination, connecting
+                    <br class="hide-on-mobile" />
+                    Europe, Asia, Africa and the Middle East
+
+                    <br class="hide-on-mobile" />
+                    through world-class infrastructure and a
+
+                    <br class="hide-on-mobile" />
+                    globally focused economy.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="latest-news-section my-5 container">
-            <div class="latest-news">
-              <div class="news-title">
-                <div
-                  class="energlobix__title font-adelle-sans-bold text-gold text-center font-bold"
-                >
-                  Build & Sell Development for Capital Growth
-                </div>
-              </div>
-              <div
-                class="energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
-              >
-                You gain access to developments structured for
-
-                <br class="hide-on-mobile" />value creation and timely
-                realisation.
-              </div>
-
-              <div
-                class="energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
-              >
-                Each project is positioned to meet market
-
-                <br class="hide-on-mobile" />
-                demand and deliver capital growth through
-                <br class="hide-on-mobile" />
-                quality, clarity, and precise timing.
-              </div>
-
-              <a
-                href="./how-we-do-it.html"
-                class="description-link font-adelle-sans-bold description-link-custom mt-4 lh-1 text-black fw-semibold d-flex align-items-center justify-content-center text-decoration-none"
-              >
-                See more here
-              </a>
-            </div>
-
-            <div class="vertical-divider"></div>
-
-            <div class="latest-news">
-              <div class="news-title">
-                <div
-                  class="energlobix__title font-adelle-sans-bold text-gold text-center font-bold"
-                >
-                  Long-Term Investment Income & Asset Strength
-                </div>
-              </div>
-              <div
-                class="energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
-              >
-                You invest in assets designed to
-
-                <br class="hide-on-mobile" />
-                perform beyond completion.
-              </div>
-
-              <div
-                class="energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
-              >
-                These properties generate stable income while
-
-                <br class="hide-on-mobile" />
-                building long-term value - offering a strong and
-
-                <br class="hide-on-mobile" />
-                enduring foundation for your capital.
-              </div>
-
-              <a
-                href="./how-we-do-it.html"
-                class="description-link font-adelle-sans-bold description-link-custom mt-4 lh-1 text-black fw-semibold d-flex align-items-center justify-content-center text-decoration-none"
-              >
-                See more here
-              </a>
-            </div>
-          </div>
-
+          <!-- Signature Communities and Amenities Header -->
           <div
             class="energlobix__title font-adelle-sans-bold text-center mt-5 text-gold font-bold"
           >
-            Why Invest in Dubai Real Estate
+            Signature Communities and Amenities
           </div>
 
           <div
             class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+            style="max-width: 900px"
+          >
+            The UAE has become one of the world's most dynamic destinations for
+            both residential and international business. Defined by modern
+            infrastructure, global connectivity and a fast-moving economy, the
+            city continues to attract individuals, families and companies
+            seeking quality, accessibility and long-term opportunity.
+          </div>
+
+          <!-- Circle Icons Section -->
+          <div class="container my-5 py-5">
+            <div class="row justify-content-center g-5 amenities-grid">
+              <!-- Item 1: Business -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="13"></line>
+                    <line x1="6" y1="20" x2="6" y2="16"></line>
+                    <path d="M4 17l6-6 4 3 6-8"></path>
+                    <polyline points="16 6 20 6 20 10"></polyline>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Business
+                </div>
+              </div>
+              <!-- Item 2: Education -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="4" width="18" height="16" rx="1"></rect>
+                    <line x1="7" y1="8" x2="17" y2="8"></line>
+                    <line x1="7" y1="12" x2="13" y2="12"></line>
+                    <circle cx="16" cy="14" r="2.5"></circle>
+                    <path d="M15 16.5l-1 2 2-1 2 1-1-2"></path>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Education
+                </div>
+              </div>
+              <!-- Item 3: Travel -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <g transform="rotate(45 12 12)">
+                      <path
+                        d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5l7 2.5z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Travel
+                </div>
+              </div>
+              <!-- Item 4: Health -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="4" y="3" width="16" height="18" rx="1"></rect>
+                    <rect x="7" y="6" width="2" height="2"></rect>
+                    <rect x="11" y="6" width="2" height="2"></rect>
+                    <rect x="15" y="6" width="2" height="2"></rect>
+                    <rect x="7" y="10" width="2" height="2"></rect>
+                    <rect x="11" y="10" width="2" height="2"></rect>
+                    <rect x="15" y="10" width="2" height="2"></rect>
+                    <rect x="7" y="14" width="2" height="2"></rect>
+                    <rect x="15" y="14" width="2" height="2"></rect>
+                    <path d="M10 21v-4h4v4"></path>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Health
+                </div>
+              </div>
+              <!-- Item 5: Sports -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="5.5" cy="17.5" r="3.5"></circle>
+                    <circle cx="18.5" cy="17.5" r="3.5"></circle>
+                    <path d="M5.5 17.5L10 11h6.5l2 6.5"></path>
+                    <path d="M10 11l4 6.5"></path>
+                    <path d="M14 6.5L10 11"></path>
+                    <path d="M12 6.5h4"></path>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Sports
+                </div>
+              </div>
+              <!-- Item 6: Lifestyle -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 21V9"></path>
+                    <path d="M12 9c-3.3 0-6-2.2-6-5h12c0 2.8-2.7 5-6 5z"></path>
+                    <path d="M4 17h8l4-4h4"></path>
+                    <path d="M7 17v3"></path>
+                    <path d="M15 17v3"></path>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Lifestyle
+                </div>
+              </div>
+              <!-- Item 7: Communities -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="10" width="8" height="11" rx="0.5"></rect>
+                    <rect x="13" y="4" width="8" height="17" rx="0.5"></rect>
+                    <line x1="5" y1="13" x2="9" y2="13"></line>
+                    <line x1="5" y1="16" x2="9" y2="16"></line>
+                    <line x1="15" y1="7" x2="19" y2="7"></line>
+                    <line x1="15" y1="10" x2="19" y2="10"></line>
+                    <line x1="15" y1="13" x2="19" y2="13"></line>
+                    <line x1="15" y1="16" x2="19" y2="16"></line>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Communities
+                </div>
+              </div>
+              <!-- Item 8: Retail -->
+              <div
+                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
+              >
+                <div
+                  class="amenity-circle d-flex align-items-center justify-content-center"
+                >
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c5a880"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="4" y="8" width="16" height="13" rx="1"></rect>
+                    <path d="M9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2"></path>
+                  </svg>
+                </div>
+                <div class="amenity-title font-adelle-sans-regular mt-2">
+                  Retail
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Section Header -->
+          <div
+            class="energlobix__title font-adelle-sans-bold text-center text-gold font-bold"
+          >
+            The UAE Continues to Attract Global Residents and Businesses
+          </div>
+
+          <div
+            class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+            style="max-width: 950px"
+          >
+            Dubai combines modern living, global business access and forward
+            thinking development, creating an environment shaped by innovation,
+            connectivity and opportunity. With world class infrastructure, a
+            high level of safety, an international outlook and rapidly evolving
+            residential and commercial sectors, the city continues to strengthen
+            its position as one of the world’s most attractive destinations for
+            both living and business.
+          </div>
+
+          <!-- 5-Image Asymmetric Gallery Grid -->
+          <div class="container my-5 pb-4">
+            <div class="row g-3 align-items-stretch">
+              <!-- Column 1: Tall image -->
+              <div class="col-12 col-md-4">
+                <div class="gallery-item tall h-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=800&q=80"
+                    alt="Dubai Canal & Burj Al Arab"
+                  />
+                </div>
+              </div>
+              <!-- Column 2: Stacked landscape images -->
+              <div class="col-12 col-md-4 d-flex flex-column gap-3">
+                <div class="gallery-item landscape flex-grow-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80"
+                    alt="Luxury Yacht Dubai"
+                  />
+                </div>
+                <div class="gallery-item landscape flex-grow-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=800&q=80"
+                    alt="Dubai Dining View"
+                  />
+                </div>
+              </div>
+              <!-- Column 3: Stacked landscape images -->
+              <div class="col-12 col-md-4 d-flex flex-column gap-3">
+                <div class="gallery-item landscape flex-grow-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                    alt="Dubai Coastline Skyline"
+                  />
+                </div>
+                <div class="gallery-item landscape flex-grow-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=800&q=80"
+                    alt="Dubai Golf Course"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="energlobix__title font-adelle-sans-bold mt-3 text-centertext-gold font-bold"
+          >
+            Why Invest in the UAE
+          </div>
+
+          <div
+            class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+            style="max-width: 950px"
           >
             A Market Defined by Growth, Demand, and Global Capital
-
             <br class="hide-on-mobile" />
+
             Dubai has established itself as one of the world’s most dynamic real
             estate
-
             <br class="hide-on-mobile" />
             markets, attracting international investors through a combination of
             growth,
@@ -324,17 +805,19 @@
           </div>
 
           <div
-            class="energlobix__title font-adelle-sans-bold text-center mt-4 text-gold font-bold"
+            class="energlobix__title font-adelle-sans-bold text-cente mt-4 text-gold font-bold"
           >
             Consistent Demand at Global Scale
           </div>
 
           <div
             class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+            style="max-width: 950px"
           >
             Driven by population growth, international migration, and business
 
             <br class="hide-on-mobile" />
+
             expansion, Dubai continues to see strong and sustained demand across
 
             <br class="hide-on-mobile" />
@@ -440,13 +923,13 @@
       <section
         id="section-contact"
         class="bg-black"
-        style="padding-top: 260px; padding-bottom: 100px; min-height: 100vh;"
+        style="padding-top: 260px; padding-bottom: 100px; min-height: 100vh"
       >
         <div class="container contact-container">
           <!-- Heading -->
           <h1
             class="energlobix__title font-adelle-sans-bold text-center text-gold"
-            style="font-weight: bold;"
+            style="font-weight: bold"
           >
             Contact us
           </h1>
@@ -513,28 +996,29 @@
 
           <!-- Footer -->
           <div class="contact-footer">
-            <img
-              src="./assets/Links/footer-img.png"
-              class="footer-logo"
-              alt=""
-            />
+            <a
+              href="index.html"
+              class="logo-container"
+              style="text-decoration: none"
+            >
+              <img
+                src="assets/Links/top-logo.png"
+                alt="EnerGlobix Holdings"
+                class="logo-img"
+              />
+              <div class="logo-subtitle">Development</div>
+            </a>
 
             <h3 class="footer-subtitle font-adelle-sans-regular">
               Explore Our Businesses
             </h3>
 
             <div class="footer-links-wrapper">
-              <h4 class="footer-link-text">
-                © EnerGlobix 2024
-              </h4>
+              <h4 class="footer-link-text">© EnerGlobix 2024</h4>
 
-              <h4 class="footer-link-text footer-link-hover">
-                Terms of use
-              </h4>
+              <h4 class="footer-link-text footer-link-hover">Terms of use</h4>
 
-              <h4 class="footer-link-text footer-link-hover">
-                Privacy policy
-              </h4>
+              <h4 class="footer-link-text footer-link-hover">Privacy policy</h4>
             </div>
           </div>
         </div>
@@ -611,7 +1095,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         const approachAccordion = document.getElementById("approach-accordion");
         const sectionApproachInner = document.getElementById(
-          "section-approach-inner"
+          "section-approach-inner",
         );
         const sectionSignature = document.getElementById("section-signature");
 
