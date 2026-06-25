@@ -21,6 +21,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/local.css" />
+    <link rel="stylesheet" href="gallery/style.css" />
     <style>
       .description-link-custom {
         padding: 0.625rem 3rem;
@@ -45,7 +46,7 @@
       .floor-plan-circle {
         width: 130px;
         height: 130px;
-        border: 1px solid var(--gold-color);
+        border: 1px solid var(--color-beige-c, #c2b18f);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -57,18 +58,18 @@
         text-decoration: none;
       }
       .floor-plan-circle:hover {
-        background-color: rgba(184, 166, 133, 0.15);
+        background-color: rgba(194, 177, 143, 0.15);
         transform: scale(1.05);
       }
       .floor-plan-box {
-        border: 1px solid var(--gold-color);
+        border: 1px solid var(--color-beige-c, #c2b18f);
         padding: 8px 12px;
         min-width: 75px;
         text-align: center;
       }
       .floor-plan-text {
         font-family: "Adelle-Sans-Regular", sans-serif;
-        color: var(--gold-color);
+        color: var(--color-beige-c, #c2b18f);
         font-size: 13px;
         font-weight: bold;
         margin: 0;
@@ -180,7 +181,7 @@
                 <ul class="nav-menu-list">
                   <li class="nav-menu-item has-submenu">
                     <a href="#" class="nav-menu-link toggle-submenu">
-                      Energy
+                      Development
                       <svg
                         class="submenu-arrow"
                         fill="none"
@@ -199,112 +200,27 @@
                     </a>
                     <ul class="nav-submenu">
                       <li>
-                        <a href="https://energlobix.com/" class="submenu-link"
-                          >Home</a
+                        <a href="index.html" class="submenu-link">Home</a>
+                      </li>
+                      <li>
+                        <a href="who-we-are.html" class="submenu-link">About</a>
+                      </li>
+                      <li>
+                        <a href="how-we-do-it.html" class="submenu-link"
+                          >Developments</a
                         >
                       </li>
                       <li>
-                        <a
-                          href="https://energlobix.com/whoweare/"
-                          class="submenu-link"
-                          >Who We Are</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobix.com/whatwedo/"
-                          class="submenu-link"
-                          >What We Do</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobix.com/howwedoit/"
-                          class="submenu-link"
-                          >How We Do It</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobix.com/insights/"
-                          class="submenu-link"
-                          >Insights</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobix.com/contact"
-                          class="submenu-link"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-menu-item has-submenu">
-                    <a href="#" class="nav-menu-link toggle-submenu">
-                      Agriculture
-                      <svg
-                        class="submenu-arrow"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        width="12"
-                        height="12"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
-                        ></path>
-                      </svg>
-                    </a>
-                    <ul class="nav-submenu">
-                      <li>
-                        <a
-                          href="https://energlobixagriculture.kasehub.com/"
-                          class="submenu-link"
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobixagriculture.kasehub.com/who-we-are.html"
-                          class="submenu-link"
-                          >Who We Are</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobixagriculture.kasehub.com/what-we-do.html"
-                          class="submenu-link"
-                          >What We Do</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://energlobixagriculture.kasehub.com/how-we-do-it.html"
-                          class="submenu-link"
-                          >How We Do It</a
-                        >
+                        <a href="invest.html" class="submenu-link">Location</a>
                       </li>
                     </ul>
                   </li>
 
                   <li class="nav-menu-item">
                     <a
-                      href="https://energlobixholding.kasehub.com/"
+                      href="https://development-intro.kasehub.com/"
                       class="nav-menu-link"
-                      >Holding</a
-                    >
-                  </li>
-
-                  <li class="nav-menu-item">
-                    <a
-                      href="https://energlobix.kasehub.com/"
-                      class="nav-menu-link"
-                      >Main Page</a
+                      >Main Menu</a
                     >
                   </li>
                 </ul>
@@ -660,30 +576,6 @@
                     src="assets/Links/compressed-img/north-43-10.webp"
                     alt="Gallery Image 1"
                   />
-                  <div
-                    class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
-                    style="background-color: rgba(0, 0, 0, 0.35)"
-                  >
-                    <h1
-                      class="text-white font-adelle-sans-bold display-4 font-bold m-0"
-                      style="
-                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-                        font-weight: bold;
-                      "
-                    >
-                      FULLY SERVICED
-                    </h1>
-                    <p
-                      class="text-white font-adelle-sans-regular mt-2"
-                      style="
-                        font-size: 14px;
-                        letter-spacing: 0.15em;
-                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-                      "
-                    >
-                      STUDIO, 1, 2 & 3 BEDROOM RESIDENCES
-                    </p>
-                  </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="overlap-slide">
@@ -742,13 +634,13 @@
             </div>
           </div>
 
-          <a
+          <!-- <a
             href="#"
             class="description-link font-adelle-sans-bold description-link-custom mt-5 lh-1 text-black fw-semibold d-flex align-items-center justify-content-center text-decoration-none"
             style="cursor: pointer"
           >
             Download
-          </a>
+          </a> -->
         </div>
 
         <div class="container contact-container">
@@ -1085,5 +977,97 @@
         setTimeout(updateSlider, 100);
       });
     </script>
+
+    <!-- PORTFOLIO OVERLAY MODAL (Initially Hidden) -->
+    <div
+      id="portfolioModal"
+      class="portfolio-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <!-- Close Button -->
+      <button
+        class="modal-close-btn"
+        aria-label="Close Gallery"
+        onclick="closePortfolioPopup()"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-content-wrapper">
+        <!-- Header Section -->
+        <header class="gallery-modal-header">
+          <span class="gallery-modal-category">DEVELOPMENT PORTFOLIO</span>
+          <h1 id="modalTitle" class="gallery-modal-title">
+            NORTH43 Residence Gallery
+          </h1>
+          <div class="gallery-header-divider"></div>
+        </header>
+
+        <!-- Gallery Masonry Grid (Dynamically Populated) -->
+        <div id="galleryGrid" class="gallery-masonry-grid">
+          <!-- Javascript will inject cards here -->
+        </div>
+
+        <!-- Floating Download Button -->
+        <div class="download-button-wrapper">
+          <a
+            href="YOUR_MERGED_PDF_LINK"
+            download
+            class="download-portfolio-btn"
+          >
+            <span class="btn-icon"><i class="fa-solid fa-file-pdf"></i></span>
+            <span class="btn-text">Download Portfolio</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGE PREVIEW LIGHTBOX (Initially Hidden) -->
+    <div
+      id="lightboxModal"
+      class="lightbox-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image Preview"
+    >
+      <!-- Close Button -->
+      <button
+        class="lightbox-close-btn"
+        aria-label="Close Preview"
+        onclick="closeLightbox()"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Navigation Arrows -->
+      <button
+        class="lightbox-nav-btn lightbox-prev-btn"
+        aria-label="Previous Image"
+      >
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <button
+        class="lightbox-nav-btn lightbox-next-btn"
+        aria-label="Next Image"
+      >
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+
+      <!-- Lightbox Content -->
+      <div class="lightbox-content">
+        <img
+          id="lightboxImg"
+          src=""
+          alt="Preview Image"
+          class="lightbox-image"
+        />
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- Portfolio Gallery JS -->
+    <script src="gallery/script.js"></script>
   </body>
 </html>

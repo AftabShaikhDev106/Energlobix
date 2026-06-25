@@ -48,6 +48,8 @@
 
 :root {
   --color-gold-card: #dbd2c2;
+  --color-beige-c: rgb(194, 177, 143);
+  --color-beige-dark: #dcc59d;
   --gold-color: rgb(184, 166, 133);
   --black-color: rgb(3, 12, 21);
   --dark-blue-color: rgb(25, 45, 80);
@@ -315,7 +317,7 @@ a:active {
 
 /* 3 Text colors */
 .text-gold {
-  color: var(--gold-color);
+  color: var(--color-beige-c, #c2b18f);
 }
 
 .text-light-green {
@@ -2382,7 +2384,7 @@ body {
 
 /* Description text — mirrors: text-[--color-beige-c] */
 .overlap-card-desc {
-  color: var(--gold-color);
+  color: var(--color-beige-c, #c2b18f);
 }
 
 /* Register button — mirrors: bg-[#9e8b6d] text-black py-3 px-4 font-bold hover:bg-[--color-beige-c] */

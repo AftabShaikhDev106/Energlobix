@@ -1,0 +1,612 @@
+/* CSS Variables for Premium Architecture Brand */
+:root {
+    --bg-color: #0d0d0f;
+    --card-bg: #141416;
+    --gold-color: var(--color-beige-c, #c2b18f);
+    --gold-hover: var(--color-beige-dark, #dcc59d);
+    --text-white: #ffffff;
+    --text-gray: #a1a1a6;
+    --border-color: rgba(194, 177, 143, 0.2);
+    --border-hover: rgba(194, 177, 143, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --sans-font: 'Montserrat', sans-serif;
+    --serif-font: 'Playfair Display', serif;
+}
+
+/* Reset and Demo Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: var(--sans-font);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Demo Page Wrapper */
+.demo-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-image: radial-gradient(circle at top right, rgba(197, 160, 89, 0.08), transparent 45%);
+}
+
+.demo-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.brand-logo {
+    font-family: var(--serif-font);
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.brand-logo .gold-text {
+    color: var(--gold-color);
+}
+
+.brand-logo .white-text {
+    color: var(--text-white);
+}
+
+.demo-subtitle {
+    font-size: 1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+/* Demo Triggers - Floor Plans Section */
+.demo-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.floor-plans-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.floor-plan-circle {
+    width: 130px;
+    height: 130px;
+    border: 1px solid var(--gold-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.floor-plan-circle:hover {
+    background-color: rgba(194, 177, 143, 0.15);
+    transform: scale(1.05);
+}
+
+.floor-plan-box {
+    border: 1px solid var(--gold-color);
+    padding: 8px 12px;
+    min-width: 75px;
+    text-align: center;
+}
+
+.floor-plan-text {
+    color: var(--gold-color);
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.instruction-note {
+    font-size: 0.9rem;
+    color: var(--gold-color);
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+}
+
+/* PORTFOLIO OVERLAY MODAL (Initially Hidden) */
+.portfolio-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(10, 10, 12, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active Modal State */
+.portfolio-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Disable body scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 15px; /* Prevent layout shift if scrollbars disappear */
+}
+
+/* Modal Content Container */
+.modal-content-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: 80px auto;
+    padding-bottom: 120px; /* Space for floating download button */
+    transform: scale(0.95) translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scale effect inside active Modal */
+.portfolio-modal.active .modal-content-wrapper {
+    transform: scale(1) translateY(0);
+}
+
+/* Close Button (Top Right) */
+.modal-close-btn {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 10000;
+    background: rgba(20, 20, 22, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn:hover {
+    background-color: var(--gold-color);
+    color: var(--bg-color);
+    border-color: var(--gold-color);
+    transform: rotate(90deg) scale(1.05);
+}
+
+/* Modal Header */
+.gallery-modal-header {
+    text-align: center;
+    margin-bottom: 50px;
+    display: block !important; /* Force block layout to override Bootstrap flexbox */
+    border-bottom: none !important; /* Remove Bootstrap default border */
+    padding: 0 !important; /* Remove Bootstrap default padding */
+}
+
+.gallery-modal-category {
+    font-family: "Adelle-Sans-Bold", sans-serif !important;
+    font-size: 0.85rem;
+    color: var(--gold-color);
+    letter-spacing: 0.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.gallery-modal-title {
+    font-family: "Adelle-Sans-Bold", sans-serif !important;
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: var(--text-white);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.gallery-header-divider {
+    width: 85px;
+    height: 2px;
+    background-color: var(--gold-color);
+    margin: 20px auto 0;
+}
+
+/* Gallery Masonry Layout (Pinterest style) */
+.gallery-masonry-grid {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.gallery-grid-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.gallery-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+    position: relative;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(197, 160, 89, 0.12), 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: var(--border-hover);
+}
+
+/* Image styling */
+.gallery-card-image-wrap {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--card-bg);
+}
+
+.gallery-card-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Card details/footer */
+.gallery-card-info {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.gallery-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+}
+
+.gallery-card-tag {
+    font-size: 0.75rem;
+    color: var(--gold-color);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Hover overlay inside image wrapper */
+.gallery-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(13, 13, 15, 0.8) 0%, rgba(13, 13, 15, 0) 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.gallery-card:hover .gallery-card-overlay {
+    opacity: 1;
+}
+
+/* Floating Download Button */
+.download-button-wrapper {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-modal.active .download-button-wrapper {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.download-portfolio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--gold-color);
+    color: var(--bg-color) !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 0 !important; /* Perfectly square corners, no border radius */
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-portfolio-btn:hover {
+    background-color: #ffffff !important;
+    color: var(--bg-color) !important;
+}
+
+.download-portfolio-btn:active {
+    background-color: #ffffff !important;
+}
+
+.download-portfolio-btn .btn-icon {
+    font-size: 0.95rem;
+}
+
+/* LIGHTBOX MODAL (Image Preview) */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11000; /* Higher than portfolio modal */
+    background-color: rgba(5, 5, 6, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Lightbox Close Button */
+.lightbox-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 12000;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.lightbox-close-btn:hover {
+    background-color: var(--text-white);
+    color: var(--bg-color);
+    border-color: var(--text-white);
+    transform: rotate(90deg) scale(1.05);
+}
+
+/* Lightbox Navigation Slider Buttons */
+.lightbox-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(20, 20, 22, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    font-size: 1.8rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 12000;
+}
+
+.lightbox-nav-btn:hover {
+    background-color: var(--gold-color);
+    color: var(--bg-color);
+    border-color: var(--gold-color);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.lightbox-prev-btn {
+    left: 40px;
+}
+
+.lightbox-next-btn {
+    right: 40px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+    .lightbox-prev-btn {
+        left: 15px;
+    }
+    .lightbox-next-btn {
+        right: 15px;
+    }
+}
+
+/* Lightbox Content Container */
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.92);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-caption {
+    margin-top: 20px;
+    font-family: var(--serif-font);
+    font-size: 1.3rem;
+    color: var(--text-white);
+    letter-spacing: 0.05em;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Responsive Breaks for Masonry Columns */
+@media (max-width: 1200px) {
+    .gallery-masonry-grid {
+        gap: 20px;
+    }
+    .gallery-grid-column {
+        gap: 20px;
+    }
+    .modal-content-wrapper {
+        width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-masonry-grid {
+        gap: 16px;
+    }
+    .gallery-grid-column {
+        gap: 16px;
+    }
+    .brand-logo {
+        font-size: 2.2rem;
+    }
+    .gallery-modal-title {
+        font-size: 2rem;
+    }
+    .modal-close-btn {
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .lightbox-close-btn {
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    .download-portfolio-btn {
+        padding: 8px 16px;
+        font-size: 0.7rem;
+    }
+    .floor-plans-container {
+        gap: 16px;
+    }
+    .floor-plan-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .floor-plan-box {
+        padding: 4px 8px;
+        min-width: 60px;
+    }
+    .floor-plan-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-masonry-grid {
+        gap: 16px;
+    }
+    .gallery-grid-column {
+        gap: 16px;
+    }
+    .modal-content-wrapper {
+        width: 90%;
+        margin: 60px auto;
+    }
+    .gallery-modal-title {
+        font-size: 1.6rem;
+    }
+    .download-button-wrapper {
+        width: 90%;
+        left: 5%;
+        transform: translateY(0);
+    }
+    .download-portfolio-btn {
+        width: 100%;
+        border-radius: 0 !important;
+        padding: 10px 16px;
+    }
+    .floor-plans-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        max-width: 260px;
+    }
+}
