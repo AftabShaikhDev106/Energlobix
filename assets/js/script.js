@@ -231,3 +231,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fallback: hide loader after 8 seconds anyway to prevent infinite loading
   setTimeout(hideLoader, 8000);
 });
+
+// Sync hero wrapper padding with navbar height
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".energlobix__navbar");
+  const heroWrappers = document.querySelectorAll(".hero-content-wrapper");
+  if (navbar && heroWrappers.length > 0) {
+    function syncNavbarPadding() {
+      const navHeight = navbar.getBoundingClientRect().height;
+      heroWrappers.forEach(wrapper => {
+        wrapper.style.paddingTop = navHeight + "px";
+      });
+    }
+    // Sync on initial load
+    syncNavbarPadding();
+    // Sync on window resize
+    window.addEventListener("resize", syncNavbarPadding);
+    // Sync if navbar content dynamically wraps/sizes using a ResizeObserver
+    const navResizeObserver = new ResizeObserver(syncNavbarPadding);
+    navResizeObserver.observe(navbar);
+  }
+});

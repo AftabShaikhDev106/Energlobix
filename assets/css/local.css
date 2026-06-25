@@ -879,15 +879,15 @@ body {
 }
 
 .hero-content-wrapper {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
+  position: relative;
+  z-index: 2;
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 335px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .green-map-bg {
@@ -904,11 +904,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 992px) {
-  .hero-content-wrapper {
-    height: 100svh;
-  }
-}
+
 
 .hero-mid-section {
   position: relative;
@@ -1421,14 +1417,17 @@ body {
 }
 
 @media (max-width: 576px) {
-  .about-section {
-    margin-top: -535px;
-    /* border-top-left-radius: 100% 140px; */
-    /* border-top-right-radius: 100% 140px;      */
-    /* background-image: none; */
-    /* background-color: var(--gold-color); */
+  .hero-content-wrapper {
+    height: calc(100% - 535px);
   }
 
+  .about-section,
+  .who-we-are-about-section,
+  .what-we-do-about-section,
+  .how-we-do-it-about-section,
+  .invest-about-section {
+    margin-top: -535px;
+  }
 }
 
 @media (max-width: 1024px) {
