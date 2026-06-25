@@ -239,22 +239,39 @@
       </div>
 
       <div class="hero-slider-section">
-        <div
-          class="slide active"
-          style="
-            background-image:
-              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url(&quot;assets/Links/compressed-img/how-hero.webp&quot;);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: bottom;
-          "
-        >
+        <div class="slide active">
+          <!-- Background Video -->
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="video-bg"
+            style="object-fit: cover"
+          >
+            <source
+              src="https://energlobix.com/wp-content/themes/energlobix_v2/development/assets/development-hero-video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <!-- Video Overlay -->
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.4);
+              z-index: -5;
+            "
+          ></div>
           <div class="hero-content-wrapper">
             <div class="hero-mid-section">
               <img
                 class="single-logo-transparent"
-                src="assets/images/single-logo-transparent.png"
+                src="assets/Links/single-logo-transparent.png"
                 alt=""
               />
               <div class="hero-mid-section-content">
@@ -288,7 +305,7 @@
       <div class="how-we-do-it-about-section" style="background-position: top">
         <div id="about-us" class="oval-container">
           <div
-            class="energlobix__title font-adelle-sans-bold text-center text-blue font-bold"
+            class="energlobix__title font-adelle-sans-bold text-center text-black font-bold"
           >
             How We Do It
           </div>
@@ -319,69 +336,73 @@
                   />
                 </div>
                 <div class="card-content-2 bg-black">
-                  <div class="divider-logo-container">
-                    <img
-                      class="divider-logo"
-                      src="assets/Links/logo-mini-blue.png"
-                      alt=""
-                    />
-                  </div>
-                  <div
-                    class="energlobix__card-title font-adelle-sans-bold text-gold mt-3 font-bold"
-                  >
-                    Residential
-                  </div>
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    We create residential properties that go beyond
+                  <div class="w-100 inner-pad">
+                    <div class="divider-logo-container">
+                      <img
+                        class="divider-logo"
+                        src="assets/Links/logo-mini-blue.png"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="energlobix__card-title font-adelle-sans-bold text-gold mt-3 font-bold"
+                    >
+                      Residential
+                    </div>
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      We create residential properties that go beyond
 
-                    <!-- <br class="hide-on-mobile" /> -->
-                    standard living.
-                  </div>
+                      <!-- <br class="hide-on-mobile" /> -->
+                      standard living.
+                    </div>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-bold text-white mt-3 font-bold"
-                  >
-                    Spaces shaped by:
-                  </div>
+                    <div
+                      class="energlobix__card-text font-adelle-sans-bold text-white mt-3 font-bold"
+                    >
+                      Spaces shaped by:
+                    </div>
 
-                  <ul
-                    class="energlobix__card-text font-adelle-sans-regular text-gold mt-3 list-unstyled"
-                    style="
-                      text-align: left;
+                    <ul
+                      class="energlobix__card-text font-adelle-sans-regular text-gold mt-3 list-unstyled"
+                      style="
+                        text-align: left;
 
-                      list-style: none !important;
-                      margin-bottom: 0 !important;
-                    "
-                  >
-                    <li class="mb-3">• Thoughtful layouts and natural flow</li>
-                    <li class="mb-3">
-                      • Materials and finishes chosen for durability and feel
-                    </li>
-                    <li>
-                      • Locations that connect lifestyle with long-term value
-                    </li>
-                  </ul>
+                        list-style: none !important;
+                        margin-bottom: 0 !important;
+                      "
+                    >
+                      <li class="mb-3">
+                        • Thoughtful layouts and natural flow
+                      </li>
+                      <li class="mb-3">
+                        • Materials and finishes chosen for durability and feel
+                      </li>
+                      <li>
+                        • Locations that connect lifestyle with long-term value
+                      </li>
+                    </ul>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    These are homes with presence — created for those
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      These are homes with presence — created for those
 
-                    <br class="hide-on-mobile" />
-                    who recognise the difference between standard and
-                    <br class="hide-on-mobile" />
-                    exceptional.
-                  </div>
+                      <br class="hide-on-mobile" />
+                      who recognise the difference between standard and
+                      <br class="hide-on-mobile" />
+                      exceptional.
+                    </div>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    Our experience includes North 43 Serviced Residences
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      Our experience includes North 43 Serviced Residences
 
-                    <br class="hide-on-mobile" />
-                    in JVC, developed in partnership with Naseeb Group.
+                      <br class="hide-on-mobile" />
+                      in JVC, developed in partnership with Naseeb Group.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -395,71 +416,73 @@
                 <div class="card-image-container text-center">
                   <img
                     class="card-image-2"
-                    src="assets/Links/compressed-img/exceptional1.webp"
+                    src="assets/Links/compressed-img/commercial.jpeg"
                     alt=""
                   />
                 </div>
                 <div class="card-content-2 bg-black">
-                  <div class="divider-logo-container">
-                    <img
-                      class="divider-logo"
-                      src="assets/Links/logo-mini-blue.png"
-                      alt=""
-                    />
-                  </div>
-                  <div
-                    class="energlobix__card-title font-adelle-sans-bold text-gold mt-3 font-bold"
-                  >
-                    Commercial
-                  </div>
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    We develop commercial properties creates real
+                  <div class="w-100 inner-pad">
+                    <div class="divider-logo-container">
+                      <img
+                        class="divider-logo"
+                        src="assets/Links/logo-mini-blue.png"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="energlobix__card-title font-adelle-sans-bold text-gold mt-3 font-bold"
+                    >
+                      Commercial
+                    </div>
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      We develop commercial properties creates real
 
-                    <!-- <br class="hide-on-mobile" /> -->
-                    business activity.
-                  </div>
+                      <!-- <br class="hide-on-mobile" /> -->
+                      business activity.
+                    </div>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    Building Commercial Real Estate for Real Demand.
-                  </div>
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      Building Commercial Real Estate for Real Demand.
+                    </div>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    We develop commercial properties with a clear purpose.
-                  </div>
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      We develop commercial properties with a clear purpose.
+                    </div>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3 font-bold"
-                  >
-                    Assets that:
-                  </div>
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3 font-bold"
+                    >
+                      Assets that:
+                    </div>
 
-                  <ul
-                    class="energlobix__card-text font-adelle-sans-regular text-gold mt-3 list-unstyled"
-                    style="
-                      text-align: left;
+                    <ul
+                      class="energlobix__card-text font-adelle-sans-regular text-gold mt-3 list-unstyled"
+                      style="
+                        text-align: left;
 
-                      list-style: none !important;
-                      margin-bottom: 0 !important;
-                    "
-                  >
-                    <li class="mb-3">• Support real business activity</li>
-                    <li class="mb-3">• Attract consistent tenant demand</li>
-                    <li>• Offer stability and long-term income potential</li>
-                  </ul>
+                        list-style: none !important;
+                        margin-bottom: 0 !important;
+                      "
+                    >
+                      <li class="mb-3">• Support real business activity</li>
+                      <li class="mb-3">• Attract consistent tenant demand</li>
+                      <li>• Offer stability and long-term income potential</li>
+                    </ul>
 
-                  <div
-                    class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
-                  >
-                    These are spaces designed to function effortlessly
+                    <div
+                      class="energlobix__card-text font-adelle-sans-regular text-white mt-3"
+                    >
+                      These are spaces designed to function effortlessly
 
-                    <br class="hide-on-mobile" />
-                    and to remain relevant as markets evolve.
+                      <br class="hide-on-mobile" />
+                      and to remain relevant as markets evolve.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -535,10 +558,10 @@
         </div>
 
         <div
-          class="developments-new-container d-flex flex-column align-items-center mt-5 mb-5"
+          class="developments-new-container d-flex flex-column align-items-center mb-5"
         >
           <!-- Video Container -->
-          <div class="video-container-placeholder w-100 mt-5">
+          <div class="video-container-placeholder w-100">
             <video
               class="w-100 h-100 rounded"
               controls
@@ -871,9 +894,11 @@
               }
 
               // Use 400px padding: 280px to counteract the -280px margin-top, plus 120px spacing
+              // For mobile (< 768px), we reduce this padding so the video isn't pushed too far down.
+              const isPhone = window.innerWidth < 768;
               sectionContact.style.setProperty(
                 "padding-top",
-                "400px",
+                isPhone ? "380px" : "400px",
                 "important",
               );
             } else {

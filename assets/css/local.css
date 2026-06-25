@@ -1072,7 +1072,7 @@ body {
 }
 
 .energlobix-stats-section {
-  background-image: url("../../assets/Links/compressed-img/page-1-index.webp");
+  background-image: url("../../assets/Links/compressed-img/location-info-bg.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1448,7 +1448,7 @@ body {
 }
 
 .gold-border {
-  border: 2px solid var(--gold-color);
+  border: 1px solid var(--gold-color);
 }
 
 @media (max-width: 992px) {
@@ -1720,8 +1720,8 @@ body {
   padding: 50px;
   display: flex;
   justify-content: center;
-  gap: 73px;
-  border: 2px solid var(--gold-color);
+  gap: 50px;
+  border: 1px solid var(--gold-color);
 }
 
 .latest-news {
@@ -1766,8 +1766,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 73px;
+    gap: 30px;
     padding: 30px;
+  }
+
+  .commodities-section {
+    margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0px 0px !important;
+
+    /* padding-left: 35px;
+    padding-right: 35px; */
   }
 
   .latest-news {
@@ -2074,6 +2083,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.inner-pad{
+  padding: 0px 30px;
+}
+
 @media (max-width: 576px) {
   .how-we-do-it-box {
     width: 100%;
@@ -2084,7 +2097,7 @@ body {
   .insights-box {
     width: 100%;
     min-height: 100vw;
-    padding: 34px 72px;
+    padding: 34px 34px;
   }
 
   .contact-us-maps {
@@ -2395,11 +2408,6 @@ body {
   max-width: 100%;
 }
 
-@media (min-width: 992px) {
-  .overlap-card-title {
-    max-width: 65%;
-  }
-}
 
 /* Body grid — mirrors: flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 */
 .overlap-card-body {
@@ -2525,7 +2533,8 @@ body {
 /* Energlobix Stats Section */
 .energlobix-stats-section {
   width: 100%;
-  min-height: 110vh;
+  height: 110vh;
+  max-height: 1000px;
   background-color: #000;
   margin-top: 0;
   padding-top: 80px;
@@ -2542,9 +2551,9 @@ body {
 .gradient-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.9)
+    rgba(0, 0, 0, 0.0),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
   );
 }
 
@@ -2611,4 +2620,8 @@ body {
   .overlap-slider-next {
     right: -4rem;
   }
+}
+
+.no-pad {
+  padding: 0px !important;
 }
