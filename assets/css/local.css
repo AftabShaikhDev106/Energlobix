@@ -1030,8 +1030,17 @@ body {
   /* background: red; */
   background-image: url("../../assets/Links/compressed-img/circle-img-1.svg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  z-index: 2;
   background-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: top center;
+  mask-position: top center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .index-bg {
@@ -1082,8 +1091,17 @@ body {
   margin-top: -335px;
   background-image: url("../../assets/Links/compressed-img/who-we-are-circle.svg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  z-index: 2;
   background-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: top center;
+  mask-position: top center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .bg-who-we-are {
@@ -1099,8 +1117,17 @@ body {
   margin-top: -335px;
   background-image: url("/Energlobix/assets/images/what-we-do-about-section-bg.png");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  z-index: 2;
   background-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: top center;
+  mask-position: top center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .how-we-do-it-about-section {
@@ -1108,8 +1135,17 @@ body {
   margin-top: -335px;
   background-image: url("../../assets/Links/compressed-img/circle-img-1.svg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  z-index: 2;
   background-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: top center;
+  mask-position: top center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .invest-about-section {
@@ -1117,8 +1153,17 @@ body {
   margin-top: -335px;
   background-image: url("../../assets/Links/compressed-img/invest-circle.svg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  z-index: 2;
   background-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%221180%22%20rx%3D%221982%22%20ry%3D%221180%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%221180%22%20rx%3D%221982%22%20ry%3D%221180%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: top center;
+  mask-position: top center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .contact-container {
@@ -1325,22 +1370,32 @@ body {
 @media (max-width: 576px) {
   .about-section {
     background-image: url("/assets/Links/compressed-img/circle-img-mob-1.svg");
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
 
   .who-we-are-about-section {
     background-image: url("/assets/Links/compressed-img/who-we-are-circle-mob.svg");
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
 
   .what-we-do-about-section {
     background-image: url("/Energlobix/assets/images/what-we-do-about-section-bg-mobile.png");
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
 
   .how-we-do-it-about-section {
     background-image: url("/assets/Links/compressed-img/circle-img-mob-1.svg");
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
 
   .invest-about-section {
     background-image: url("../../assets/Links/compressed-img/invest-circle-mob.svg");
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22214.5%22%20cy%3D%22904.5%22%20rx%3D%22913.5%22%20ry%3D%22904.5%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22214.5%22%20cy%3D%22904.5%22%20rx%3D%22913.5%22%20ry%3D%22904.5%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
 }
 
