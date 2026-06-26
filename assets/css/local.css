@@ -932,6 +932,36 @@ body {
   /* Ensures the image is behind the content */
 }
 
+.dubai-skeleton-overlay {
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.hero-mid-section .dubai-skeleton-overlay {
+  width: 70%;
+}
+
+.commodities-section .dubai-skeleton-overlay {
+  width: 100%;
+}
+
+.who-we-are-about-section .dubai-skeleton-overlay {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .dubai-skeleton-overlay {
+    max-width: 280px;
+  }
+}
+
+
 .hero-mid-section-content {
   position: relative;
   z-index: 2;
@@ -1089,7 +1119,7 @@ body {
 .who-we-are-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../../assets/Links/compressed-img/who-we-are-circle.svg");
+  background-image: url("../../assets/Links/compressed-img/water-circle.jpg");
   background-size: cover;
   background-position: top center;
   z-index: 2;
@@ -1375,7 +1405,7 @@ body {
   }
 
   .who-we-are-about-section {
-    background-image: url("../../assets/Links/compressed-img/who-we-are-circle-mob.svg");
+    background-image: url("../../assets/Links/compressed-img/water-circle.jpg");
     -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
     mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
@@ -1708,9 +1738,19 @@ body {
 }
 
 .commodities-section {
+  position: relative;
   padding: 0px 10px;
   margin-top: 117px;
   margin-bottom: 117px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commodities-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2478,9 +2518,16 @@ body {
 
 /* Individual slide — mirrors: min-w-full md:min-w-[calc(50%-8px)] aspect-[16/9] */
 .overlap-slide {
-  flex: 0 0 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 21 / 9;
   overflow: hidden;
+}
+
+#sliderTrack .overlap-slide {
+  flex: 0 0 calc(50% - 8px);
+}
+
+#galleryTrack .overlap-slide {
+  flex: 0 0 100%;
 }
 
 .overlap-slide img {
@@ -2488,12 +2535,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-@media (min-width: 768px) {
-  .overlap-slide {
-    flex: 0 0 calc(50% - 8px);
-  }
 }
 
 /* Nav buttons — mirrors: absolute -left-10/-right-10 lg:-left-16/-right-16
