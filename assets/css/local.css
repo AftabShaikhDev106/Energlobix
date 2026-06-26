@@ -267,8 +267,8 @@ a:active {
   .energlobix__card-title-2,
   .energlobix__card-text,
   .common-heading {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .card-content-2 .energlobix__card-title {
@@ -342,11 +342,16 @@ a:active {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "MinionPro-Regular", sans-serif;
   margin: 0;
+  overflow-x: hidden;
+  
+  width: 100%;
+  max-width: 100%;
 }
 
 .color-test {
@@ -956,9 +961,15 @@ body {
 }
 
 @media (max-width: 576px) {
-  .dubai-skeleton-overlay {
+  /* .dubai-skeleton-overlay {
     max-width: 280px;
-  }
+  } */
+
+  .hero-mid-section .dubai-skeleton-overlay, .commodities-section .dubai-skeleton-overlay, .who-we-are-about-section .dubai-skeleton-overlay {
+  width: 170%;
+}
+
+
 }
 
 
@@ -1058,7 +1069,7 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  background-image: url("../../assets/Links/compressed-img/circle-img-1.svg");
+  background-image: url("../../assets/Links/compressed-img/circle-img-1.jpg");
   background-size: cover;
   background-position: top center;
   z-index: 2;
@@ -1118,6 +1129,7 @@ body {
 
 .who-we-are-about-section {
   position: relative;
+  overflow: hidden;
   margin-top: -335px;
   background-image: url("../../assets/Links/compressed-img/water-circle.jpg");
   background-size: cover;
@@ -1399,7 +1411,7 @@ body {
 
 @media (max-width: 576px) {
   .about-section {
-    background-image: url("../../assets/Links/compressed-img/circle-img-mob-1.svg");
+    background-image: url("../../assets/Links/compressed-img/circle-img-1.jpg");
     -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
     mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
@@ -1496,8 +1508,8 @@ body {
 
 @media (max-width: 576px) {
   .circle-placeholder {
-    width: 40%;
-    margin-bottom: 20px;
+    width: 44%;
+    margin-bottom: 0px;
   }
 }
 
@@ -1723,7 +1735,9 @@ body {
   .how-box-bg3 {
     min-height: 100vw !important;
   }
+
 }
+
 
 .how-section-links {
   cursor: pointer;
@@ -1745,6 +1759,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .commodities-content-wrapper {
@@ -1811,7 +1826,7 @@ body {
   }
 
   .commodities-section {
-    margin-top: 80px;
+    margin-top: 65px;
   margin-bottom: 80px;
   padding: 0px 0px !important;
 
@@ -1894,6 +1909,10 @@ body {
 
   .contact-form-wrapper {
     width: 100%;
+  }
+
+  .card-content-2{
+    padding-bottom: 10px !important;
   }
 
   .form-grid {
@@ -2423,10 +2442,10 @@ body {
 #overlap-div.overlap-card {
   width: 100%;
   padding: 1.5rem;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) { 
   #overlap-div.overlap-card {
     padding: 2rem;
   }
@@ -2435,7 +2454,7 @@ body {
 @media (min-width: 992px) {
   #overlap-div.overlap-card {
     padding: 2.5rem 5rem;
-    gap: 2.5rem;
+    gap: 2rem;
     max-width: 1143px;
     margin: 0 auto;
   }
@@ -2505,10 +2524,7 @@ body {
   text-decoration: none;
 }
 
-/* Slider wrapper — mirrors: w-full relative */
-.overlap-slider-wrap {
-  padding: 0 2.5rem;
-}
+
 
 /* Slider track — mirrors: flex transition-transform duration-500 ease-in-out gap-4 */
 .overlap-slider-track {
@@ -2523,7 +2539,13 @@ body {
 }
 
 #sliderTrack .overlap-slide {
-  flex: 0 0 calc(50% - 8px);
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  #sliderTrack .overlap-slide {
+    flex: 0 0 calc(50% - 8px);
+  }
 }
 
 #galleryTrack .overlap-slide {
@@ -2574,16 +2596,18 @@ body {
 /* Energlobix Stats Section */
 .energlobix-stats-section {
   width: 100%;
-  height: 110vh;
-  max-height: 1000px;
+  height: auto;
   background-color: #000;
   margin-top: 0;
   padding-top: 80px;
   padding-bottom: 6rem;
   z-index: 10;
 }
+
 @media (min-width: 992px) {
   .energlobix-stats-section {
+    height: 110vh;
+    max-height: 1000px;
     padding-top: 140px;
     padding-bottom: 200px;
   }

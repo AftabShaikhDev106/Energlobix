@@ -37,9 +37,33 @@
       }
 
       /* Circle Icons */
+      .amenities-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+        max-width: 800px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-items: center;
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        .amenities-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          max-width: 400px;
+        }
+      }
+      .amenity-item {
+        width: 100%;
+        max-width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .amenity-circle {
-        width: 110px;
-        height: 110px;
+        width: 100%;
+        aspect-ratio: 1;
         border: 1.5px solid var(--gold-color, #c5a880);
         border-radius: 50%;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -64,14 +88,8 @@
         color: rgba(255, 255, 255, 0.7);
         transition: color 0.3s ease;
       }
-      .col-6:hover .amenity-title {
+      .amenity-item:hover .amenity-title {
         color: var(--gold-color, #c5a880);
-      }
-
-      .amenities-grid {
-        max-width: 680px;
-        margin-left: auto !important;
-        margin-right: auto !important;
       }
 
       /* 5-Image Grid */
@@ -314,12 +332,13 @@
                   class="invest-bg d-flex flex-column justify-content-center align-items-center text-center p-4 p-md-5 rounded shadow-sm h-100"
                 >
                   <h3
-                    class="font-adelle-sans-bold mb-4 text-black energlobix__card-title"
+                    class="font-adelle-sans-bold mb-3 text-black energlobix__card-title"
                   >
                     Living in Dubai
                   </h3>
                   <p
-                    class="mb-3 text-black energlobix__text font-adelle-sans-regular"
+                    style="margin-bottom: 0px !important"
+                    class="text-black energlobix__text font-adelle-sans-regular"
                   >
                     Living in Dubai means becoming
 
@@ -354,7 +373,7 @@
                   class="invest-bg d-flex flex-column justify-content-center align-items-center text-center p-3 px-5 rounded shadow-sm h-100"
                 >
                   <h3
-                    class="font-bold mb-4 text-black energlobix__title font-adelle-sans-bold"
+                    class="font-bold mb-3 text-black energlobix__title font-adelle-sans-bold"
                   >
                     Business in Dubai
                   </h3>
@@ -366,6 +385,7 @@
                     connected Market.
                   </p>
                   <p
+                    style="margin-bottom: 0px !important"
                     class="text-black energlobix__text font-adelle-sans-regular"
                   >
                     Dubai has established itself as a leading
@@ -404,11 +424,9 @@
 
           <!-- Circle Icons Section -->
           <div class="container my-5 py-5">
-            <div class="row justify-content-center g-5 amenities-grid">
+            <div class="amenities-grid">
               <!-- Item 1: Business -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -434,9 +452,7 @@
                 </div>
               </div>
               <!-- Item 2: Education -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -462,9 +478,7 @@
                 </div>
               </div>
               <!-- Item 3: Travel -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -490,9 +504,7 @@
                 </div>
               </div>
               <!-- Item 4: Health -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -523,9 +535,7 @@
                 </div>
               </div>
               <!-- Item 5: Sports -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -552,9 +562,7 @@
                 </div>
               </div>
               <!-- Item 6: Lifestyle -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -580,9 +588,7 @@
                 </div>
               </div>
               <!-- Item 7: Communities -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -611,9 +617,7 @@
                 </div>
               </div>
               <!-- Item 8: Retail -->
-              <div
-                class="col-6 col-md-3 text-center d-flex flex-column align-items-center mt-md-4"
-              >
+              <div class="amenity-item">
                 <div
                   class="amenity-circle d-flex align-items-center justify-content-center"
                 >
@@ -659,7 +663,13 @@
           </div>
 
           <!-- 5-Image Asymmetric Gallery Grid -->
-          <div class="container my-5 pb-4">
+          <div
+            style="
+              padding-left: 20px !important;
+              padding-right: 20px !important;
+            "
+            class="container my-5 pb-4"
+          >
             <div class="row g-3 align-items-stretch">
               <!-- Column 1: Tall image -->
               <div class="col-12 col-md-4">
@@ -726,7 +736,7 @@
           </div>
 
           <div
-            class="energlobix__title font-adelle-sans-bold text-cente mt-4 text-gold font-bold"
+            class="energlobix__title font-adelle-sans-bold text-center mt-4 text-gold font-bold"
           >
             Consistent Demand at Global Scale
           </div>

@@ -41,6 +41,77 @@
       #nextBtn.overlap-slider-next {
         right: 0.75rem !important;
       }
+      #sliderTrack .overlap-slide {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .approach-accordion-card {
+        max-width: 100%;
+        overflow: hidden;
+      }
+      @media (max-width: 576px) {
+        .approach-accordion-card .energlobix__title {
+          font-size: 1.6rem !important;
+          line-height: 1.3 !important;
+        }
+        .approach-accordion-card .energlobix__text {
+          font-size: 1.1rem !important;
+          line-height: 1.4 !important;
+        }
+      }
+      .latest-news-section {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 73px !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin: 25px auto !important;
+      }
+      .latest-news {
+        flex: 1 1 0% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-width: 0 !important;
+      }
+      .news-title {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 20px !important;
+      }
+      .feed-image {
+        width: 26.25px !important;
+        margin-bottom: 10px !important;
+      }
+      .vertical-divider {
+        width: 1px !important;
+        flex: 0 0 1px !important;
+        background-color: var(--gold-color, #dbd2c2) !important;
+        align-self: stretch !important;
+      }
+      @media (max-width: 768px) {
+        .latest-news-section {
+          flex-direction: column !important;
+          gap: 30px !important;
+          margin: 15px auto !important;
+        }
+        .latest-news {
+          flex: 1 1 auto !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        .vertical-divider {
+          width: 100% !important;
+          height: 1px !important;
+          flex: 0 0 1px !important;
+          align-self: stretch !important;
+          margin: 0 !important;
+        }
+      }
     </style>
   </head>
 
@@ -359,496 +430,259 @@
             </div>
           </div>
 
-          <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="container px-3 px-sm-4">
+            <div class="row justify-content-center">
               <div
-                id="approach-accordion"
-                class="approach-accordion-card gold-border"
+                style="
+                  padding-left: 0px !important;
+                  padding-right: 0px !important;
+                "
+                class="col-lg-12 col-md-12 col-sm-12"
               >
-                <h1
-                  class="energlobix__title text-center text-gold font-adelle-sans-bold"
+                <div
+                  id="approach-accordion"
+                  class="approach-accordion-card gold-border"
                 >
-                  Explore Our Latest Developments
-                </h1>
-
-                <p
-                  class="energlobix__text mt-2 text-center text-white font-adelle-sans-regular"
-                >
-                  View our latest projects that bring each development to life,
-                  <br class="hide-on-mobile" />
-                  from architectural details to the flow of every space.
-                </p>
-
-                <div class="w-100 position-relative overlap-slider-wrap mt-2">
-                  <!-- Navigation Arrows -->
-                  <button
-                    id="prevBtn"
-                    class="overlap-slider-btn overlap-slider-prev"
+                  <h1
+                    class="energlobix__title text-center text-gold font-adelle-sans-bold"
                   >
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button
-                    id="nextBtn"
-                    class="overlap-slider-btn overlap-slider-next"
-                  >
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
+                    Explore Our Latest Developments
+                  </h1>
 
-                  <!-- Slider Container -->
-                  <div class="overflow-hidden w-100">
-                    <div id="sliderTrack" class="overlap-slider-track d-flex">
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img25.jpg"
-                          alt="Brochure Image img25"
-                          loading="lazy"
-                        />
+                  <p
+                    class="energlobix__text mt-2 text-center text-white font-adelle-sans-regular"
+                  >
+                    View our latest projects that bring each development to
+                    life,
+                    <br class="hide-on-mobile" />
+                    from architectural details to the flow of every space.
+                  </p>
+
+                  <div class="w-100 position-relative overlap-slider-wrap mt-2">
+                    <!-- Navigation Arrows -->
+                    <button
+                      id="prevBtn"
+                      class="overlap-slider-btn overlap-slider-prev"
+                    >
+                      <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button
+                      id="nextBtn"
+                      class="overlap-slider-btn overlap-slider-next"
+                    >
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+
+                    <!-- Slider Container -->
+                    <div class="overflow-hidden w-100">
+                      <div id="sliderTrack" class="overlap-slider-track d-flex">
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0001.jpg"
+                            alt="North 43 Brochure Page 1"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0002.jpg"
+                            alt="North 43 Brochure Page 2"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0003.jpg"
+                            alt="North 43 Brochure Page 3"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0004.jpg"
+                            alt="North 43 Brochure Page 4"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0005.jpg"
+                            alt="North 43 Brochure Page 5"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0006.jpg"
+                            alt="North 43 Brochure Page 6"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0007.jpg"
+                            alt="North 43 Brochure Page 7"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0008.jpg"
+                            alt="North 43 Brochure Page 8"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0001.jpg"
+                            alt="North 43 Brochure Page 9"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0002.jpg"
+                            alt="North 43 Brochure Page 10"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0003.jpg"
+                            alt="North 43 Brochure Page 11"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0004.jpg"
+                            alt="North 43 Brochure Page 12"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0005.jpg"
+                            alt="North 43 Brochure Page 13"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0006.jpg"
+                            alt="North 43 Brochure Page 14"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0007.jpg"
+                            alt="North 43 Brochure Page 15"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0008.jpg"
+                            alt="North 43 Brochure Page 16"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0001.jpg"
+                            alt="North 43 Brochure Page 17"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0002.jpg"
+                            alt="North 43 Brochure Page 18"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0003.jpg"
+                            alt="North 43 Brochure Page 19"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0004.jpg"
+                            alt="North 43 Brochure Page 20"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0005.jpg"
+                            alt="North 43 Brochure Page 21"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0006.jpg"
+                            alt="North 43 Brochure Page 22"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0007.jpg"
+                            alt="North 43 Brochure Page 23"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0008.jpg"
+                            alt="North 43 Brochure Page 24"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0001.jpg"
+                            alt="North 43 Brochure Page 25"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0002.jpg"
+                            alt="North 43 Brochure Page 26"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0003.jpg"
+                            alt="North 43 Brochure Page 27"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="overlap-slide">
+                          <img
+                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0004.jpg"
+                            alt="North 43 Brochure Page 28"
+                            loading="lazy"
+                          />
+                        </div>
                       </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img27 (2).jpg"
-                          alt="Brochure Image img27 (2)"
-                          loading="lazy"
-                        />
-                      </div>
-                      <!-- <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img27 (3).jpg"
-                          alt="Brochure Image img27 (3)"
-                          loading="lazy"
-                        />
-                      </div> -->
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img27.jpg"
-                          alt="Brochure Image img27"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img37.jpg"
-                          alt="Brochure Image img37"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img46.jpg"
-                          alt="Brochure Image img46"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img49.jpg"
-                          alt="Brochure Image img49"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img50.jpg"
-                          alt="Brochure Image img50"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img51 (2).jpg"
-                          alt="Brochure Image img51 (2)"
-                          loading="lazy"
-                        />
-                      </div>
-                      <!-- <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img51 (3).jpg"
-                          alt="Brochure Image img51 (3)"
-                          loading="lazy"
-                        />
-                      </div> -->
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img51.jpg"
-                          alt="Brochure Image img51"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img52.jpg"
-                          alt="Brochure Image img52"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img53.jpg"
-                          alt="Brochure Image img53"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img61.jpg"
-                          alt="Brochure Image img61"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img63.jpg"
-                          alt="Brochure Image img63"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img65.jpg"
-                          alt="Brochure Image img65"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img67.jpg"
-                          alt="Brochure Image img67"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img68.jpg"
-                          alt="Brochure Image img68"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img72.jpg"
-                          alt="Brochure Image img72"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img74.jpg"
-                          alt="Brochure Image img74"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img75.jpg"
-                          alt="Brochure Image img75"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img76.jpg"
-                          alt="Brochure Image img76"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img78.jpg"
-                          alt="Brochure Image img78"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img80 (2).jpg"
-                          alt="Brochure Image img80 (2)"
-                          loading="lazy"
-                        />
-                      </div>
-                      <!-- <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img80 (3).jpg"
-                          alt="Brochure Image img80 (3)"
-                          loading="lazy"
-                        />
-                      </div> -->
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img80.jpg"
-                          alt="Brochure Image img80"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img87.jpg"
-                          alt="Brochure Image img87"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img89.jpg"
-                          alt="Brochure Image img89"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img90.jpg"
-                          alt="Brochure Image img90"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img97.jpg"
-                          alt="Brochure Image img97"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img103.jpg"
-                          alt="Brochure Image img103"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img105.jpg"
-                          alt="Brochure Image img105"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img106.jpg"
-                          alt="Brochure Image img106"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img107.jpg"
-                          alt="Brochure Image img107"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img118.jpg"
-                          alt="Brochure Image img118"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img120.jpg"
-                          alt="Brochure Image img120"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img121.jpg"
-                          alt="Brochure Image img121"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img123.jpg"
-                          alt="Brochure Image img123"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img127.jpg"
-                          alt="Brochure Image img127"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img140.jpg"
-                          alt="Brochure Image img140"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img141 (2).jpg"
-                          alt="Brochure Image img141 (2)"
-                          loading="lazy"
-                        />
-                      </div>
-                      <!-- <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img141 (3).jpg"
-                          alt="Brochure Image img141 (3)"
-                          loading="lazy"
-                        />
-                      </div> -->
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img141.jpg"
-                          alt="Brochure Image img141"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img143.jpg"
-                          alt="Brochure Image img143"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img144.jpg"
-                          alt="Brochure Image img144"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img145.jpg"
-                          alt="Brochure Image img145"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img146.jpg"
-                          alt="Brochure Image img146"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img147.jpg"
-                          alt="Brochure Image img147"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img148.jpg"
-                          alt="Brochure Image img148"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img156.jpg"
-                          alt="Brochure Image img156"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img168.jpg"
-                          alt="Brochure Image img168"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img170.jpg"
-                          alt="Brochure Image img170"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img172.jpg"
-                          alt="Brochure Image img172"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img174.jpg"
-                          alt="Brochure Image img174"
-                          loading="lazy"
-                        />
-                      </div>
-                      <!-- <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img186.jpg"
-                          alt="Brochure Image img186"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img187.jpg"
-                          alt="Brochure Image img187"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img189.jpg"
-                          alt="Brochure Image img189"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img190.jpg"
-                          alt="Brochure Image img190"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img191.jpg"
-                          alt="Brochure Image img191"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img192.jpg"
-                          alt="Brochure Image img192"
-                          loading="lazy"
-                        />
-                      </div> -->
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img288.jpg"
-                          alt="Brochure Image img288"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img289.jpg"
-                          alt="Brochure Image img289"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="overlap-slide">
-                        <img
-                          src="assets/Links/all-brochure-image/img291.jpg"
-                          alt="Brochure Image img291"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
                     </div>
                   </div>
-                </div>
 
-                <a
-                  href="how-we-do-it.html"
-                  class="description-link description-link-custom mt-4 font-adelle-sans-bold lh-1 text-black d-flex align-items-center justify-content-center text-decoration-none"
-                >
-                  See more here
-                </a>
+                  <a
+                    href="how-we-do-it.html"
+                    class="description-link description-link-custom mt-4 font-adelle-sans-bold lh-1 text-black d-flex align-items-center justify-content-center text-decoration-none"
+                  >
+                    See more here
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -865,7 +699,7 @@
           />
           <div class="commodities-content-wrapper">
             <div
-              class="energlobix__title text-center text-gold font-adelle-sans-bold"
+              class="energlobix__title text-center mb-5 text-gold font-adelle-sans-bold"
             >
               Be Part of UAE's New Development Chapter
             </div>
@@ -948,9 +782,80 @@
             </div>
 
             <div
-              class="energlobix__title text-center mb-5 mt-5 text-gold font-adelle-sans-bold"
+              class="latest-news-section my-5 container"
+              style="border: none !important"
             >
-              RRS NEWs feed - real estate
+              <div class="latest-news">
+                <div class="news-title">
+                  <img
+                    class="feed-image"
+                    src="assets/images/Generic_Feed-icon.svg.png"
+                    alt="Feed Icon"
+                  />
+                  <div
+                    class="energlobix__title text-gold font-adelle-sans-bold"
+                  >
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style="text-decoration: none; color: inherit"
+                    >
+                      Dubai Real Estate Market Records Historic Transaction
+                      Volume in Q2 2026
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="learn-more mt-3 text-center text-white font-adelle-sans-regular"
+                >
+                  Sat, 27 Jun 2026 08:00:00 GMT
+                </div>
+                <div
+                  class="energlobix__text mt-3 text-center text-white font-adelle-sans-regular"
+                >
+                  The Dubai property market continues its upward trajectory,
+                  achieving record-breaking sales volumes and value driven by
+                  surging demand for luxury residential properties.
+                </div>
+              </div>
+
+              <div class="vertical-divider"></div>
+
+              <div class="latest-news">
+                <div class="news-title">
+                  <img
+                    class="feed-image"
+                    src="assets/images/Generic_Feed-icon.svg.png"
+                    alt="Feed Icon"
+                  />
+                  <div
+                    class="energlobix__title text-gold font-adelle-sans-bold"
+                  >
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style="text-decoration: none; color: inherit"
+                    >
+                      Sustainable Smart Cities Shape Future Urban Developments
+                      in the UAE
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="learn-more mt-3 text-center text-white font-adelle-sans-regular"
+                >
+                  Fri, 26 Jun 2026 14:30:00 GMT
+                </div>
+                <div
+                  class="energlobix__text mt-3 text-center text-white font-adelle-sans-regular"
+                >
+                  New infrastructure projects integrate cutting-edge green
+                  building materials, intelligent power grids, and eco-friendly
+                  features to meet national sustainability objectives.
+                </div>
+              </div>
             </div>
 
             <div
@@ -1047,6 +952,7 @@
             style="
               background-image: url(&quot;assets/Links/compressed-img/split-right-1.webp&quot;);
               background-size: cover;
+              background-position: right 50%;
             "
           ></div>
 
@@ -1055,7 +961,7 @@
             style="
               background-image: url(&quot;assets/Links/compressed-img/split-right-1.webp&quot;);
               background-size: cover;
-              background-position: 50% 50%;
+              background-position: right 50%;
             "
           ></div>
         </div>
@@ -1237,7 +1143,7 @@
         const totalSlides = slides.length;
 
         function getVisibleSlidesCount() {
-          return 2;
+          return 1;
         }
 
         function updateSlider() {
