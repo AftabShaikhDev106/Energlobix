@@ -93,6 +93,16 @@
         background-color: var(--gold-color, #dbd2c2) !important;
         align-self: stretch !important;
       }
+      .feed-title {
+        font-size: 28px !important;
+        line-height: 34px !important;
+      }
+      @media (max-width: 576px) {
+        .feed-title {
+          font-size: 22px !important;
+          line-height: 28px !important;
+        }
+      }
       @media (max-width: 768px) {
         .latest-news-section {
           flex-direction: column !important;
@@ -793,7 +803,7 @@
                     alt="Feed Icon"
                   />
                   <div
-                    class="energlobix__title text-gold font-adelle-sans-bold"
+                    class="energlobix__title text-gold font-adelle-sans-bold feed-title"
                   >
                     <a
                       href="#"
@@ -830,7 +840,7 @@
                     alt="Feed Icon"
                   />
                   <div
-                    class="energlobix__title text-gold font-adelle-sans-bold"
+                    class="energlobix__title text-gold font-adelle-sans-bold feed-title"
                   >
                     <a
                       href="#"

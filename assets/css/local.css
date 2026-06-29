@@ -1069,7 +1069,7 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  background-image: url("../../assets/Links/compressed-img/circle-img-1.jpg");
+  background-image: url("../../assets/Links/compressed-img/Marble.png");
   background-size: cover;
   background-position: top center;
   z-index: 2;
@@ -1175,7 +1175,7 @@ body {
 .how-we-do-it-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../../assets/Links/compressed-img/circle-img-1.jpg");
+  background-image: url("../../assets/Links/compressed-img/Marble.png");
   background-size: cover;
   background-position: top center;
   z-index: 2;
@@ -1411,7 +1411,7 @@ body {
 
 @media (max-width: 576px) {
   .about-section {
-    background-image: url("../../assets/Links/compressed-img/circle-img-1.jpg");
+    background-image: url("../../assets/Links/compressed-img/Marble.png");
     -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
     mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
@@ -1429,7 +1429,7 @@ body {
   }
 
   .how-we-do-it-about-section {
-    background-image: url("../../assets/Links/compressed-img/circle-img-1.jpg");
+    background-image: url("../../assets/Links/compressed-img/Marble.png");
     -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
     mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22430%22%20height%3D%221630%22%20viewBox%3D%220%200%20430%201630%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22215.5%22%20cy%3D%22815%22%20rx%3D%22850.5%22%20ry%3D%22815%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
   }
@@ -2534,11 +2534,11 @@ body {
 
 /* Individual slide — mirrors: min-w-full md:min-w-[calc(50%-8px)] aspect-[16/9] */
 .overlap-slide {
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 39 / 9;
   overflow: hidden;
 }
 
-#sliderTrack .overlap-slide {
+#sliderTrack .overlap-slide { 
   flex: 0 0 100%;
 }
 
