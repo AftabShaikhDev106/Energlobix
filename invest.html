@@ -62,12 +62,14 @@
         align-items: center;
       }
       .amenity-circle {
-        width: 110px;
-        height: 110px;
+        width: 100%;
+        max-width: 110px;
+        aspect-ratio: 1;
         border: 1.5px solid var(--gold-color, #c5a880);
         border-radius: 50%;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         background-color: transparent;
+        position: relative;
       }
       .amenity-circle:hover {
         border-color: #ffffff;
@@ -82,6 +84,10 @@
         stroke: #ffffff !important;
       }
       .amenity-circle img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 55%;
         height: 55%;
         object-fit: contain;
