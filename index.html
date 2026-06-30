@@ -35,16 +35,12 @@
       .description-link-custom:hover {
         background-color: #ffffff !important;
       }
-      #prevBtn.overlap-slider-prev {
-        left: 0.75rem !important;
-      }
-      #nextBtn.overlap-slider-next {
-        right: 0.75rem !important;
-      }
-      #sliderTrack .overlap-slide {
-        flex: 0 0 100% !important;
-        width: 100% !important;
-        max-width: 100% !important;
+      .video-container-placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
       }
       .approach-accordion-card {
         max-width: 100%;
@@ -333,12 +329,12 @@
           <div class="mt-3">
             <a
               class="energlobix__links font-adelle-sans-bold text-black"
-              href="whoweare.html"
+              href="who-we-are.html"
               >Learn More</a
             >
           </div>
 
-          <a href="whoweare.html"
+          <a href="who-we-are.html"
             ><img class="mt-1" src="assets/Links/arrow-black.svg" alt=""
           /></a>
 
@@ -378,7 +374,7 @@
                     <div class="mt-3">
                       <a
                         class="energlobix__links font-adelle-sans-bold text-gold"
-                        href="whatwedo.html#TC1-Aviation-Fuel"
+                        href="how-we-do-it.html#about-us"
                         >Read More</a
                       >
                     </div>
@@ -426,7 +422,7 @@
                     <div class="mt-3">
                       <a
                         class="energlobix__links text-gold font-adelle-sans-bold"
-                        href="whatwedo.html#TC1-Aviation-Fuel"
+                        href="how-we-do-it.html#about-us"
                         >Read More</a
                       >
                     </div>
@@ -468,222 +464,25 @@
                     from architectural details to the flow of every space.
                   </p>
 
-                  <div class="w-100 position-relative overlap-slider-wrap mt-2">
-                    <!-- Navigation Arrows -->
-                    <button
-                      id="prevBtn"
-                      class="overlap-slider-btn overlap-slider-prev"
+                  <!-- Video Container -->
+                  <div class="video-container-placeholder w-100 mt-2">
+                    <video
+                      class="w-100 h-100 rounded"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      controls
+                      poster="assets/Links/compressed-img/exceptional1.webp"
+                      style="object-fit: cover"
+                      preload="metadata"
                     >
-                      <i class="fa-solid fa-angle-left"></i>
-                    </button>
-                    <button
-                      id="nextBtn"
-                      class="overlap-slider-btn overlap-slider-next"
-                    >
-                      <i class="fa-solid fa-angle-right"></i>
-                    </button>
-
-                    <!-- Slider Container -->
-                    <div class="overflow-hidden w-100">
-                      <div id="sliderTrack" class="overlap-slider-track d-flex">
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0001.jpg"
-                            alt="North 43 Brochure Page 1"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0002.jpg"
-                            alt="North 43 Brochure Page 2"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0003.jpg"
-                            alt="North 43 Brochure Page 3"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0004.jpg"
-                            alt="North 43 Brochure Page 4"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0005.jpg"
-                            alt="North 43 Brochure Page 5"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0006.jpg"
-                            alt="North 43 Brochure Page 6"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0007.jpg"
-                            alt="North 43 Brochure Page 7"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-1-8_page-0008.jpg"
-                            alt="North 43 Brochure Page 8"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0001.jpg"
-                            alt="North 43 Brochure Page 9"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0002.jpg"
-                            alt="North 43 Brochure Page 10"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0003.jpg"
-                            alt="North 43 Brochure Page 11"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0004.jpg"
-                            alt="North 43 Brochure Page 12"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0005.jpg"
-                            alt="North 43 Brochure Page 13"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0006.jpg"
-                            alt="North 43 Brochure Page 14"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0007.jpg"
-                            alt="North 43 Brochure Page 15"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-9-16_page-0008.jpg"
-                            alt="North 43 Brochure Page 16"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0001.jpg"
-                            alt="North 43 Brochure Page 17"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0002.jpg"
-                            alt="North 43 Brochure Page 18"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0003.jpg"
-                            alt="North 43 Brochure Page 19"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0004.jpg"
-                            alt="North 43 Brochure Page 20"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0005.jpg"
-                            alt="North 43 Brochure Page 21"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0006.jpg"
-                            alt="North 43 Brochure Page 22"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0007.jpg"
-                            alt="North 43 Brochure Page 23"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-17-24_page-0008.jpg"
-                            alt="North 43 Brochure Page 24"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0001.jpg"
-                            alt="North 43 Brochure Page 25"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0002.jpg"
-                            alt="North 43 Brochure Page 26"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0003.jpg"
-                            alt="North 43 Brochure Page 27"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div class="overlap-slide">
-                          <img
-                            src="assets/Links/all-brochure-image/North 43 - Brochure-25-28_page-0004.jpg"
-                            alt="North 43 Brochure Page 28"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                      <source
+                        src="https://energlobix.com/wp-content/themes/energlobix_v2/development/assets/North%2043%20-%20Project%20Video.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
 
                   <a
@@ -877,7 +676,7 @@
             <div
               class="energlobix__text mt-3 text-center text-white font-adelle-sans-regular"
             >
-              We Choose with Clarity
+              We Choose with Clarity.
             </div>
 
             <div
@@ -1137,53 +936,7 @@
         }
       }
 
-      // Developments Slider Functionality
-      document.addEventListener("DOMContentLoaded", () => {
-        const track = document.getElementById("sliderTrack");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-        if (!track || !prevBtn || !nextBtn) return;
-
-        let currentIndex = 0;
-        const slides = track.querySelectorAll(".overlap-slide");
-        const totalSlides = slides.length;
-
-        function getVisibleSlidesCount() {
-          return 1;
-        }
-
-        function updateSlider() {
-          const visibleSlides = getVisibleSlidesCount();
-          const maxIndex = totalSlides - visibleSlides;
-
-          if (currentIndex < 0) currentIndex = 0;
-          if (currentIndex > maxIndex) currentIndex = maxIndex;
-
-          prevBtn.style.opacity = currentIndex === 0 ? "0.3" : "1";
-          prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
-          nextBtn.style.opacity = currentIndex === maxIndex ? "0.3" : "1";
-          nextBtn.style.pointerEvents =
-            currentIndex === maxIndex ? "none" : "auto";
-
-          const slideWidth = slides[0].getBoundingClientRect().width;
-          const gap = 16; // 1rem
-          const amount = currentIndex * (slideWidth + gap);
-          track.style.transform = `translateX(-${amount}px)`;
-        }
-
-        prevBtn.addEventListener("click", () => {
-          currentIndex--;
-          updateSlider();
-        });
-
-        nextBtn.addEventListener("click", () => {
-          currentIndex++;
-          updateSlider();
-        });
-
-        window.addEventListener("resize", updateSlider);
-        setTimeout(updateSlider, 100); // initial calc after layout settles
-      });
+      // Developments Slider Functionality removed as slider was replaced by video
     </script>
   </body>
 </html>
