@@ -595,7 +595,7 @@ body.modal-open {
     }
     .download-button-wrapper {
         width: 90%;
-        left: 5%;
+        /* left: 5%; */
         transform: translateY(0);
     }
     .download-portfolio-btn {

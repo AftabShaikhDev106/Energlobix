@@ -74,6 +74,29 @@
         font-weight: bold;
         margin: 0;
       }
+      .floor-plans-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 130px);
+        gap: 1rem;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+      }
+      @media (min-width: 360px) {
+        .floor-plans-grid {
+          grid-template-columns: repeat(2, 130px);
+        }
+      }
+      @media (min-width: 576px) {
+        .floor-plans-grid {
+          gap: 1.5rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .floor-plans-grid {
+          grid-template-columns: repeat(4, 130px);
+        }
+      }
       #galleryPrevBtn.overlap-slider-prev {
         left: 0.75rem !important;
       }
@@ -817,9 +840,7 @@
             NORTH43 Floor Plans
           </h2>
 
-          <div
-            class="d-flex justify-content-center align-items-center flex-wrap gap-4 mt-4 w-100"
-          >
+          <div class="floor-plans-grid mt-4">
             <div class="floor-plan-circle">
               <div class="floor-plan-box">
                 <p class="floor-plan-text">Studio</p>
