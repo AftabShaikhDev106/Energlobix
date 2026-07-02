@@ -267,8 +267,8 @@ a:active {
   .energlobix__card-title-2,
   .energlobix__card-text,
   .common-heading {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
   }
 
   .card-content-2 .energlobix__card-title {
@@ -1388,6 +1388,11 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
+
+  #section-contact-above{
+    padding-top: 80px !important;
+  }
+
   #section-contact {
     padding-top: 80px !important;
     padding-bottom: 80px !important;
